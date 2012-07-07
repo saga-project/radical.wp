@@ -92,12 +92,11 @@ scalar (@ARGV)  && usage ("Too many arguments.");
             my $month  = $e->{'month'}      || "";
             my $year   = $e->{'year'}       || "";
             my $note   = $e->{'note'}       || "";
-            my $book   = $e->{'booktitle'}  || $e->{'institution'} || 
-                         $e->{'journal'}    || "";
+            my $book   = $e->{'booktitle'}  || $e->{'institution'} || $e->{'journal'} || "";
             my $vol    = $e->{'volume'}     || "";
             my $num    = $e->{'number'}     || "";
-            my $url    = $e->{'published'}  || $e->{'URL'}         || $e->{'note'} ||
-                         $e->{'bdsk-url-1'} || $e->{'eprint'}      || "";
+            my $type   = $e->{'type'}       || "";
+            my $url    = $e->{'published'}  || $e->{'url'} || "";
 
             unless ( $key    ) { die  "Error  : no key    for entry ?\n";    }
             unless ( $title  ) { warn "Warning: no title  for entry $key\n"; }
@@ -105,8 +104,9 @@ scalar (@ARGV)  && usage ("Too many arguments.");
             unless ( $year   ) { warn "Warning: no year   for entry $key\n"; }
 
             $book  .= ", vol. $vol" if $vol;
-            $book  .= " # $num"   if $num;
-            $book  .= ","         if $book;
+            $book  .= " # $num"     if $num;
+            $book  .= ", $type"     if $type;
+            $book  .= ","           if $book;
 
             $url    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
             $url    = " [<a title=\"pdf\" href=\"$url\">pdf</a>] " if $url;
