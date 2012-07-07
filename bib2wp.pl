@@ -4,6 +4,7 @@ BEGIN {
   use strict;
 
   use IO::File;
+  use IO::String;
   use Data::Dumper;
   use BibTeX::Parser;
 
@@ -16,11 +17,6 @@ BEGIN {
 my $BIB = shift || usage ("Missing 'bib' argument.");
 my $WP  = shift || usage ("Missing 'wp'  argument.");
 scalar (@ARGV)  && usage ("Too many arguments.");
-
-# define IO streams here to use them in END block
-my $in;
-my $out;
-my $parser;
 ################################################################################
 
 ################################################################################
@@ -28,62 +24,126 @@ my $parser;
 # main
 #
 {
-  $in     = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
-  $out    = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
-  $parser = new BibTeX::Parser ($in);
+  my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
+  my $out     = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
+  my @lines   = <$in>;
+  my @section = ();
+  my $heading = "";
+  my $headed  =  0;  # was heading printed?
 
-  my $cnt = 0;
+  $in->close ();
 
-  while ( my $e = $parser->next )
+  chomp (@lines);
+
+  LINE:
+  foreach my $line ( @lines )
   {
-    $cnt++;
-
-    if ( ! $e->parse_ok ) 
+    if ( $line =~ /^\s*$/io )
     {
-      print "Warning: skipping bib e $cnt - parse error\n";
+      next LINE;
+    }
+    elsif ( $line =~ /^##\s+(.+?)\s*$/io )
+    {
+      my $title = $1;
+
+      if ( $title eq 'END' )
+      {
+        last LINE;
+      }
+
+      $out->print ("\n\n<h1><u>$title</u></h1>\n\n");
+    }
+    elsif ( $line =~ /^#\s+(\d+?)\s*$/io )
+    {
+      my $year = $1;
+      $heading = "\n <h2><u>$year</u></h2>\n\n";
+      $headed  = 0;
+    }
+    elsif ( $line =~ /^#/io )
+    {
+      next LINE;
     }
     else
     {
-      my $key    = $e->{'_key'}       || "";
-      my $title  = $e->{'title'}      || "";
-      my $author = $e->{'author'}     || "";
-      my $month  = $e->{'month'}      || "";
-      my $year   = $e->{'year'}       || "";
-      my $book   = $e->{'booktitle'}  || $e->{'institution'} || "";
-      my $url    = $e->{'published'}  || $e->{'URL'}         || $e->{'note'} ||
-                   $e->{'bdsk-url-1'} || $e->{'eprint'}      || "";
+      push (@section, $line);
 
-      unless ( $key    ) { die  "Error  : no key    for entry ?\n";    }
-      unless ( $title  ) { warn "Warning: no title  for entry $key\n"; }
-      unless ( $author ) { warn "Warning: no author for entry $key\n"; }
-      unless ( $month  ) { warn "Warning: no month  for entry $key\n"; }
-      unless ( $year   ) { warn "Warning: no year   for entry $key\n"; }
+      # end of section?
+      if ( $line =~ /^\s*[^{]*}\s*$/io )
+      {
+        my $sec      = join ("\n", @section);
+        my $iostream = new IO::String ($sec);
+        my $parser   = new BibTeX::Parser ($iostream);
 
-      $book  .= ',' if $book;
+        my $cnt = 0;
 
-      $url    =~ s/^.*?([^{"]*\.pdf).*?$/$1/i;
-      $url    = " [<a title=\"pdf\" href=\"$url\">pdf</a>] " if $url;
+        while ( my $e = $parser->next )
+        {
+          $cnt++;
 
-      $author =~ s/ and /, /g;
-      $year   =~ s/\D//g;
+          if ( ! $e->parse_ok ) 
+          {
+            print "Warning: skipping bib e $cnt - parse error\n";
+          }
+          else
+          {
+            my $key    = $e->{'_key'}       || "";
+            my $title  = $e->{'title'}      || "";
+            my $author = $e->{'author'}     || "";
+            my $month  = $e->{'month'}      || "";
+            my $year   = $e->{'year'}       || "";
+            my $note   = $e->{'note'}       || "";
+            my $book   = $e->{'booktitle'}  || $e->{'institution'} || 
+                         $e->{'journal'}    || "";
+            my $vol    = $e->{'volume'}     || "";
+            my $num    = $e->{'number'}     || "";
+            my $url    = $e->{'published'}  || $e->{'URL'}         || $e->{'note'} ||
+                         $e->{'bdsk-url-1'} || $e->{'eprint'}      || "";
 
-      $title  =~ tr/{}//ds; 
-      $author =~ tr/{}//ds; 
-      $month  =~ tr/{}//ds; 
-      $book   =~ tr/{}//ds; 
+            unless ( $key    ) { die  "Error  : no key    for entry ?\n";    }
+            unless ( $title  ) { warn "Warning: no title  for entry $key\n"; }
+            unless ( $author ) { warn "Warning: no author for entry $key\n"; }
+            unless ( $year   ) { warn "Warning: no year   for entry $key\n"; }
 
-      my $biburl = "http://saga-project.org/saga.bib";
+            $book  .= ", vol. $vol" if $vol;
+            $book  .= " # $num"   if $num;
+            $book  .= ","         if $book;
 
-      print $out <<EOT; 
-        <strong> <em> $title </em> </strong>
-        <em> $author </em>
-        $book $month $year
-        $url [<a title="bib" href="$biburl">bib</a>]: $e->{_key}
+            $url    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
+            $url    = " [<a title=\"pdf\" href=\"$url\">pdf</a>] " if $url;
 
-EOT
-    }
-  }
-}
+            $author =~ s/ and /, /g;
+            $year   =~ s/\D//g;
+
+            $title  =~ tr/{}//ds; 
+            $author =~ tr/{}//ds; 
+            $month  =~ tr/{}//ds; 
+            $book   =~ tr/{}//ds; 
+            $note   =~ tr/{}//ds; 
+
+            my $biburl = "https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib";
+
+            if ( ! $headed )
+            {
+              $out->print ($heading);
+              $headed = 1;
+            }
+
+            $out->print ("  <strong> <em> $title </em> </strong>\n");
+            $out->print ("  <em> $author </em>\n");
+            $out->print ("  $book $month $year\n");
+            $out->print ("  $note\n") if ( $note);
+            $out->print ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $e->{_key}\n");
+            $out->print ("  <br><br>\n");
+
+          } # parse ok
+        } # parser->next
+        
+        @section = ();
+      
+      } # end of section
+    } # section line
+  } # foreach line
+} # main
 #
 ################################################################################
 
@@ -119,11 +179,4 @@ EOT
 }
 #
 ################################################################################
-
-
-END {
-
-  $in ->close ();
-  $out->close ();
-}
 
