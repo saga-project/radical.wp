@@ -26,6 +26,8 @@ scalar (@ARGV)  && usage ("Too many arguments.");
 {
   my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
   my $out     = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
+  my $res     = "";
+  my $links   = "";
   my @lines   = <$in>;
   my @section = ();
   my $heading = "";
@@ -51,7 +53,11 @@ scalar (@ARGV)  && usage ("Too many arguments.");
         last LINE;
       }
 
-      $out->print ("\n\n<h1><u>$title</u></h1>\n\n");
+      my $lnk = $title;
+      $lnk =~ s/\s/_/iog;
+
+      $res   .= sprintf ("\n\n <a name=\"$lnk\"></a><h1><u>$title</u></h1>\n\n");
+      $links .= sprintf (" &bull; <a href=\"#$lnk\"><b>$title</b></a> <br>\n");
     }
     elsif ( $line =~ /^#\s+(\d+?)\s*$/io )
     {
@@ -124,16 +130,16 @@ scalar (@ARGV)  && usage ("Too many arguments.");
 
             if ( ! $headed )
             {
-              $out->print ($heading);
+              $res .= sprintf ($heading);
               $headed = 1;
             }
 
-            $out->print ("  <strong> <em> $title </em> </strong>\n");
-            $out->print ("  <em> $author </em>\n");
-            $out->print ("  $book $month $year\n");
-            $out->print ("  $note\n") if ( $note);
-            $out->print ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $e->{_key}\n");
-            $out->print ("  <br><br>\n");
+            $res .= sprintf ("  <strong> <em> $title </em> </strong>\n");
+            $res .= sprintf ("  <em> $author </em>\n");
+            $res .= sprintf ("  $book $month $year\n");
+            $res .= sprintf ("  $note\n") if ( $note);
+            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $e->{_key}\n");
+            $res .= sprintf ("  <br><br>\n");
 
           } # parse ok
         } # parser->next
@@ -143,6 +149,14 @@ scalar (@ARGV)  && usage ("Too many arguments.");
       } # end of section
     } # section line
   } # foreach line
+
+  $out->print ("<hr><br>\n");
+  $out->print ($links);
+  $out->print ("<hr><br><br>\n");
+  $out->print ($res);
+
+  $out->close ();
+
 } # main
 #
 ################################################################################
