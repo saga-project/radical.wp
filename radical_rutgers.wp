@@ -68,11 +68,6 @@
   Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 367 # 1897,  2009
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: katz2009louisiana
   <br><br>
-  <strong> <em> Application Level Interoperability between Clouds and Grids </em> </strong>
-  <em> Andre Merzky, Katerina Stamou, Shantenu Jha </em>
-  Grid and Pervasive Computing Conference,  2009
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: 10.1109/GPC.2009.17
-  <br><br>
   <strong> <em> Using Clouds to Provide Grids with Higher Levels of Abstraction and Explicit Support for Usage Modes </em> </strong>
   <em> Shantenu Jha, Andre Merzky, Geoffrey Fox </em>
   Concurrency and Computation: Practice and Experience, vol. 21 # 8,  2009
@@ -159,6 +154,11 @@
 
  <h2><u>2009</u></h2>
 
+  <strong> <em> Application Level Interoperability between Clouds and Grids </em> </strong>
+  <em> Andre Merzky, Katerina Stamou, Shantenu Jha </em>
+  Proceedings of the IEEE Grid and Pervasive Computing Conference '09,  2009
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: 10.1109/GPC.2009.17
+  <br><br>
   <strong> <em> A Fresh Perspective on Developing and Executing DAG-Based Distributed Applications: A Case-Study of SAGA-Based Montage </em> </strong>
   <em> Andre Merzky, Katerina Stamou, Shantenu Jha, Daniel S. Katz </em>
   Proceedings of the 2009 Fifth IEEE International Conference on e-Science,  2009
@@ -234,14 +234,6 @@
  <a name="Standards,_White_Papers,_Technical_Reports"></a><h1><u>Standards, White Papers, Technical Reports</u></h1>
 
 
- <h2><u>2012</u></h2>
-
-  <strong> <em> SAGA Extension: Information Service Navigator API </em> </strong>
-  <em> Steve Fisher, Antony Wilson </em>
-  Open Grid Forum, OGF Proposed Recommendation, GFD.195,  2012
-   [<a title="pdf" href="http://ogf.org/Public_Comment_Docs/Documents/2011-06/ISNSpec.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-isn
-  <br><br>
-
  <h2><u>2011</u></h2>
 
   <strong> <em> SAGA Extension: Message API </em> </strong>
@@ -258,14 +250,6 @@
   <em> Daniel S. Katz, Shantenu Jha, Manish Parashar, Omer F. Rana, Jon Weissman </em>
   Computation Institute, University of Chicago \& Argonne National Laboratory,  2011
    [<a title="pdf" href="http://www.ci.uchicago.edu/research/papers/CI-TR-7-0811">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-pdci-tr
-  <br><br>
-
- <h2><u>2009</u></h2>
-
-  <strong> <em> SAGA Extension: Service Discovery API </em> </strong>
-  <em> Steve Fisher, Antony Wilson, Arumugam Paventhan </em>
-  Open Grid Forum, OGF Proposed Recommendation, GFD.144,  2009
-   [<a title="pdf" href="http://ogf.org/documents/GFD.144.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-sd
   <br><br>
 
  <h2><u>2008</u></h2>
