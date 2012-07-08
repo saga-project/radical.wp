@@ -1,15 +1,17 @@
 #!/usr/bin/perl -w
 
-BEGIN {
+BEGIN 
+{
   use strict;
 
-  use IO::File;
-  use IO::String;
-  use Data::Dumper;
-  use BibTeX::Parser;
+  use IO::File;       # for input and output files
+  use IO::String;     # for bibtex parser
+  use Data::Dumper;   # for debugging
+  use BibTeX::Parser; # for bibtex parsing
 
-  sub usage (;$);
+  sub usage (;$);     
 }
+
 ################################################################################
 #
 # get args and check syntax
@@ -27,6 +29,7 @@ scalar (@ARGV)  && usage ("Too many arguments.");
   # open input/output files, and alloc vars which survive the parsing loop
   my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
   my $out     = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
+
   my @lines   = <$in>; # slurp in lines from input file, to be parsed
   my @section = ();    # lines for a single bibtex entry
   my $res     = "";    # resulting WP text

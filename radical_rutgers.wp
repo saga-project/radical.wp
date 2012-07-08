@@ -50,11 +50,6 @@
 
  <h2><u>2010</u></h2>
 
-  <strong> <em> Abstractions for Loosely-Coupled and Ensemble-Based Simulations on Azure </em> </strong>
-  <em> Andre Luckow, Shantenu Jha </em>
-  International IEEE Conference on Cloud Computing Technology and Science,  2010
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: bigjob_cloudcom10
-  <br><br>
   <strong> <em> Understanding Performance of Distributed Data-Intensive Applications </em> </strong>
   <em> Chris Miceli, Michael Miceli, Bety Rodriguez-Milla, Shantenu Jha </em>
   Royal Society of London Philosophical Transactions Series A, vol. 368, August 2010
@@ -126,6 +121,11 @@
 
  <h2><u>2010</u></h2>
 
+  <strong> <em> Abstractions for Loosely-Coupled and Ensemble-Based Simulations on Azure </em> </strong>
+  <em> Andre Luckow, Shantenu Jha </em>
+  International IEEE Conference on Cloud Computing Technology and Science,  2010
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: bigjob_cloudcom10
+  <br><br>
   <strong> <em> What Is the Price of Simplicity? -- A Cross-Platform Evaluation of the SAGA API </em> </strong>
   <em> Mathijs Den Burger, Ceriel Jacobs, Thilo Kielmann, Andre Merzky, Ole Weidner, Hartmut Kaiser </em>
   Proceedings of the 16th international Euro-Par conference on Parallel processing: Part I,  2010
