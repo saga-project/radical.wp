@@ -3,6 +3,7 @@
  &bull; <a href="#Journal_Publications"><b>Journal Publications</b></a> <br>
  &bull; <a href="#Conference_Papers"><b>Conference Papers</b></a> <br>
  &bull; <a href="#Standards,_White_Papers,_Technical_Reports"><b>Standards, White Papers, Technical Reports</b></a> <br>
+ &bull; <a href="#bibtex"><b>BibTeX</b></a> <br>
 <hr><br><br>
 
 
@@ -11,7 +12,7 @@
   <strong> <em> Understanding Scientific Applications for Cloud Environments </em> </strong>
   <em> Shantenu Jha, Daniel S. Katz, Andre Luckow, Andre Merzky, Katerina Stamou </em>
   Cloud Computing: Principles and Paradigms, March 2011
-   [<a title="pdf" href="http://cct.lsu.edu/~sjha/select_publications/cloud_book_chapter.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ideas
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ideas.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ideas
   <br><br>
 
 
@@ -24,7 +25,7 @@
   <em> Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Frank L\"offler, Erik Schnetter </em>
   Procedia Computer Science, vol. 4,  2011
   Proceedings of the International Conference on Computational Science, ICCS 2011
-   [<a title="pdf" href="http://www.sciencedirect.com/science/article/pii/S1877050911002687">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: csc7700-iccs
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: csc7700-iccs
   <br><br>
   <strong> <em> Energy Landscape Analysis for Regulatory RNA Finding using Scalable Distributed Cyberinfrastructure </em> </strong>
   <em> Joohyun Kim, Wei Huang, Sharath Maddineni, Fareed Aboul-ela, Shantenu Jha </em>
@@ -34,18 +35,18 @@
   <strong> <em> Efficient large-scale Replica-Exchange Simulations on Production Infrastructure </em> </strong>
   <em> Abhinav Thota, Andre Luckow, Shantenu Jha </em>
   Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 369 # 1949,  2011
-   [<a title="pdf" href="http://rsta.royalsocietypublishing.org/content/369/1949/3318.abstract">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: async_repex11
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/async_repex11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: async_repex11
   <br><br>
   <strong> <em> Distributed Computing Practice for Large-Scale Science \& Engineering Applications </em> </strong>
   <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
   submitted to ACM Computing Surveys,  2011
   under review, draft available
-   [<a title="pdf" href="http://www.cct.lsu.edu/~sjha/select_publications/dpa_surveypaper.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-surveypaper
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-surveypaper.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-surveypaper
   <br><br>
   <strong> <em> Understanding Application-Level Interoperability: Scaling-Out MapReduce over High-Performance Grids and Clouds </em> </strong>
   <em> Saurabh Sehgal, Miklos Erdelyi, Andre Merzky, Shantenu Jha </em>
   Future Generation Computer Systems, vol. 27 # 5,  2011
-   [<a title="pdf" href="http://www.sciencedirect.com/science/article/B6V06-51KT861-2/2/0092927785fbf5e065a7788af8b65b72">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: fgcs-interop11
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: fgcs-interop11
   <br><br>
 
  <h2><u>2010</u></h2>
@@ -79,7 +80,7 @@
   <strong> <em> SAGA: A Simple API for Grid applications, High-Level Application Programming on the Grid </em> </strong>
   <em> Tom Goodale, Shantenu Jha, Harmut Kaiser, Thilo Kielmann, Pascal K leijer, Gregor von Laszewski, Craig Lee, Andre Merzky, Hrabri Rajic, John Shalf </em>
   Computational Methods in Science and Technology, vol. 12 # 1,  2006
-   [<a title="pdf" href="http://saga.cct.lsu.edu/publications/saga_paper-a_simple_api_for_grid_applications_sc05.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: sagastuff
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: sagastuff
   <br><br>
 
 
@@ -91,7 +92,7 @@
   <strong> <em> Running Many Molecular Dynamics Simulations on Many Supercomputers </em> </strong>
   <em> Rajib Mukherjee et al </em>
   submitted to IEEE CCGrid 2012 (under review),  2011
-   [<a title="pdf" href="http://cct.lsu.edu/~sjha/select_publications/bj_hthpc.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: bigjob-ccgrid12
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/bigjob-ccgrid12.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: bigjob-ccgrid12
   <br><br>
   <strong> <em> Towards high-throughput, high-performance computational estimation of binding affinities for patient specific HIV-1 protease sequences </em> </strong>
   <em> Owain Kenway, David W. Wright, Helmut Heller, Andre Merzky, Gavin Pringle, Jules Wolfrat, Peter Coveney, Shantenu Jha, Shantenu </em>
@@ -129,7 +130,7 @@
   <strong> <em> What Is the Price of Simplicity? -- A Cross-Platform Evaluation of the SAGA API </em> </strong>
   <em> Mathijs Den Burger, Ceriel Jacobs, Thilo Kielmann, Andre Merzky, Ole Weidner, Hartmut Kaiser </em>
   Proceedings of the 16th international Euro-Par conference on Parallel processing: Part I,  2010
-   [<a title="pdf" href="http://dl.acm.org/citation.cfm?id=1887695.1887739">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_europar10
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_europar10
   <br><br>
   <strong> <em> Modelling data-driven CO2 sequestration using distributed HPC cyberinfrastructure </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha, Christopher D. White </em>
@@ -162,7 +163,7 @@
   <strong> <em> A Fresh Perspective on Developing and Executing DAG-Based Distributed Applications: A Case-Study of SAGA-Based Montage </em> </strong>
   <em> Andre Merzky, Katerina Stamou, Shantenu Jha, Daniel S. Katz </em>
   Proceedings of the 2009 Fifth IEEE International Conference on e-Science,  2009
-   [<a title="pdf" href="http://www.cct.lsu.edu/~sjha/dpa_publications/saga_montage_G09.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: merzky-fresh
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: merzky-fresh
   <br><br>
   <strong> <em> Developing Autonomic Distributed Scientific Applications: A Case Study From History Matching Using Ensemble Kalman-Filters </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha </em>
@@ -187,12 +188,12 @@
   <strong> <em> Critical Perspectives on Large-Scale Distributed Applications and Production Grids (Best Paper Award) </em> </strong>
   <em> Shantenu Jha, Daniel S. Katz, Manish Parashar, Omer Rana, Jon B. Weissman </em>
   The 10th IEEE/ACM Conference on Grid Computing 2009,  2009
-   [<a title="pdf" href=""http://www.cct.lsu.edu/~sjha/dpa_publications/dpa_grid2009.pdf"">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpagrid2009
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpagrid2009.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpagrid2009
   <br><br>
   <strong> <em> Modelling Data-Driven CO$_2$ Sequestration Using Distributed HPC CyberInfrastructure </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha </em>
   Microsoft Research eScience Workshop, Pittsburgh,  2009
-   [<a title="pdf" href="http://research.microsoft.com/en-us/UM/redmond/events/eScience2009/17863/lecture.htm">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: co2_escience2009
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/co2_escience2009.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: co2_escience2009
   <br><br>
 
  <h2><u>2008</u></h2>
@@ -201,7 +202,7 @@
   <em> Shantenu Jha, Yaakoub El-Khamra, Hartmut Kaiser, Ole Weidner, Andre Merzky </em>
   Proceedings of TeraGrid08,  2008
   Winner of the Performance Challenge Award
-   [<a title="pdf" href="http://tinyurl.com/5du32j">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_tg08
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_tg08
   <br><br>
   <strong> <em> Distributed Replica-Exchange Simulations on Production Environments Using SAGA and Migol </em> </strong>
   <em> Andre Luckow, Shantenu Jha, Joohyun Kim, Andre Merzky, Bettina Schnor </em>
@@ -239,17 +240,17 @@
   <strong> <em> SAGA Extension: Message API </em> </strong>
   <em> Andre Merzky </em>
   Open Grid Forum, OGF Proposed Recommendation, GFD.178,  2011
-   [<a title="pdf" href="http://ogf.org/documents/GFD.178.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-msg
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-msg.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-msg
   <br><br>
   <strong> <em> SAGA Extension: Advert API </em> </strong>
   <em> Andre Merzky </em>
   Open Grid Forum, OGF Proposed Recommendation, GFD.177,  2011
-   [<a title="pdf" href="http://ogf.org/documents/GFD.177.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-advert
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-advert.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-advert
   <br><br>
   <strong> <em> Survey and Analysis of Production Distributed Computing Infrastructures (CI-TR-7-0811) </em> </strong>
   <em> Daniel S. Katz, Shantenu Jha, Manish Parashar, Omer F. Rana, Jon Weissman </em>
   Computation Institute, University of Chicago \& Argonne National Laboratory,  2011
-   [<a title="pdf" href="http://www.ci.uchicago.edu/research/papers/CI-TR-7-0811">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-pdci-tr
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-pdci-tr.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-pdci-tr
   <br><br>
 
  <h2><u>2008</u></h2>
@@ -257,7 +258,7 @@
   <strong> <em> SAGA Extension: Checkpoint and Recovery API (CPR) </em> </strong>
   <em> Andre Merzky, Andre Luckow, Derek Simmel </em>
   Open Grid Forum, Draft for an OGF Proposed Recommendation Document,  2008
-   [<a title="pdf" href="http://www.ogf.org/OGF27/materials/1767/saga_cpr.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-cpr
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-cpr.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-cpr
   <br><br>
 
  <h2><u>2007</u></h2>
@@ -265,7 +266,7 @@
   <strong> <em> A Simple API for Grid Applications (SAGA) </em> </strong>
   <em> Tom Goodale, Shantenu Jha, Hartmut Kaiser, Thilo Kielmann, Pascal Kleijer, Andre Merzky, John Shalf, Christopher Smith </em>
   Open Grid Forum, OGF Recommendation, GFD.90,  2007
-   [<a title="pdf" href="http://ogf.org/documents/GFD.90.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-90
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-90.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-90
   <br><br>
 
  <h2><u>2006</u></h2>
@@ -273,10 +274,16 @@
   <strong> <em> A Requirements Analysis for a Simple API for Grid Applications </em> </strong>
   <em> Shantenu Jha, Andre Merzky </em>
   Global Grid Forum, GGF Proposed Recommendation, GFD.71,  2006
-   [<a title="pdf" href="http://ogf.org/documents/GFD.71.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-uca
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-uca.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-uca
   <br><br>
   <strong> <em> A Collection of Use Cases for a Simple API for Grid Applications </em> </strong>
   <em> Andre Merzky, Shantenu Jha </em>
   Global Grid Forum, GGF Proposed Recommendation, GFD.70,  2006
-   [<a title="pdf" href="http://ogf.org/documents/GFD.70.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-uc
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-uc.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: ogf-gfd-uc
   <br><br>
+<hr><br><br>
+
+
+ <a name="bibtex"></a><h1><u>BibTeX</u></h1>
+
+ &bull; <a href="https://raw.github.com/saga-project/radical.wp/master/publications/radical_rutgers.bib"><b>radical_rutgers.bib</b></a> <br>

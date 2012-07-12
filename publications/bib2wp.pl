@@ -14,11 +14,14 @@ BEGIN
 
 ################################################################################
 #
-# get args and check syntax
+# globals, args and syntax check
 #
 my $BIB = shift || usage ("Missing 'bib' argument.");
 my $WP  = shift || usage ("Missing 'wp'  argument.");
 scalar (@ARGV)  && usage ("Too many arguments.");
+
+my $BIBROOT = "https://raw.github.com/saga-project/radical.wp/master/publications";
+my $PDFROOT = "$BIBROOT/pdf";
 ################################################################################
 
 ################################################################################
@@ -37,7 +40,6 @@ scalar (@ARGV)  && usage ("Too many arguments.");
   my $heading = "";    # heading (year) to be printed if there are entries for that year
   my $headed  =  0;    # was heading printed?
   my $biburl  = "https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib";
-
 
   $in->close ();       # got all lines - can be closed
 
@@ -119,6 +121,8 @@ scalar (@ARGV)  && usage ("Too many arguments.");
             my $num    = $e->{'number'}     || "";
             my $type   = $e->{'type'}       || "";
             my $url    = $e->{'published'}  || $e->{'url'} || "";
+            my $pdf    = $url;
+
 
             # we expect these keys for all valid entries
             unless ( $key    ) { die  "Error  : no key    for entry ?\n";    }
@@ -133,9 +137,19 @@ scalar (@ARGV)  && usage ("Too many arguments.");
             $book  .= ","           if $book;
 
             # grab pdf links
-            $url    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
-            $url    = " [<a title=\"pdf\" href=\"$url\">pdf</a>] " if $url;
+            $pdf    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
+            $url    = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] " if $pdf;
 
+            # if pdf does not exist in the 'pdf/' subdir, fetch it.  ONly if
+            # that succeeds we link the URL...
+            if ( $pdf && ! -e "pdf/$key.pdf" )
+            {
+              my $old = $url;
+              printf "fetching %-20s \t from $pdf ... ", "$key.pdf";
+              system ("wget -q -c $pdf -O 'pdf/$key.pdf' && echo 'ok' " . 
+                      "  || (echo 'fail' && rm pdf/$key.pdf && false)") and $url = "";
+            }
+ 
             # replace 'and's in author list
             $author =~ s/ and /, /g;
             $year   =~ s/\D//g;
@@ -159,7 +173,7 @@ scalar (@ARGV)  && usage ("Too many arguments.");
             $res .= sprintf ("  <em> $author </em>\n");
             $res .= sprintf ("  $book $month $year\n");
             $res .= sprintf ("  $note\n") if ( $note);
-            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $e->{_key}\n");
+            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $key\n");
             $res .= sprintf ("  <br><br>\n");
 
           } # parse ok
@@ -172,11 +186,16 @@ scalar (@ARGV)  && usage ("Too many arguments.");
     } # section line
   } # foreach line
 
-  # we got all entries parsed - print top links and all entries to output file
-  $out->print ("<hr><br>\n");
-  $out->print ($links);
-  $out->print ("<hr><br><br>\n");
-  $out->print ($res);
+  # we got all entries parsed - print top links and all entries to output file,
+  # and the bibtex link
+  $out->print  ("<hr><br>\n");
+  $out->print  ($links);
+  $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a> <br>\n");
+  $out->print  ("<hr><br><br>\n");
+  $out->print  ($res);
+  $out->print  ("<hr><br><br>\n");
+  $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
+  $out->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n");();
 
   $out->close (); # done, close output.
 

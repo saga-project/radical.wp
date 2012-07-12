@@ -1,0 +1,653 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Efficient large-scale replica-exchange simulations on production infrastructure </title>
+      <meta name="googlebot" content="NOODP" />
+      <meta name="HW.ad-path" content="/cgi/content/abstract/369/1949/3318" />
+      <meta content="/roypta/369/1949/3318.atom" name="HW.identifier" />
+      <meta name="DC.Format" content="text/html" />
+      <meta name="DC.Language" content="en" />
+      <meta content="Efficient large-scale replica-exchange simulations on production infrastructure"
+            name="DC.Title" />
+      <meta content="10.1098/rsta.2011.0151" name="DC.Identifier" />
+      <meta content="2011-08-28" name="DC.Date" />
+      <meta content="The Royal Society" name="DC.Publisher" />
+      <meta content="Abhinav Thota" name="DC.Contributor" />
+      <meta content="André Luckow" name="DC.Contributor" />
+      <meta content="Shantenu Jha" name="DC.Contributor" />
+      <meta content="130" name="citation_collection_id" />
+      <meta content="193" name="citation_collection_id" />
+      <meta content="44" name="citation_collection_id" />
+      <meta content="Philosophical Transactions of the Royal Society A: Mathematical,&#xA;&#x9;&#x9;&#x9;&#x9;Physical and Engineering Sciences"
+            name="citation_journal_title" />
+      <meta content="Phil. Trans. R. Soc. A" name="citation_journal_abbrev" />
+      <meta content="1364-503X" name="citation_issn" />
+      <meta content="1471-2962" name="citation_issn" />
+      <meta name="citation_author" content="Abhinav Thota" />
+      <meta name="citation_author" content="André Luckow" />
+      <meta name="citation_author" content="Shantenu Jha" />
+      <meta name="citation_author_email" content="sjha@cct.lsu.edu" />
+      <meta content="Efficient large-scale replica-exchange simulations on production infrastructure"
+            name="citation_title" />
+      <meta content="08/28/2011" name="citation_date" />
+      <meta content="369" name="citation_volume" />
+      <meta content="1949" name="citation_issue" />
+      <meta content="3318" name="citation_firstpage" />
+      <meta content="3335" name="citation_lastpage" />
+      <meta content="369/1949/3318" name="citation_id" />
+      <meta content="roypta;369/1949/3318" name="citation_mjid" />
+      <meta content="10.1098/rsta.2011.0151" name="citation_doi" />
+      <meta content="http://rsta.royalsocietypublishing.org/content/369/1949/3318.abstract"
+            name="citation_abstract_html_url" />
+      <meta content="http://rsta.royalsocietypublishing.org/content/369/1949/3318.full"
+            name="citation_fulltext_html_url" />
+      <meta content="http://rsta.royalsocietypublishing.org/content/369/1949/3318.full.pdf"
+            name="citation_pdf_url" />
+      <meta content="http://rsta.royalsocietypublishing.org/content/369/1949/3318"
+            name="citation_public_url" />
+      <meta content="21768142" name="citation_pmid" />
+      <meta name="citation_section" content="Articles" />
+      <meta name="robots" content="noarchive" />
+      <link rel="stylesheet" type="text/css" media="all" href="/shared/css/hw-global.css" />
+      <link rel="stylesheet" type="text/css" media="print" href="/shared/css/hw-print.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/publisher/css/hw-publisher-global.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/local/css/hw-local-global.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/local/css/hw-local-sidebars.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/shared/css/hw-page-content.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/shared/css/jquery.fancybox-1.3.4.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/shared/css/hw-global-colexpand.css" />
+      <link rel="stylesheet" type="text/css" media="all"
+            href="/publisher/css/hw-publisher-page-content.css" /><script type="text/javascript" id="session-d5008643e1">var callbackToken='527A2F27BCADB5C';</script><script type="text/javascript" src="/shared/js/jquery-min.js"></script><script type="text/javascript" src="/shared/js/hw-shared.js"></script><script type="text/javascript" src="/publisher/js/hw-publisher-shared.js"></script><script type="text/javascript" src="/shared/js/pages/hw-content.js"></script><script type="text/javascript" src="/shared/js/util/hw-view-specific-access-check.js"></script><script type="text/javascript" src="/shared/js/fancybox/jquery.fancybox-1.3.4.js"></script><script type="text/javascript" src="/shared/js/fancybox/jquery.easing-1.3.pack.js"></script><script type="text/javascript"
+              src="/shared/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script><script type="text/javascript" src="/shared/js/util/hw-col-expand.js"></script></head>
+   <body>
+      <div class="hw-gen-page pagetype-content" id="pageid-content" itemscope="itemscope"
+           itemtype="http://schema.org/ScholarlyArticle">
+         <div id="header">
+            	<a href="http://royalsocietypublishing.org" class="button_rs_homepage">Royal Society Homepage</a>
+            	<a href="/"><img title="Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+                    alt="Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+                    id="main-logo"
+                    src="/local/img/journal_logo.gif" /></a>
+            	
+            <div class="corner_top_left"></div>
+            	
+            <div class="corner_top_right"></div>
+            	
+         </div>
+         <p id="skip-link">
+            <a href="#content-block">Skip to main page content</a>
+            
+         </p>
+         <div id="navigation" class="clearfix">
+            	
+            <ul class="superfish">
+               <li class="sfbreadcrumb">
+                  		
+                  <ul class="button-list delimiter superfish">
+                     <li class="first"><a href="/" title="Home"><span>Home</span></a></li>
+                     <li><a href="/content/current" title="Current issue"><span>Current issue</span></a></li>
+                     <li><a href="/content/" title="Past issues"><span>Past issues</span></a></li>
+                     <li><a href="/site/misc/authors.xhtml" title="Submit"><span>Submit</span></a></li>
+                     <li><a href="http://royalsocietypublishing.org/site/librarians/subscriptions.xhtml"
+                           title="Subscribe"><span>Subscribe</span></a></li>
+                     <li class="last"><a href="http://royalsocietypublishing.org/cgi/alerts" title="Alerts"><span>Alerts</span></a></li>
+                     <div class="corner_bottom_left"></div>
+                     <div class="corner_bottom_right"></div>
+                  </ul>
+                  		
+               </li>
+            </ul>
+            
+         </div>
+         <div id="utilities">
+            
+            <ul class="button-list delimiter">
+               <li class="first"><a href="http://royalsocietypublishing.org/site/misc/about.xhtml" title="About us"><span>About us</span></a></li>
+               <li><a href="/help" title="Help"><span>Help</span></a></li>
+               <li><a href="http://royalsocietypublishing.org/site/misc/contacts.xhtml"
+                     title="Contact us"><span>Contact us</span></a></li>
+               <li><a href="http://royalsocietypublishing.org/feedback" title="Feedback"><span>Feedback</span></a></li>
+               <li class="last"><a href="http://royalsocietypublishing.org/site/misc/sitemap.xhtml"
+                     title="Sitemap"><span>Sitemap</span></a></li>
+            </ul>
+            	
+            <div class="corner_bottom_left"></div>
+            	
+            <div class="corner_bottom_right"></div>	
+            
+         </div>
+         <div id="ac" class="clearfix information_bar">
+            	
+            	
+            <div id="authstring">
+               
+               
+            </div>
+            
+            
+            <div class="corner_top_left"></div>
+            
+            <div class="corner_top_right"></div>
+            
+         </div>
+         <div id="content-block">
+            <div class="crossmark-logo">
+               <script type="text/javascript"
+                       src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+               <script type="text/javascript"
+                       src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script> 
+               <script type="text/javascript"
+                       src="http://crossmark.crossref.org/javascripts/crossmark.js"></script> 
+               <a id="open-crossmark" href="#"
+                  style="padding: 0; background: none; width: 135px;">
+                  <img style="border: 0; display: none;" id="crossmark-icon"
+                       src="http://crossmark.crossref.org/images/crossmark_button.png" /></a> 
+               
+               <div id="crossmark-dialog" style="display: none;" title=""> 
+                  
+                  <iframe id="crossmark-dialog-frame" frameborder="0"></iframe> 
+                  
+               </div> 
+               
+               
+            </div>
+            <div class="article abstract-view" itemprop="articleBody"><span class="highwire-journal-article-marker-start"></span><h1 id="article-title-1" itemprop="headline">Efficient large-scale replica-exchange simulations on production infrastructure</h1>
+               <div class="contributors">
+                  <ol class="contributor-list" id="contrib-group-1">
+                     <li class="contributor" id="contrib-1" itemprop="author" itemscope="itemscope"
+                         itemtype="http://schema.org/Person"><span class="name" itemprop="name"><a class="name-search"
+                              href="/search?author1=Abhinav+Thota&amp;sortspec=date&amp;submit=Submit">Abhinav Thota</a></span><a id="xref-aff-1-1" class="xref-aff" href="#aff-1">1</a><span class="xref-sep">,</span><a id="xref-aff-2-1" class="xref-aff" href="#aff-2">2</a>, 
+                     </li>
+                     <li class="contributor" id="contrib-2" itemprop="author" itemscope="itemscope"
+                         itemtype="http://schema.org/Person"><span class="name" itemprop="name"><a class="name-search"
+                              href="/search?author1=Andr%C3%A9+Luckow&amp;sortspec=date&amp;submit=Submit">André Luckow</a></span><a id="xref-aff-1-2" class="xref-aff" href="#aff-1">1</a> and 
+                     </li>
+                     <li class="last" id="contrib-3"><span class="name"><a class="name-search"
+                              href="/search?author1=Shantenu+Jha&amp;sortspec=date&amp;submit=Submit">Shantenu Jha</a></span><a id="xref-aff-1-3" class="xref-aff" href="#aff-1">1</a><span class="xref-sep">,</span><a id="xref-aff-3-1" class="xref-aff" href="#aff-3">3</a><span class="xref-sep">,</span><a id="xref-corresp-1-1" class="xref-corresp" href="#corresp-1">*</a></li>
+                  </ol>
+                  <ol class="affiliation-list">
+                     <li class="aff"><a id="aff-1" name="aff-1"></a><address><sup>1</sup><span class="addr-line">Centre for Computation and Technology</span>, Louisiana State University, <span class="addr-line">Baton Rouge, LA 70803, USA</span></address>
+                     </li>
+                     <li class="aff"><a id="aff-2" name="aff-2"></a><address><sup>2</sup><span class="addr-line">Department of Computer Science</span>, Louisiana State University, <span class="addr-line">Baton Rouge, LA 70803, USA</span></address>
+                     </li>
+                     <li class="aff"><a id="aff-3" name="aff-3"></a><address><sup>3</sup><span class="addr-line">Rutgers</span>, State University of New Jersey, <span class="addr-line">NJ, USA</span></address>
+                     </li>
+                  </ol>
+                  <ol class="corresp-list">
+                     <li class="corresp" id="corresp-1"><a class="rev-xref" href="#xref-corresp-1-1">↵</a><span class="corresp-label">*</span>Author for correspondence (<span class="em-link"><span class="em-addr">sjha{at}cct.lsu.edu</span></span>)
+                     </li>
+                  </ol>
+               </div>
+               <div class="section abstract" id="abstract-1" itemprop="description">
+                  <h2>Abstract</h2>
+                  
+                  <p id="p-2">Replica-exchange (RE) algorithms are used to understand physical phenomena—ranging from protein folding dynamics to binding
+                     affinity calculations. They represent a class of algorithms that involve a large number of loosely coupled ensembles, and
+                     are thus amenable to using distributed resources. We develop a framework for RE that supports different replica pairing (synchronous
+                     versus asynchronous) and exchange coordination mechanisms (centralized versus decentralized) and which can use a range of
+                     production cyberinfrastructures concurrently. We characterize the performance of both RE algorithms at an unprecedented number
+                     of cores employed—the number of replicas and the typical number of cores per replica—on the production distributed infrastructure.
+                     We find that the asynchronous algorithms outperform the synchronous algorithms, even though details of the specific implementations
+                     are important determinants of performance.
+                  </p>
+                  
+               </div>
+               <ul class="kwd-group">
+                  <li class="kwd"><span><a class="kwd-search"
+                           href="/search?fulltext=replica+exchange&amp;sortspec=date&amp;submit=Submit&amp;andorexactfulltext=phrase">replica exchange</a></span></li>
+                  <li class="kwd"><span><a class="kwd-search"
+                           href="/search?fulltext=SAGA&amp;sortspec=date&amp;submit=Submit&amp;andorexactfulltext=phrase">SAGA</a></span></li>
+                  <li class="kwd"><span><a class="kwd-search"
+                           href="/search?fulltext=large-scale+distributed+cyberinfrastructure&amp;sortspec=date&amp;submit=Submit&amp;andorexactfulltext=phrase">large-scale distributed cyberinfrastructure</a></span></li>
+               </ul>
+               <div class="section fn-group" id="fn-group-1">
+                  <h2>Footnotes</h2>
+                  <ul>
+                     <li class="fn-other" id="fn-1">
+                        <p id="p-1">One contribution of 12 to a Theme Issue ‘<a href="http://rsta.royalsocietypublishing.org/content/369/1949.toc">e-Science: novel research, new science and enduring impact</a>’.
+                        </p>
+                     </li>
+                  </ul>
+               </div>
+               <ul class="copyright-statement">
+                  <li class="fn" id="copyright-statement-1">This journal is © 2011 The Royal Society</li>
+               </ul><span class="highwire-journal-article-marker-end"></span></div>
+            <div class="social-bookmarking">
+               
+               <ul class="social-bookmark-links">
+                  <li class="social-bookmarking-item social-bookmarking-item-citeulike"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=CITEULIKE"><img src="/shared/img/common/social-bookmarking/citeulike.gif"
+                             alt="Add to CiteULike"
+                             title="CiteULike" /></a><span class="soc-bm-link-text">CiteULike</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-connotea"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=CONNOTEA"><img src="/shared/img/common/social-bookmarking/connotea.gif" alt="Add to Connotea"
+                             title="Connotea" /></a><span class="soc-bm-link-text">Connotea</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-delicious"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=DEL_ICIO_US"><img src="/shared/img/common/social-bookmarking/delicious.gif"
+                             alt="Add to Delicious"
+                             title="Delicious" /></a><span class="soc-bm-link-text">Delicious</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-digg"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=DIGG"><img src="/shared/img/common/social-bookmarking/digg.gif" alt="Add to Digg"
+                             title="Digg" /></a><span class="soc-bm-link-text">Digg</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-facebook"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/short/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=FACEBOOK"
+                        class="sb-facebook"
+                        rel="external-nw"><img src="/shared/img/common/social-bookmarking/facebook.gif" alt="Add to Facebook"
+                             title="Facebook" /></a><span class="soc-bm-link-text">Facebook</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-googleplus"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=GOOGLEPLUS&amp;log_only=yes"><img src="/shared/img/common/social-bookmarking/googleplus.jpg" alt="Add to Google+"
+                             title="Google+" /></a><span class="soc-bm-link-text">Google+</span></li>
+                  <li class="social-bookmarking-item social-bookmarking-item-twitter"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=TWITTER"><img src="/shared/img/common/social-bookmarking/twitter.gif" alt="Add to Twitter"
+                             title="Twitter" /></a><span class="soc-bm-link-text">Twitter</span></li>
+               </ul>
+               
+               <p class="social-bookmarking-help"><a href="/help/social_bookmarks.dtl">What's this?</a></p>
+               
+            </div><span id="related-urls"></span></div>
+         <div id="col-2">
+            
+            <div class="article-nav sidebar-nav">
+               <a href="/content/369/1949/3300.short" title="Previous article" class="previous">« Previous</a><span class="article-nav-sep"> | </span><a href="/content/369/1949/3336.short" title="Next article" class="next">Next Article »</a>
+               
+               <span class="toc-link">
+                  				<a href="/content/369/1949.toc" title="Table of Contents">Table of Contents</a>
+                  			</span>
+               
+               
+            </div>
+            <div id="theme-issue" class="theme-issue">
+               This is one article from the
+               <a href="/content/369/1949.toc">
+                  Theme Issue 'e-Science: novel research, new science and enduring impact' compiled and edited by David W. Walker, Malcolm P.
+                  Atkinson, John M. Brooke and Paul Watson</a>
+               
+            </div>
+            <div class="content-box" id="article-cb-main">
+               <div class="cb-contents">
+                  <h3 class="cb-contents-header"><span>This Article</span></h3>
+                  <div class="cb-section cb-slug">
+                     <ol>
+                        <li>
+                           <div id="slugline">
+                              
+                              
+                              	    
+                              
+                              doi:
+                              <span title="10.1098/rsta.2011.0151" class="slug-doi">10.1098/rsta.2011.0151
+                                 </span>
+                              <cite>
+                                 	    <abbr title="Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+                                       class="slug-jnl-abbrev">
+                                    <nlm:abbrev-journal-title xmlns:nlm="http://schema.highwire.org/NLM/Journal" abbrev-type="publisher">Phil. Trans. R. Soc. A</nlm:abbrev-journal-title></abbr><span class="slug-pub-date" itemprop="datePublished">
+                                    28 August 2011 
+                                    </span>
+                                 	    <span class="slug-vol">
+                                    vol. 369 
+                                    </span><span class="slug-issue">
+                                    no. 1949 
+                                    </span><span class="slug-pages">
+                                    3318-3335
+                                    </span>
+                                 </cite>
+                              
+                              
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div class="cb-section cb-views">
+                     <ol>
+                        <li class="abstract-view-link primary"><span class="variant-indicator">» <span>Abstract</span></span><span class="viewspecificaccesscheck roypta;369/1949/3318 abstract"></span></li>
+                        <li class="notice full-text-view-link primary"><a href="/content/369/1949/3318.full" rel="view-full-text">Full Text</a><span class="viewspecificaccesscheck roypta;369/1949/3318 full"></span></li>
+                        <li class="notice full-text-pdf-view-link primary"><a href="/content/369/1949/3318.full.pdf+html" rel="view-full-text.pdf">Full Text (PDF)</a><span class="viewspecificaccesscheck roypta;369/1949/3318 reprint"></span></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible" id="cb-art-cat">
+                     <h4 class="cb-section-header"><span>Classifications</span></h4>
+                     <ol>
+                        <li>
+                           <ul class="subject-headings last-child">
+                              <li><a class="tocsection-search"
+                                    href="/search?tocsectionid=Articles&amp;sortspec=date&amp;submit=Submit">Articles</a></li>
+                           </ul>
+                        </li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible" id="cb-art-svcs">
+                     <h4 class="cb-section-header"><span>Services</span></h4>
+                     <ol>
+                        <li class="mail-a-friend-link icon-link"><a href="/email?gca=roypta;369/1949/3318&amp;current-view-path=/content/369/1949/3318.abstract">
+                              Email this article to a friend
+                              </a></li>
+                        <li class="alert-link icon-link"><a href="/cgi/alerts/ctalert?alertType=citedby&amp;addAlert=cited_by&amp;cited_by_criteria_resid=roypta;369/1949/3318&amp;saveAlert=no&amp;return-type=article&amp;return_url=http://rsta.royalsocietypublishing.org/content/369/1949/3318.abstract">Alert me when this article is cited</a></li>
+                        <li class="alert-link icon-link"><a href="/cgi/alerts/ctalert?alertType=correction&amp;addAlert=correction&amp;correction_criteria_value=369/1949/3318&amp;saveAlert=no&amp;return-type=article&amp;return_url=http://rsta.royalsocietypublishing.org/content/369/1949/3318.abstract">Alert me if a correction is posted</a></li>
+                        <li class="alert-link eletter-alert-link icon-link"><a href="/cgi/alerts/ctalert?alertType=eletter&amp;addAlert=eletter&amp;eletter_criteria_value=369/1949/3318&amp;saveAlert=no&amp;return-type=article&amp;return_url=http://rsta.royalsocietypublishing.org/content/369/1949/3318.abstract">Alert me when eletters are published</a></li>
+                        <li class="usage-stats-link icon-link"><a href="/articleusage?rid=369/1949/3318" rel="nofollow">Article Usage Statistics</a></li>
+                        <li class="similar-link"><a href="/search?qbe=roypta;369/1949/3318&amp;citation=Thota%20et%20al.%20369%20%281949%29:%203318&amp;submit=yes">Similar articles in this journal</a></li>
+                        <li class="similar-link"><a href="/external-ref?access_num=roypta%3B369%2F1949%2F3318&amp;link_type=ISI_RELATEDRECORDS"
+                              id="cb-isi-similar-articles"
+                              class="similar-link">Similar articles in Web of Science</a></li>
+                        <li class="similar-link"><a href="/external-ref?access_num=21768142&amp;link_type=MED_NBRS"
+                              class="similar-link">Similar articles in PubMed</a></li>
+                        <li class="cit-man-link icon-link cite-link"><a href="/citmgr?gca=roypta;369/1949/3318">Download to citation manager</a></li>
+                        <li class="copyright-link icon-link"><a class="request-permissions" rel="external-nw"
+                              href="https://s100.copyright.com/AppDispatchServlet?publisherName=theroysoc&amp;publication=1471-2962&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure&amp;publicationDate=August%2028%2C%202011&amp;author=Abhinav%20Thota%2C%20Andr%C3%A9%20Luckow%2C%20Shantenu%20Jha&amp;contentID=10.1098%2Frsta.2011.0151&amp;volumeNum=369&amp;issueNum=1949&amp;copyright=The%20Royal%20Society&amp;orderBeanReset=true">Permissions</a></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible" id="cb-letter-cit">
+                     <h4 class="cb-section-header"><span>Responses</span></h4>
+                     <ol>
+                        <li><a href="/letters/submit/roypta;369/1949/3318">Submit an eLetter</a></li>
+                        <li><span class="eletters-no-responses-published">No eLetters published</span></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible default-closed" id="cb-art-cit">
+                     <h4 class="cb-section-header"><span>Citing Articles</span></h4>
+                     <ol>
+                        <li class="hw-citing-link"><a href="/content/369/1949/3318.abstract?cited-by=yes&amp;legid=roypta;369/1949/3318#cited-by"
+                              id="cb-hw-citing-articles">Load citing article information</a></li>
+                        <li><a href="/cgi/crossref-forward-links/369/1949/3318" rel="external-nw"
+                              id="cb-crossref-citing-articles">Citing articles via CrossRef</a></li>
+                        <li><a href="/external-ref?access_num=%2Froypta%2F369%2F1949%2F3318&amp;link_type=ISI_CITING&amp;accnum_type=native"
+                              rel="external-nw"
+                              id="cb-isi-citing-articles">Citing articles via Web of Science</a></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible default-closed" id="cb-art-gs">
+                     <h4 class="cb-section-header"><span>Google Scholar</span></h4>
+                     <ol>
+                        <li class="cb-art-gs-auth author-link"><a href="http://scholar.google.com/scholar?q=%22author%3AThota%20author%3AA.%22"
+                              class="cb-art-gs-auth author-link">Articles by  Thota, A.</a></li>
+                        <li class="cb-art-gs-auth author-link"><a href="http://scholar.google.com/scholar?q=%22author%3AJha%20author%3AS.%22"
+                              class="cb-art-gs-auth author-link">Articles by  Jha, S.</a></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible default-closed" id="cb-art-pm">
+                     <h4 class="cb-section-header"><span>PubMed</span></h4>
+                     <ol>
+                        <li class="cb-art-pm-cite cite-link icon-link"><a href="/external-ref?access_num=21768142&amp;link_type=PUBMED"
+                              class="cb-art-pm-cite cite-link icon-link">PubMed citation</a></li>
+                        <li class="cb-art-pm-auth author-link"><a href="/external-ref?access_num=Thota%20A&amp;link_type=AUTHORSEARCH"
+                              class="cb-art-pm-auth author-link">Articles by  Thota, A.</a></li>
+                        <li class="cb-art-pm-auth author-link"><a href="/external-ref?access_num=Jha%20S&amp;link_type=AUTHORSEARCH"
+                              class="cb-art-pm-auth author-link">Articles by  Jha, S.</a></li>
+                        <li>
+                           <div id="cb-entrez-links-placeholder"><a href="/entrez-links/21768142"></a></div>
+                        </li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible default-closed" id="cb-art-rel">
+                     <h4 class="cb-section-header"><span>Related Content</span></h4>
+                     <ol>
+                        <li><a href="/cgi/collection/molecular_computing">molecular computing</a></li>
+                        <li><a href="/cgi/collection/e-science">e-science</a></li>
+                        <li><a href="/cgi/collection/computational_biology">computational biology</a></li>
+                     </ol>
+                  </div>
+                  <div class="cb-section collapsible default-closed soc-links icon-link"
+                       id="cb-art-soc">
+                     <h4 class="cb-section-header"><span>Social Bookmarking</span></h4>
+                     <ol>
+                        <li>
+                           <div class="social-bookmarking">
+                              
+                              <ul class="social-bookmark-links">
+                                 <li class="social-bookmarking-item social-bookmarking-item-citeulike"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=CITEULIKE"><img src="/shared/img/common/social-bookmarking/citeulike.gif"
+                                            alt="Add to CiteULike"
+                                            title="CiteULike" /></a><span class="soc-bm-link-text">CiteULike</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-connotea"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=CONNOTEA"><img src="/shared/img/common/social-bookmarking/connotea.gif" alt="Add to Connotea"
+                                            title="Connotea" /></a><span class="soc-bm-link-text">Connotea</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-delicious"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=DEL_ICIO_US"><img src="/shared/img/common/social-bookmarking/delicious.gif"
+                                            alt="Add to Delicious"
+                                            title="Delicious" /></a><span class="soc-bm-link-text">Delicious</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-digg"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=DIGG"><img src="/shared/img/common/social-bookmarking/digg.gif" alt="Add to Digg"
+                                            title="Digg" /></a><span class="soc-bm-link-text">Digg</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-facebook"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/short/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=FACEBOOK"
+                                       class="sb-facebook"
+                                       rel="external-nw"><img src="/shared/img/common/social-bookmarking/facebook.gif" alt="Add to Facebook"
+                                            title="Facebook" /></a><span class="soc-bm-link-text">Facebook</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-googleplus"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=GOOGLEPLUS&amp;log_only=yes"><img src="/shared/img/common/social-bookmarking/googleplus.jpg" alt="Add to Google+"
+                                            title="Google+" /></a><span class="soc-bm-link-text">Google+</span></li>
+                                 <li class="social-bookmarking-item social-bookmarking-item-twitter"><a href="/external-ref?tag_url=http://rsta.royalsocietypublishing.org/cgi/content/long/369/1949/3318&amp;title=Efficient%20large-scale%20replica-exchange%20simulations%20on%20production%20infrastructure+--+Thota%20et%20al.%20369%20%281949%29%3A%203318+--+RSTA&amp;doi=10.1098/rsta.2011.0151&amp;link_type=TWITTER"><img src="/shared/img/common/social-bookmarking/twitter.gif" alt="Add to Twitter"
+                                            title="Twitter" /></a><span class="soc-bm-link-text">Twitter</span></li>
+                              </ul>
+                              
+                              <p class="social-bookmarking-help"><a href="/help/social_bookmarks.dtl">What's this?</a></p>
+                              
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+            </div>
+            
+            
+            <div class="corner_top_left"></div>
+            <div class="corner_top_right"></div>
+            <div class="corner_bottom_left"></div>
+            <div class="corner_bottom_right"></div>
+            
+         </div>
+         <div id="col-3">
+            
+            <div id="article_finder">
+               
+               <h3>Search Philosophical Transactions A</h3>
+               	
+               <form action="/search" method="get"><label for="header-qs-input" id="header-qs-search-label">keywords</label><input value="keywords" type="text" name="fulltext" id="header-qs-input" /><input type="hidden" name="submit" value="yes" /><input type="hidden" value="and" name="andorexactfulltext" /><p class="button"><input value="Search" alt="Link: Go" type="image"
+                            src="/publisher/img/structural/buttons/63x22_button_search.png"
+                            id="header-qs-search-go" /></p>
+                  <div class="adv-search-link"><a href="/search">Advanced »</a></div>
+               </form>
+               
+               	
+               <div class="corner_top_left"></div>
+               <div class="corner_top_right"></div>
+               <div class="corner_bottom_left"></div>
+               <div class="corner_bottom_right"></div>
+               
+            </div>
+            <div class="col-space sb-div"></div>
+            <div id="subnavigation">
+               		
+               		
+               		
+               
+               <ul class="button-list pub-links">
+                  <li>
+                     <a href="/site/misc/authors.xhtml">Author Information</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/metrics.xhtml">Citation Metrics</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/contacts.xhtml">Contact Information</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/guest-editors.xhtml">Guest Editor Information</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/misc/style-guide.xhtml">Preparing your article</a>
+                     
+                  </li>
+                  <li>
+                     <a href="http://royalsocietypublishing.org/site/authors/policy.xhtml">Publishing Policy</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/purchasing.xhtml">Purchasing Information</a>
+                     
+                  </li>
+                  <li>
+                     <a href="http://royalsocietypublishing.org/site/librarians/Librarian-Recommendation-Form.xhtml">Recommend to your library</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/referee_information.xhtml">Referee Information</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/cgi/collection">Subject Collections</a>
+                     
+                  </li>
+                  <li>
+                     <a href="/site/misc/EditingABook.xhtml">Thinking of Editing a Book?</a>
+                     
+                  </li>
+               </ul>
+               
+               		
+               		
+               <div class="corner_top_left"></div>
+               <div class="corner_top_right"></div>
+               <div class="corner_bottom_left"></div>
+               <div class="corner_bottom_right"></div>
+               	
+            </div>
+            <div class="col-space sb-div"></div>
+            <div id="social_network" class="lozenge_sidebar">
+               	
+               
+               <h3 class="publisher">Social Networking</h3>
+               
+               <p>
+                  <a href="http://www.facebook.com/RoyalSocietyPublishing.FanPage">
+                     <img class="no-wrap"
+                          src="http://creative.ak.fbcdn.net/ads3/creative/pressroom/jpg/n_1234209334_facebook_logo.jpg"
+                          width="85"
+                          alt="facebook" />
+                     </a>
+                  <a href="http://twitter.com/RSocPublishing">
+                     <img class="no-wrap" src="http://twitter-badges.s3.amazonaws.com/twitter-b.png"
+                          width="80"
+                          alt="twitter" />
+                     </a>
+                  
+               </p>
+               
+               	
+               <div class="corner_top_left"></div>
+               <div class="corner_top_right"></div>
+               <div class="corner_bottom_left"></div>
+               <div class="corner_bottom_right"></div>
+               	
+            </div>
+            
+            <div class="col-space sb-div"></div>
+            <div class="lozenge_sidebar most-links-box js-marker">
+               
+               <div class="most-header">
+                  
+                  <h3>Most</h3>
+                  
+               </div>
+               
+               <ul>
+                  <li class="most-cur-sel">
+                     <h4>Read</h4>
+                     		
+                     
+                     <div class="latest-content">
+                        
+                        <ul>
+                           <li class="first-item"><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/370/1969/2949?rss=1&amp;amp;ssource=mfr">Structures of pseudo-decagonal approximants in Al-Co-Ni</a></li>
+                           <li><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/368/1915/1333?rss=1&amp;amp;ssource=mfr">Surface modification, functionalization and bioconjugation of colloidal inorganic nanoparticles</a></li>
+                           <li class="last-item"><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/369/1934/20?rss=1&amp;amp;ssource=mfr">Beyond 'dangerous' climate change: emission scenarios for a new world</a></li>
+                        </ul>
+                        <a href="http://rsta.royalsocietypublishing.org/reports/most-read"
+                           class="view-all">» View all Most Read articles</a>
+                        
+                     </div>
+                     
+                     		
+                     <div class="corner_top_left"></div>
+                     <div class="corner_top_right"></div>
+                     <div class="corner_bottom_left"></div>
+                     <div class="corner_bottom_right"></div>
+                     
+                  </li>
+                  <li>
+                     <h4>Cited</h4>
+                     		
+                     
+                     <div class="latest-content">
+                        
+                        <ul>
+                           <li class="first-item"><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/332/1627/511?rss=1&amp;amp;ssource=mfc">The Distributions of the Apparent Open Times and Shut Times in a Single Channel Record when Brief Events Cannot Be Detected</a></li>
+                           <li><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/368/1920/2595?rss=1&amp;amp;ssource=mfc">A vision and strategy for the virtual physiological human in 2010 and beyond</a></li>
+                           <li class="last-item"><a href="http://rsta.royalsocietypublishing.org/cgi/content/short/366/1878/3001?rss=1&amp;amp;ssource=mfc">Genes and causation</a></li>
+                        </ul>
+                        <a href="http://rsta.royalsocietypublishing.org/reports/most-cited"
+                           class="view-all">» View all Most Cited articles</a>
+                        
+                     </div>
+                     
+                     		
+                     <div class="corner_top_left"></div>
+                     <div class="corner_top_right"></div>
+                     <div class="corner_bottom_left"></div>
+                     <div class="corner_bottom_right"></div>
+                     
+                  </li>
+               </ul>
+               
+            </div>
+            <ul class="tower-ads">
+               <li class="no-ad tower"><span>  </span></li>
+            </ul>
+            
+            
+         </div>
+         <div id="foot" class="clearfix">
+            
+            <ul class="button-list delimiter">
+               <li class="first"><a href="/help" title="Help"><span>Help</span></a></li>
+               <li><a href="http://royalsocietypublishing.org/site/misc/privacy.xhtml"
+                     title="Privacy Policy"><span>Privacy Policy</span></a></li>
+               <li><a href="http://royalsocietypublishing.org/site/misc/cookies.xhtml"
+                     title="Cookies"><span>Cookies</span></a></li>
+               <li><a href="http://royalsocietypublishing.org/site/misc/contacts.xhtml"
+                     title="Contact us"><span>Contact us</span></a></li>
+               <li class="last"><a href="http://royalsocietypublishing.org/site/misc/sitemap.xhtml"
+                     title="Sitemap"><span>Sitemap</span></a></li><script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try{
+        var pageTracker = _gat._getTracker("UA-7236413-1");
+        pageTracker._setDomainName(".royalsocietypublishing.org");
+        pageTracker._trackPageview();
+        } catch(err) {}
+        </script><script type="text/javascript">
+        try{
+        var pageTracker = _gat._getTracker("UA-31718707-1");
+        pageTracker._setDomainName(".royalsocietypublishing.org");
+        pageTracker._trackPageview();
+        } catch(err) {}
+        </script></ul>
+            
+            <p class="fright"><span>Online ISSN: </span>
+               <span class="issn">1471-2962</span> | <a href="http://royalsocietypublishing.org/site/librarians/terms.xhtml">Copyright ©  The Royal Society 2012</a></p>
+            
+            <p class="fright"><a href="http://royalsocietypublishing.org/site/misc/partners.xhtml"><span>Partner of Research4Life, PERii-INASP, CrossRef &amp; LOCKSS</span></a></p>
+            
+            <div class="corner_top_left"></div>
+            <div class="corner_top_right"></div>
+            <div class="corner_bottom_left"></div>
+            <div class="corner_bottom_right"></div>
+            
+         </div>
+      </div>
+   </body>
+</html>
