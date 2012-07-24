@@ -19,6 +19,15 @@
  <a name="Journal_Publications"></a><h1><u>Journal Publications</u></h1>
 
 
+ <h2><u>2012</u></h2>
+
+  <strong> <em> Distributed Computing Practice for Large-Scale Science \& Engineering Applications </em> </strong>
+  <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
+    2012
+  Computing and Concurrency: Practise and Experience (in press)
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-surveypaper.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-surveypaper
+  <br><br>
+
  <h2><u>2011</u></h2>
 
   <strong> <em> A Practical and Comprehensive Graduate Course preparing Students for Research involving Scientific Computing </em> </strong>
@@ -36,12 +45,6 @@
   <em> Abhinav Thota, Andre Luckow, Shantenu Jha </em>
   Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 369 # 1949,  2011
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/async_repex11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: async_repex11
-  <br><br>
-  <strong> <em> Distributed Computing Practice for Large-Scale Science \& Engineering Applications </em> </strong>
-  <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
-  submitted to ACM Computing Surveys,  2011
-  under review, draft available
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-surveypaper.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: dpa-surveypaper
   <br><br>
   <strong> <em> Understanding Application-Level Interoperability: Scaling-Out MapReduce over High-Performance Grids and Clouds </em> </strong>
   <em> Saurabh Sehgal, Miklos Erdelyi, Andre Merzky, Shantenu Jha </em>
@@ -87,6 +90,14 @@
  <a name="Conference_Papers"></a><h1><u>Conference Papers</u></h1>
 
 
+ <h2><u>2012</u></h2>
+
+  <strong> <em> Towards a common model for pilot-jobs </em> </strong>
+  <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Sharath Maddineni, Shantenu Jha </em>
+  Proceedings of the 21st International Symposium on High-Performance Parallel and Distributed Computing,HPDC'12, June 2012
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: pilotjob-hpdc
+  <br><br>
+
  <h2><u>2011</u></h2>
 
   <strong> <em> Running Many Molecular Dynamics Simulations on Many Supercomputers </em> </strong>
@@ -95,13 +106,13 @@
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/bigjob-ccgrid12.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: bigjob-ccgrid12
   <br><br>
   <strong> <em> Towards high-throughput, high-performance computational estimation of binding affinities for patient specific HIV-1 protease sequences </em> </strong>
-  <em> Owain Kenway, David W. Wright, Helmut Heller, Andre Merzky, Gavin Pringle, Jules Wolfrat, Peter Coveney, Shantenu Jha, Shantenu </em>
+  <em> Owain Kenway, David W. Wright, Helmut Heller, Andre Merzky, Gavin Pringle, Jules Wolfrat, Peter Coveney, Shantenu Jha </em>
   Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery,  2011
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: tg-vph-interop
   <br><br>
   <strong> <em> P*: An Extensible Model of Pilot-Abstractions for Dynamic Execution </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Sharath Maddineni, Andre Merzky, Shantenu Jha </em>
-  under review,  2011
+  submitted to IEEE e-Science 2012 (under review),  2011
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: pstar11
   <br><br>
   <strong> <em> Building Gateways for Life-Science Applications using the Dynamic Application Runtime Environment (DARE) Framework </em> </strong>
@@ -201,7 +212,7 @@
   <strong> <em> Developing Large-Scale Adaptive Scientific Applications with Hard to Predict Runtime Resource Requirements </em> </strong>
   <em> Shantenu Jha, Yaakoub El-Khamra, Hartmut Kaiser, Ole Weidner, Andre Merzky </em>
   Proceedings of TeraGrid08,  2008
-  Winner of the Performance Challenge Award
+  Winner of the Performance Challenge Award http://www.cct.lsu.edu/~sjha/select_publications/tg08-performance-award.pdf
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_tg08
   <br><br>
   <strong> <em> Distributed Replica-Exchange Simulations on Production Environments Using SAGA and Migol </em> </strong>
