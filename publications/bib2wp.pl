@@ -69,7 +69,7 @@ my $PDFROOT = "$BIBROOT/pdf";
       $lnk =~ s/\s/_/iog;
 
       # add the section heading to the result, and add an entry in the top links
-      $res   .= sprintf ("\n\n <a name=\"$lnk\"></a><h1><u>$title</u></h1>\n\n");
+      $res   .= sprintf ("\n\n<a name=\"$lnk\"></a><h1><hr/><u>$title</u></h1>\n\n");
       $links .= sprintf (" &bull; <a href=\"#$lnk\"><b>$title</b></a> <br>\n");
     }
     elsif ( $line =~ /^#\s+(\d+?)\s*$/io )
@@ -190,8 +190,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   # and the bibtex link
   $out->print  ("<hr><br>\n");
   $out->print  ($links);
-  $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a> <br>\n");
-  $out->print  ("<hr><br><br>\n");
+  $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a><br><hr>\n");
   $out->print  ($res);
   $out->print  ("<hr><br><br>\n");
   $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");

@@ -3,11 +3,10 @@
  &bull; <a href="#Journal_Publications"><b>Journal Publications</b></a> <br>
  &bull; <a href="#Conference_Papers"><b>Conference Papers</b></a> <br>
  &bull; <a href="#Standards,_White_Papers,_Technical_Reports"><b>Standards, White Papers, Technical Reports</b></a> <br>
- &bull; <a href="#bibtex"><b>BibTeX</b></a> <br>
-<hr><br><br>
+ &bull; <a href="#bibtex"><b>BibTeX</b></a><br><hr>
 
 
- <a name="Book_Chapters"></a><h1><u>Book Chapters</u></h1>
+<a name="Book_Chapters"></a><h1><hr/><u>Book Chapters</u></h1>
 
   <strong> <em> Understanding Scientific Applications for Cloud Environments </em> </strong>
   <em> Shantenu Jha, Daniel S. Katz, Andre Luckow, Andre Merzky, Katerina Stamou </em>
@@ -16,7 +15,7 @@
   <br><br>
 
 
- <a name="Journal_Publications"></a><h1><u>Journal Publications</u></h1>
+<a name="Journal_Publications"></a><h1><hr/><u>Journal Publications</u></h1>
 
 
  <h2><u>2012</u></h2>
@@ -34,7 +33,7 @@
   <em> Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Frank L\"offler, Erik Schnetter </em>
   Procedia Computer Science, vol. 4,  2011
   Proceedings of the International Conference on Computational Science, ICCS 2011
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: csc7700-iccs
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/csc7700-iccs.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: csc7700-iccs
   <br><br>
   <strong> <em> Energy Landscape Analysis for Regulatory RNA Finding using Scalable Distributed Cyberinfrastructure </em> </strong>
   <em> Joohyun Kim, Wei Huang, Sharath Maddineni, Fareed Aboul-ela, Shantenu Jha </em>
@@ -49,7 +48,7 @@
   <strong> <em> Understanding Application-Level Interoperability: Scaling-Out MapReduce over High-Performance Grids and Clouds </em> </strong>
   <em> Saurabh Sehgal, Miklos Erdelyi, Andre Merzky, Shantenu Jha </em>
   Future Generation Computer Systems, vol. 27 # 5,  2011
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: fgcs-interop11
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/fgcs-interop11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: fgcs-interop11
   <br><br>
 
  <h2><u>2010</u></h2>
@@ -83,11 +82,11 @@
   <strong> <em> SAGA: A Simple API for Grid applications, High-Level Application Programming on the Grid </em> </strong>
   <em> Tom Goodale, Shantenu Jha, Harmut Kaiser, Thilo Kielmann, Pascal K leijer, Gregor von Laszewski, Craig Lee, Andre Merzky, Hrabri Rajic, John Shalf </em>
   Computational Methods in Science and Technology, vol. 12 # 1,  2006
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: sagastuff
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/sagastuff.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: sagastuff
   <br><br>
 
 
- <a name="Conference_Papers"></a><h1><u>Conference Papers</u></h1>
+<a name="Conference_Papers"></a><h1><hr/><u>Conference Papers</u></h1>
 
 
  <h2><u>2012</u></h2>
@@ -141,7 +140,7 @@
   <strong> <em> What Is the Price of Simplicity? -- A Cross-Platform Evaluation of the SAGA API </em> </strong>
   <em> Mathijs Den Burger, Ceriel Jacobs, Thilo Kielmann, Andre Merzky, Ole Weidner, Hartmut Kaiser </em>
   Proceedings of the 16th international Euro-Par conference on Parallel processing: Part I,  2010
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_europar10
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/saga_europar10.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: saga_europar10
   <br><br>
   <strong> <em> Modelling data-driven CO2 sequestration using distributed HPC cyberinfrastructure </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha, Christopher D. White </em>
@@ -174,7 +173,7 @@
   <strong> <em> A Fresh Perspective on Developing and Executing DAG-Based Distributed Applications: A Case-Study of SAGA-Based Montage </em> </strong>
   <em> Andre Merzky, Katerina Stamou, Shantenu Jha, Daniel S. Katz </em>
   Proceedings of the 2009 Fifth IEEE International Conference on e-Science,  2009
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: merzky-fresh
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/merzky-fresh.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib">bib</a>]: merzky-fresh
   <br><br>
   <strong> <em> Developing Autonomic Distributed Scientific Applications: A Case Study From History Matching Using Ensemble Kalman-Filters </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha </em>
@@ -243,7 +242,7 @@
   <br><br>
 
 
- <a name="Standards,_White_Papers,_Technical_Reports"></a><h1><u>Standards, White Papers, Technical Reports</u></h1>
+<a name="Standards,_White_Papers,_Technical_Reports"></a><h1><hr/><u>Standards, White Papers, Technical Reports</u></h1>
 
 
  <h2><u>2011</u></h2>
