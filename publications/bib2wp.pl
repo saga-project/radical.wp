@@ -39,7 +39,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   my $links   = "";    # links to page sections at top
   my $heading = "";    # heading (year) to be printed if there are entries for that year
   my $headed  =  0;    # was heading printed?
-  my $biburl  = "https://raw.github.com/saga-project/radical.wp/master/radical_rutgers.bib";
+  my $biburl  = "$BIBROOT/radical_rutgers.bib";
 
   $in->close ();       # got all lines - can be closed
 
@@ -140,7 +140,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             $pdf    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
             $url    = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] " if $pdf;
 
-            # if pdf does not exist in the 'pdf/' subdir, fetch it.  ONly if
+            # if pdf does not exist in the 'pdf/' subdir, fetch it.  Only if
             # that succeeds we link the URL...
             if ( $pdf && ! -e "pdf/$key.pdf" )
             {
@@ -149,6 +149,20 @@ my $PDFROOT = "$BIBROOT/pdf";
               system ("wget -q -c $pdf -O 'pdf/$key.pdf' && echo 'ok' " . 
                       "  || (echo 'fail' && rm pdf/$key.pdf && false)") and $url = "";
             }
+
+            # if bib does not exist in the 'bib/' subdir, create it.  Only if
+            # that succeeds we link the URL...
+            if ( ! -e "bib/$key.bib" )
+            {
+              print "create bib/$key.bib\n";
+              open (BIB, ">bib/$key.bib") || die "Cannot create bib file bib/$key.bib: $!\n";
+              print BIB "\n################################################################################\n#\n";
+              print BIB "$sec";
+              print BIB "\n#\n################################################################################\n\n";
+              close (BIB);
+            }
+
+
  
             # replace 'and's in author list
             $author =~ s/ and /, /g;
@@ -173,7 +187,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             $res .= sprintf ("  <em> $author </em>\n");
             $res .= sprintf ("  $book $month $year\n");
             $res .= sprintf ("  $note\n") if ( $note);
-            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$biburl\">bib</a>]: $key\n");
+            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$BIBROOT/bib/$key.bib\">bib</a>]: $key\n");
             $res .= sprintf ("  <br><br>\n");
 
           } # parse ok
