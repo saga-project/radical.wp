@@ -1,7 +1,7 @@
 <hr><br>
  &bull; <a href="#Book_Chapters"><b>Book Chapters</b></a> <br>
  &bull; <a href="#Journal_Publications"><b>Journal Publications</b></a> <br>
- &bull; <a href="#Conference_Papers"><b>Conference Papers</b></a> <br>
+ &bull; <a href="#Conference_and_Workshop_Papers"><b>Conference and Workshop Papers</b></a> <br>
  &bull; <a href="#Standards,_White_Papers,_Technical_Reports"><b>Standards, White Papers, Technical Reports</b></a> <br>
  &bull; <a href="#bibtex"><b>BibTeX</b></a><br><hr>
 
@@ -86,11 +86,16 @@
   <br><br>
 
 
-<a name="Conference_Papers"></a><h1><hr/><u>Conference Papers</u></h1>
+<a name="Conference_and_Workshop_Papers"></a><h1><hr/><u>Conference and Workshop Papers</u></h1>
 
 
  <h2><u>2012</u></h2>
 
+  <strong> <em> Pilot-MapReduce: an extensible and flexible MapReduce implementation for distributed data </em> </strong>
+  <em> Pradeep Kumar Mantha, Andre Luckow, Shantenu Jha </em>
+  Proceedings of third international workshop on MapReduce and its Applications,  2012
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/Mantha:2012:PEF:2287016.2287020.bib">bib</a>]: Mantha:2012:PEF:2287016.2287020
+  <br><br>
   <strong> <em> Towards a common model for pilot-jobs </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Sharath Maddineni, Shantenu Jha </em>
   Proceedings of the 21st International Symposium on High-Performance Parallel and Distributed Computing,HPDC'12, June 2012
