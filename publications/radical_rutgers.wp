@@ -101,14 +101,14 @@
   Proceedings of the 21st International Symposium on High-Performance Parallel and Distributed Computing,HPDC'12, June 2012
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pilotjob-hpdc.bib">bib</a>]: pilotjob-hpdc
   <br><br>
+  <strong> <em> Running Many Molecular Dynamics Simulations on Many Supercomputers </em> </strong>
+  <em> Rajib Mukherjee et al </em>
+  Accepted for XSEDE'12,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/bigjob-ccgrid12.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/bigjob-ccgrid12.bib">bib</a>]: bigjob-ccgrid12
+  <br><br>
 
  <h2><u>2011</u></h2>
 
-  <strong> <em> Running Many Molecular Dynamics Simulations on Many Supercomputers </em> </strong>
-  <em> Rajib Mukherjee et al </em>
-  submitted to IEEE CCGrid 2012 (under review),  2011
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/bigjob-ccgrid12.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/bigjob-ccgrid12.bib">bib</a>]: bigjob-ccgrid12
-  <br><br>
   <strong> <em> Towards high-throughput, high-performance computational estimation of binding affinities for patient specific HIV-1 protease sequences </em> </strong>
   <em> Owain Kenway, David W. Wright, Helmut Heller, Andre Merzky, Gavin Pringle, Jules Wolfrat, Peter Coveney, Shantenu Jha </em>
   Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery,  2011
