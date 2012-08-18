@@ -29,6 +29,11 @@
 
  <h2><u>2011</u></h2>
 
+  <strong> <em> Efficient large-scale Replica-Exchange Simulations on Production Infrastructure </em> </strong>
+  <em> Abhinav Thota, Andre Luckow, Shantenu Jha </em>
+  Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 369 # 1949,  2011
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/async_repex11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/async_repex11.bib">bib</a>]: async_repex11
+  <br><br>
   <strong> <em> A Practical and Comprehensive Graduate Course preparing Students for Research involving Scientific Computing </em> </strong>
   <em> Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Frank L\"offler, Erik Schnetter </em>
   Procedia Computer Science, vol. 4,  2011
@@ -39,11 +44,6 @@
   <em> Joohyun Kim, Wei Huang, Sharath Maddineni, Fareed Aboul-ela, Shantenu Jha </em>
   Concurrency and Computation: Practice and Experience, vol. 23 # 17,  2011
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ecmls10_ccpe10.bib">bib</a>]: ecmls10_ccpe10
-  <br><br>
-  <strong> <em> Efficient large-scale Replica-Exchange Simulations on Production Infrastructure </em> </strong>
-  <em> Abhinav Thota, Andre Luckow, Shantenu Jha </em>
-  Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, vol. 369 # 1949,  2011
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/async_repex11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/async_repex11.bib">bib</a>]: async_repex11
   <br><br>
   <strong> <em> Understanding Application-Level Interoperability: Scaling-Out MapReduce over High-Performance Grids and Clouds </em> </strong>
   <em> Saurabh Sehgal, Miklos Erdelyi, Andre Merzky, Shantenu Jha </em>
@@ -73,7 +73,7 @@
   <br><br>
   <strong> <em> Adaptive Replica-Exchange Simulations </em> </strong>
   <em> Andre Luckow, Shantenu Jha, Joohyun Kim, Andre Merzky, Bettina Schnor </em>
-  Royal Society Philosophical Transactions A, June 2009
+  Royal Society Philosophical Transactions A, jun 2009
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/repex_ptrsa.bib">bib</a>]: repex_ptrsa
   <br><br>
 
