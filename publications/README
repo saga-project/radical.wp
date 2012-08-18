@@ -1,0 +1,68 @@
+
+This repository hosts the bibliography of the radical group.  This is maintained like this:
+
+  - git clone git@github.com:saga-project/radical.wp.git
+    # you should have write permissions now
+  - cd radical.wp/publications/
+  - vi radical_rutgers.bib
+    # yes, use vi.  No, Emacs won't work ;-)
+    # Just kidding...
+
+In that bibfile, add bib entries in the correct format and
+order.  Format:  use 'bookchapter' entries for book
+chapters, 'article' entries for journal publications,
+'inproceedings' for conference papers, etc.  Please keep
+formatting clean, and add only keys which make sense.
+Please adhere to the same author naming style everwhere
+('Albert Einstein and Paris Hilton and Jesus Christ' for
+example).
+
+Note that the comments in the bib file are significant: 
+  - '## ...' lines define subsections for the radical 
+    publications page,
+  - '# ....' define years, and 
+  - all bib entries after '## END' are ignored.  
+Please don't change that formatting w/o due consideration,
+and please keep ordering intact.
+
+Finally, please add the pdf URLs to the respective entries,
+as 'url = {...},' line.  You'll see similar lines for other
+entries.  Please make sure you follow the formatting of
+other entries, and don't change their order (unless
+something needs fixing of course).  
+
+Once you have done that, you can run:
+
+  - rm bib/*.bib
+  - ./bib2wp.pl radical_rutgers.bib radical_rutgers.wp
+
+The last command may need the BibTex/Parser perl module - let me know
+of that is missing on your system, and you need help installing it...
+
+That program does a couple of things:
+
+  - creates radical_rutgers.wp (see below)
+  - creates a number of bibtex snippets in bib/*.bib
+  - fetches all PDF links it finds in the bibtex, and stores them in pdf/
+
+So, you should see a couple of PDF downloads for those links you
+added. Please check if those downloads complete successfully, and fix
+the URLs as needed.  Also, after the run, please make sure that the
+stored files are indeed PDFs, like:
+
+  merzky@thinkie:~/saga/radical.wp/publications/pdf (master) $ file *
+  2012arXiv1207.6644L.pdf: PDF document, version 1.5
+  async_repex11.pdf:       PDF document, version 1.4
+  ...
+  saga_europar10.pdf:      PDF document, version 1.4
+  sagastuff.pdf:           PDF document, version 1.4
+
+Once that is done, please commit everything to git:
+
+  - git add radical_rutgers.bib radical_rutgers.wp bib/* pdf/*
+  - git commit -m 'update bib with PDF urls, fetch pdfs'
+  - git push
+
+Also, the contents of radical_rutgers.wp need to be cut/pasted into
+the wordpress editor for the publications page (HTML version).
+
