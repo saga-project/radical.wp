@@ -91,6 +91,11 @@
 
  <h2><u>2012</u></h2>
 
+  <strong> <em> P*: A Model of Pilot-Abstractions </em> </strong>
+  <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
+  8th IEEE International Conference on e-Science 2012,  2012
+   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pstar12.bib">bib</a>]: pstar12
+  <br><br>
   <strong> <em> Pilot-MapReduce: an extensible and flexible MapReduce implementation for distributed data </em> </strong>
   <em> Pradeep Kumar Mantha, Andre Luckow, Shantenu Jha </em>
   Proceedings of third international workshop on MapReduce and its Applications,  2012
@@ -113,11 +118,6 @@
   <em> Owain Kenway, David W. Wright, Helmut Heller, Andre Merzky, Gavin Pringle, Jules Wolfrat, Peter Coveney, Shantenu Jha </em>
   Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery,  2011
    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/tg-vph-interop.bib">bib</a>]: tg-vph-interop
-  <br><br>
-  <strong> <em> P*: An Extensible Model of Pilot-Abstractions for Dynamic Execution </em> </strong>
-  <em> Andre Luckow, Mark Santcroos, Sharath Maddineni, Andre Merzky, Shantenu Jha </em>
-  submitted to IEEE e-Science 2012 (under review),  2011
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pstar11.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pstar11.bib">bib</a>]: pstar11
   <br><br>
   <strong> <em> Building Gateways for Life-Science Applications using the Dynamic Application Runtime Environment (DARE) Framework </em> </strong>
   <em> Joohyun Kim, Sharath Maddineni, Shantenu Jha </em>
@@ -150,7 +150,7 @@
   <strong> <em> Modelling data-driven CO2 sequestration using distributed HPC cyberinfrastructure </em> </strong>
   <em> Yaakoub El-Khamra, Shantenu Jha, Christopher D. White </em>
   Proceedings of the 2010 TeraGrid Conference,  2010
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/co2-tg10.bib">bib</a>]: co2-tg10
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/co2-tg10.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/co2-tg10.bib">bib</a>]: co2-tg10
   <br><br>
   <strong> <em> Efficient Runtime Environment for Coupled Multi-physics Simulations: Dynamic Resource Allocation and Load-Balancing </em> </strong>
   <em> Soon-Heum Ko, Nayong Kim, Joohyun Kim, Abhinav Thota, Shantenu Jha </em>
@@ -230,7 +230,7 @@
   <strong> <em> Design and Implementation of Network Performance Aware Applications Using SAGA and Cactus </em> </strong>
   <em> Shantenu Jha, Hartmut Kaiser, Yaakoub El-Khamra, Ole Weidner </em>
   E-SCIENCE '07: Proceedings of the Third IEEE International Conference on e-Science and Grid Computing,  2007
-   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/escience07.bib">bib</a>]: escience07
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/escience07.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/escience07.bib">bib</a>]: escience07
   <br><br>
   <strong> <em> Grid Interoperability at the Application Level Using SAGA </em> </strong>
   <em> Shantenu Jha, Hartmut Kaiser, Andre Merzky, Ole Weidner </em>
