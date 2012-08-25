@@ -144,10 +144,14 @@ my $PDFROOT = "$BIBROOT/pdf";
             # that succeeds we link the URL...
             if ( $pdf && ! -e "pdf/$key.pdf" )
             {
-              my $old = $url;
               printf "fetching %-20s \t from $pdf ... ", "$key.pdf";
               system ("wget -q -c $pdf -O 'pdf/$key.pdf' && echo 'ok' " . 
-                      "  || (echo 'fail' && rm pdf/$key.pdf && false)") and $url = "";
+                      "  || (echo 'fail' && rm pdf/$key.pdf && false)");
+            }
+
+            if ( ! -e  "pdf/$key.pdf" )
+            { 
+              $url = "";
             }
 
             # if bib does not exist in the 'bib/' subdir, create it.  Only if
