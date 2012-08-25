@@ -218,12 +218,12 @@ my $PDFROOT = "$BIBROOT/pdf";
             }
 
             # print entry
-            $res .= sprintf ("  <strong> <em> $title </em> </strong>\n");
-            $res .= sprintf ("  <em> $author </em>\n");
-            $res .= sprintf ("  $book $month $year\n");
-            $res .= sprintf ("  $note\n") if ( $note);
-            $res .= sprintf ("  $pdflnk $notelnk $biblnk : $key\n");
-            $res .= sprintf ("  <br><br>\n");
+            $res .= "  <strong> <em> $title </em> </strong>\n";
+            $res .= "  <em> $author </em>\n";
+            $res .= "  $book $month $year\n";
+            $res .= "  $note\n" if ( $note);
+            $res .= "  $pdflnk $notelnk $biblnk : $key\n";
+            $res .= "  <br><br>\n";
 
           } # parse ok
         } # parser->next
