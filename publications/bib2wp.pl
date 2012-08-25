@@ -237,9 +237,9 @@ my $PDFROOT = "$BIBROOT/pdf";
 
   # we got all entries parsed - print top links and all entries to output file,
   # and the bibtex link
-  $out->print  ("<hr><br>\n");
+  $out->print  ("<hr>\n");
   $out->print  ($links);
-  $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a><br><hr>\n");
+  $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a>\n");
   $out->print  ($res);
   $out->print  ("<hr><br><br>\n");
   $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
