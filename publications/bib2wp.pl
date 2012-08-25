@@ -9,7 +9,8 @@ BEGIN
   use Data::Dumper;   # for debugging
   use BibTeX::Parser; # for bibtex parsing
 
-  sub usage (;$);     
+  sub pdf2draft ($);
+  sub usage     (;$);     
 }
 
 ################################################################################
@@ -121,7 +122,6 @@ my $PDFROOT = "$BIBROOT/pdf";
             my $num    = $e->{'number'}     || "";
             my $type   = $e->{'type'}       || "";
             my $url    = $e->{'published'}  || $e->{'url'} || "";
-            my $pdf    = $url;
 
 
             # we expect these keys for all valid entries
@@ -137,22 +137,33 @@ my $PDFROOT = "$BIBROOT/pdf";
             $book  .= ","           if $book;
 
             # grab pdf links
-            $pdf    =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
-            $url    = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] " if $pdf;
+            $pdfurl = $url;
+            $pdfurl =~ s/^.*{(.*?\.pdf)}.*$/$1/i;
 
             # if pdf does not exist in the 'pdf/' subdir, fetch it.  Only if
             # that succeeds we link the URL...
-            if ( $pdf && ! -e "pdf/$key.pdf" )
+            if ( $pdfurl && ! -e "pdf/$key.pdf" )
             {
-              printf "fetching %-20s \t from $pdf ... ", "$key.pdf";
-              system ("wget -q -c $pdf -O 'pdf/$key.pdf' && echo 'ok' " . 
+              printf "fetching %-20s \t from $pdfurl ... ", "$key.pdf";
+              system ("wget -q -c $pdfurl -O 'pdf/$key.pdf' && echo 'ok' " . 
                       "  || (echo 'fail' && rm pdf/$key.pdf && false)");
             }
 
-            if ( ! -e  "pdf/$key.pdf" )
-            { 
-              $url = "";
+            my $pdflnk = "";
+            if ( -e  "pdf/$key.pdf" )
+            {
+              pdf2draft ("pdf/$key.pdf");
+
+              if ( -e "pdf/$key\_draft.pdf" )
+              {
+                $pdflnk = " [<a title=\"pdf\" href=\"$PDFROOT/$key\_draft.pdf\">pdf</a>] ";
+              }
+              else
+              {
+                $pdflnk = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] ";
+              }
             }
+
 
             # if bib does not exist in the 'bib/' subdir, create it.  Only if
             # that succeeds we link the URL...
@@ -164,6 +175,26 @@ my $PDFROOT = "$BIBROOT/pdf";
               print BIB "$sec";
               print BIB "\n#\n################################################################################\n\n";
               close (BIB);
+            }
+
+            my $biblnk = "[<a title=\"bib\" href=\"$BIBROOT/bib/$key.bib\">bib</a>]";
+
+
+            my $notelnk = "";
+            if ( $note =~ /^(.*?)(?:,\s*)?\\url\{(.+?)\}(?:,\s*)?(.*)$/io )
+            {
+              my $note_1 = $1 || "";
+              my $lnktgt = $2;
+              my $note_2 = $3 || "";
+
+              my $comma  = "";
+              if ( $note_1 and $note_2 )
+              {
+                $comma = ", ";
+              }
+
+              $note = "$note_1$comma$note_2";
+              $notelnk = "[<a title=\"link\" href=\"$lnktgt\">link</a>]";
             }
 
 
@@ -191,7 +222,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             $res .= sprintf ("  <em> $author </em>\n");
             $res .= sprintf ("  $book $month $year\n");
             $res .= sprintf ("  $note\n") if ( $note);
-            $res .= sprintf ("  $url [<a title=\"bib\" href=\"$BIBROOT/bib/$key.bib\">bib</a>]: $key\n");
+            $res .= sprintf ("  $pdflnk $notelnk $biblnk : $key\n");
             $res .= sprintf ("  <br><br>\n");
 
           } # parse ok
@@ -252,4 +283,68 @@ EOT
 }
 #
 ################################################################################
+
+
+sub pdf2draft ($)
+{
+  my $pdf = shift;
+
+  my $tmp  = "/tmp/";
+  my $idx  = 0;
+  my $pwd  = `pwd`;
+  
+  chomp ($pwd);
+
+  if ( $pdf =~ /(.*\/)?(.+?)\.pdf$/io )
+  {
+    my $dir  = $1 || "./";
+    my $base = $2;
+
+    if ( $base !~ /_draft$/io &&
+         ! -e "$dir/$base\_draft.pdf" )
+    {
+      $idx++;
+      my $id   = "pdf2draft_$$\_$idx";
+
+      print "create $dir/$base\_draft.pdf\n";
+
+      system ("cp $pdf $tmp/$id\_input.pdf");
+
+      open (TMP, ">/$tmp/$id.tex") || die "cannot open tmp file: $!\n";
+      print TMP <<EOT;
+\\documentclass{article}
+\\usepackage{pdfpages}
+\\usepackage{graphicx}
+\\usepackage{type1cm}
+\\usepackage{eso-pic}
+\\usepackage{color}
+\\makeatletter
+\\AddToShipoutPicture{%
+            \\setlength{\\\@tempdimb}{.5\\paperwidth}%
+            \\setlength{\\\@tempdimc}{.5\\paperheight}%
+            \\setlength{\\unitlength}{1pt}%
+            \\put(\\strip\@pt\\\@tempdimb,\\strip\@pt\\\@tempdimc){%
+        \\makebox(0,0){\\rotatebox{45}{\\textcolor[gray]{0.8}%
+        {\\fontsize{5cm}{6cm}\\selectfont{DRAFT}}}}%
+            }%
+}
+\\makeatother
+\\begin{document}
+\\includepdf[fitpaper=true,pages=1-]{$tmp/$id\_input.pdf}
+\\end{document}
+EOT
+      close (TMP);
+
+      system ("cd $tmp ; pdflatex $id 2>&1 > /dev/null || rm -f $id.pdf");
+      system ("cd $pwd ; mv /$tmp/$id.pdf $dir/$base\_draft.pdf");
+      system ("rm -f $tmp/$id");
+    }
+    else
+    {
+      # print "$pdf is base, or base exists\n";
+    }
+    
+  }
+
+}
 
