@@ -218,6 +218,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             }
 
             # print entry
+            $res .= "  <a name=\"$key\"></a>\n";
             $res .= "  <strong> <em> $title </em> </strong>\n";
             $res .= "  <em> $author </em>\n";
             $res .= "  $book $month $year\n";
