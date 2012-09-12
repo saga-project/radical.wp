@@ -7,7 +7,7 @@ tmp:      /tmp/svn2git/
 # how to interpret the svn structure.
 svnurl:   https://svn.cct.lsu.edu/repos/saga-projects/
 svnuser:  merzky
-svnpass:  z1nfandel
+svnpass:  hunter2
 trunk:    /
 # tags:     /glite/tags/releases/
 # branches: /glite/branches/
