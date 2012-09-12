@@ -1,0 +1,20 @@
+
+# where to store temp files (disk usage can be significant)
+tmp:      /tmp/svn2git/saga-wg
+
+
+# specify what to fetch from svn, and
+# how to interpret the svn structure.
+svnurl:   https://forge.ogf.org/svn/repos/saga-wg/
+svnuser:  merzky
+svnpass:  hunter2
+trunk:    trunk/
+tags:     tags/
+branches: old/
+branches: branches/
+
+# target git repository (assumes ssh based connect)
+giturl:   git@github.com:saga-project/ogf.git
+
+# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2 ft=make
+
