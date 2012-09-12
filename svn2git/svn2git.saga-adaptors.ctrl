@@ -1,42 +1,20 @@
 
 # where to store temp files (disk usage can be significant)
-tmp:      /tmp/svn2git/saga-wg
+tmp:      /tmp/svn2git/
 
 
 # specify what to fetch from svn, and
 # how to interpret the svn structure.
-svnurl:   https://svn.cct.lsu.edu/repos/saga-adaptors/async_advert_adaptor
+svnurl:   https://svn.cct.lsu.edu/repos/saga-projects/
 svnuser:  merzky
 svnpass:  hunter2
-trunk:    trunk/
-trunk:    async_advert_adaptor
-trunk:    aws
-trunk:    curl
-trunk:    drmaa
-trunk:    globus_globusonline_file
-trunk:    gridsam
-trunk:    hbase
-trunk:    hdfs
-trunk:    htable
-trunk:    irods
-trunk:    kfs
-trunk:    lsf
-trunk:    naregi
-trunk:    ninfg
-trunk:    opencloud
-trunk:    pbs
-trunk:    pbspro
-trunk:    redis
-trunk:    rns
-trunk:    torque
-
-# tags:     tags/
-# branches: old/
-# branches: branches/
+trunk:    /
+# tags:     /glite/tags/releases/
+# branches: /glite/branches/
 
 
 # target git repository (assumes ssh based connect)
-giturl:   git@github.com:andre-merzky/saga-cpp-legacy-adaptors.git
+giturl:   git@github.com:saga-project/saga-cpp-legacy-projects.git
 
 # vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2 ft=make
 
