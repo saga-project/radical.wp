@@ -215,6 +215,32 @@ my @tag_branches = ();
   print qx{$cmd};
 }
 
+# create makefile which allows to re-sync got from svn changed
+{
+  print "create Makefile\n";
+  open (OUT, ">$tmp/Makefile") || die "Cannot write $tmp/Makefile: $!\n";
+  print OUT <<EOT;
+
+PWD=\$(shell pwd)
+
+all: gitsync
+
+svnsync:
+	svnsync  sync   file:///\$(PWD)/svn         --non-interactive
+
+gitsync: svnsync
+	cd \$(PWD)/git && git svn fetch
+	cd \$(PWD)/git && git checkout           master
+	cd \$(PWD)/git && git pull        origin master
+	cd \$(PWD)/git && git push --all  origin
+	cd \$(PWD)/git && git push --tags origin
+
+EOT
+  close (OUT);
+}
+
+print "done\n\n";
+
 # ...
 # profit
 
