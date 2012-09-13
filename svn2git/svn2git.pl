@@ -221,19 +221,17 @@ my @tag_branches = ();
   open (OUT, ">$tmp/Makefile") || die "Cannot write $tmp/Makefile: $!\n";
   print OUT <<EOT;
 
-PWD=\$(shell pwd)
-
 all: gitsync
 
 svnsync:
-	svnsync  sync   file:///\$(PWD)/svn         --non-interactive
+	svnsync  sync   file:///$tmp/svn         --non-interactive
 
 gitsync: svnsync
-	cd \$(PWD)/git && git svn fetch
-	cd \$(PWD)/git && git checkout           master
-	cd \$(PWD)/git && git pull        origin master
-	cd \$(PWD)/git && git push --all  origin
-	cd \$(PWD)/git && git push --tags origin
+	cd $tmp/git && git svn fetch
+	cd $tmp/git && git checkout           master
+	cd $tmp/git && git pull        origin master
+	cd $tmp/git && git push --all  origin
+	cd $tmp/git && git push --tags origin
 
 EOT
   close (OUT);
