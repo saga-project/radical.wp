@@ -95,11 +95,16 @@ $| = 1;
 # make a local copy of the remote svn
 {
   print "mirror svn to local\n";
+  print    "svnadmin create        $svntmp}\n";
   print qx{ svnadmin create        $svntmp};
-  print qx{ echo     '#!/bin/sh' > $svntmp/hooks/pre-revprop-change };
-  print qx{ chmod    0755          $svntmp/hooks/pre-revprop-change };
-  print qx{ svnsync  init   file://$svntmp $svnurl --username $svnuser --password $svnpass };
-  print qx{ svnsync  sync   file://$svntmp         --non-interactive };
+  print    "echo     '#!/bin/sh' > $svntmp/hooks/pre-revprop-change\n";
+  print qx{ echo     '#!/bin/sh' > $svntmp/hooks/pre-revprop-change  };
+  print    "chmod    0755          $svntmp/hooks/pre-revprop-change\n";
+  print qx{ chmod    0755          $svntmp/hooks/pre-revprop-change  };
+  print    "svnsync  init   file://$svntmp $svnurl --username $svnuser --password $svnpass\n";
+  print qx{ svnsync  init   file://$svntmp $svnurl --username $svnuser --password $svnpass  };
+  print    "svnsync  sync   file://$svntmp         --non-interactive\n";
+  print qx{ svnsync  sync   file://$svntmp         --non-interactive  };
 }
 
 # init local git with mirrored svn
