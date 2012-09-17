@@ -1,0 +1,93 @@
+
+
+Background: Reagan Moore
+  - http://www.renci.org/staff/reagan-moore
+  - http://www.sdsc.edu/profile/rmoore.html
+
+Previous research topics:  
+  - data preservation : O(100) years
+  - data archiving    : petabytes
+  - long term storage and access : NASA
+  - digital libraries
+  
+  - think Library of Congress, but electronically, with associated
+    problems of outdated data formats (WordPerfect.v3.0), bit rot,
+    hardware evolution (floppy disks?  Moon landing videos) 
+
+  - while 'data sitting somewhere' seems trivial, that is not enough.
+  
+  - amounts of data are large, types of data are diverse.  Coding
+    specific software for specific tasks is volatile process, and the
+    software itself exposes similar problems as the data it is
+    supposed to operate on (bit rot, architecture to run on, etc).
+
+  -> rule base description of data access, data transformation
+
+
+Q1:
+  "Data grids are reactive systems that handle events based on 
+   contextual information."
+  
+Q2:
+  "Data grids can be viewed as large distributed event processing
+  systems handling concurrent events from multiple users,
+  administrators and temporal cues."
+
+Q3: 
+  "The iRODs data grid can be viewed as a complex, distributed event
+  processing system providing data life-cycle management capabilities
+  using a rule-oriented architecture."
+
+
+iRods incredients: 
+  
+  1: small, well defined procedures co-located with data servers, aka
+     'micro services,
+
+  2: macro level rules implemented out of micro service chains,
+
+  4: enabled by the iRODS rule engine,
+
+  3: with event based invocation of rules.
+
+  
+
+  Rules are ECA based: Events, Condition, Action
+
+  Examples:
+
+    OnIngest :- userGroup == astro
+       | findResource, storeFile, registerInIcat, replicateFile
+       | nop, removeFile, rollback, unReplicate.
+
+    OnNewFile :- Collection == astroColl
+       | extractMetadata (astroTemplate,M), ingestICat(M).
+       | nop, rollback.
+
+
+  - http://www.linkedin.com/profile/view?id=1340451
+  - http://www.youtube.com/watch?v=SYqEVgdtnes
+
+
+
+
+
+
+  - Components:
+    - P2P server system.  
+      - 3 layers
+        - client top
+        - storage providers bottom
+        - rule based 'intelligent' layer in middle
+    - iCAT catalog
+    - client APIs and utilities (higher level)
+    - iRODS administration utility
+    - Messaging service
+    - rule scheduler (async execution of rules)
+
+ iRODS prototype has been developed based on our experience in
+ building and deploying a first generation data grid system called the
+ Storage Resource Broker [SRB].
+
+
+
