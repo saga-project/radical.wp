@@ -203,12 +203,12 @@ my $PDFROOT = "$BIBROOT/pdf";
             $author =~ s/ and /, /g;
             $year   =~ s/\D//g;
 
-            # remove brackets from strings
-            $title  =~ tr/{}//ds; 
-            $author =~ tr/{}//ds; 
-            $month  =~ tr/{}//ds; 
-            $book   =~ tr/{}//ds; 
-            $note   =~ tr/{}//ds; 
+            # remove brackets and escape '\' from strings
+            $title  =~ tr/{}//ds;     $title  =~ tr/\\//ds; 
+            $author =~ tr/{}//ds;     $author =~ tr/\\//ds; 
+            $month  =~ tr/{}//ds;     $month  =~ tr/\\//ds; 
+            $book   =~ tr/{}//ds;     $book   =~ tr/\\//ds; 
+            $note   =~ tr/{}//ds;     $note   =~ tr/\\//ds; 
 
             # print year heading if not done so before
             if ( ! $headed )

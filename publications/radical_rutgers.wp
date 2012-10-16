@@ -22,7 +22,7 @@
  <h2><u>2012</u></h2>
 
   <a name="dpa-surveypaper"></a>
-  <strong> <em> Distributed Computing Practice for Large-Scale Science and Engineering Applications </em> </strong>
+  <strong> <em> Distributed Computing Practice for Large-Scale Science & Engineering Applications </em> </strong>
   <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
     2012
   Computing and Concurrency: Practise and Experience (in press)
@@ -39,7 +39,7 @@
   <br><br>
   <a name="csc7700-iccs"></a>
   <strong> <em> A Practical and Comprehensive Graduate Course preparing Students for Research involving Scientific Computing </em> </strong>
-  <em> Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Frank L\"offler, Erik Schnetter </em>
+  <em> Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Frank L"offler, Erik Schnetter </em>
   Proceedings of the International Conference on Computational Science, ICCS 2011, vol. 4,  2011
    [<a title="link" href="http://www.sciencedirect.com/science/article/pii/S1877050911002687">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/csc7700-iccs.bib">bib</a>] : csc7700-iccs
   <br><br>
@@ -120,10 +120,10 @@
    [<a title="link" href="http://dl.acm.org/citation.cfm?id=2287094">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pilotjob-hpdc.bib">bib</a>] : pilotjob-hpdc
   <br><br>
   <a name="xsede12_ensemble"></a>
-  <strong> <em> Running many molecular dynamics simulations on many supercomputers </em> </strong>
-  <em> Mukherjee, Rajib, Thota, Abhinav, Fujioka, Hideki, Bishop, Thomas C., Jha, Shantenu </em>
-  Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the campus and beyond,  2012
-    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/xsede12_ensemble.bib">bib</a>] : xsede12_ensemble
+  <strong> <em> Running many Molecular Dynamics Simulations on many Supercomputers </em> </strong>
+  <em> Rajib Mukherjee, Abhinav Thota, Hideki Fujioka, Thomas C. Bishop, Shantenu Jha </em>
+  Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the Campus and Beyond,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/xsede12_ensemble_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/xsede12_ensemble.bib">bib</a>] : xsede12_ensemble
   <br><br>
 
  <h2><u>2011</u></h2>
@@ -148,7 +148,7 @@
   <br><br>
   <a name="saga-teach-fg10"></a>
   <strong> <em> Using the TeraGrid to teach Scientific Computing </em> </strong>
-  <em> Frank L\"offler, Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Erik Schnetter </em>
+  <em> Frank L"offler, Gabrielle Allen, Werner Benger, Andrei Hutanu, Shantenu Jha, Erik Schnetter </em>
   Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery,  2011
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/saga-teach-fg10_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/saga-teach-fg10.bib">bib</a>] : saga-teach-fg10
   <br><br>
@@ -313,7 +313,7 @@
   <a name="dpa-pdci-tr"></a>
   <strong> <em> Survey and Analysis of Production Distributed Computing Infrastructures (CI-TR-7-0811) </em> </strong>
   <em> Daniel S. Katz, Shantenu Jha, Manish Parashar, Omer F. Rana, Jon Weissman </em>
-  Computation Institute, University of Chicago \& Argonne National Laboratory,  2011
+  Computation Institute, University of Chicago & Argonne National Laboratory,  2011
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-pdci-tr_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/dpa-pdci-tr.bib">bib</a>] : dpa-pdci-tr
   <br><br>
 
