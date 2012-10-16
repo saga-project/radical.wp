@@ -22,7 +22,7 @@
  <h2><u>2012</u></h2>
 
   <a name="dpa-surveypaper"></a>
-  <strong> <em> Distributed Computing Practice for Large-Scale Science \& Engineering Applications </em> </strong>
+  <strong> <em> Distributed Computing Practice for Large-Scale Science and Engineering Applications </em> </strong>
   <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
     2012
   Computing and Concurrency: Practise and Experience (in press)
@@ -119,11 +119,11 @@
   Proceedings of the 21st International Symposium on High-Performance Parallel and Distributed Computing,HPDC'12, June 2012
    [<a title="link" href="http://dl.acm.org/citation.cfm?id=2287094">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pilotjob-hpdc.bib">bib</a>] : pilotjob-hpdc
   <br><br>
-  <a name="bigjob-ccgrid12"></a>
-  <strong> <em> Running Many Molecular Dynamics Simulations on Many Supercomputers </em> </strong>
-  <em> Rajib Mukherjee et al </em>
-  Accepted for XSEDE'12,  2012
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/bigjob-ccgrid12_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/bigjob-ccgrid12.bib">bib</a>] : bigjob-ccgrid12
+  <a name="xsede12_ensemble"></a>
+  <strong> <em> Running many molecular dynamics simulations on many supercomputers </em> </strong>
+  <em> Mukherjee, Rajib, Thota, Abhinav, Fujioka, Hideki, Bishop, Thomas C., Jha, Shantenu </em>
+  Proceedings of the 1st Conference of the Extreme Science and Engineering Discovery Environment: Bridging from the eXtreme to the campus and beyond,  2012
+    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/xsede12_ensemble.bib">bib</a>] : xsede12_ensemble
   <br><br>
 
  <h2><u>2011</u></h2>
