@@ -1,4 +1,4 @@
-ma
+
 all:
 	@rm -f bib/*
 	@./bib2wp.pl radical_rutgers.bib radical_rutgers.wp

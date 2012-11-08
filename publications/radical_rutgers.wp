@@ -29,7 +29,7 @@
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/dpa-surveypaper_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/dpa-surveypaper.bib">bib</a>] : dpa-surveypaper
   <br><br>
   <a name="jogc-2012-dare"></a>
-  <strong> <em> Dynamic Application Runtime Environment (DARE): A Standards-based Framework For Building Science Gateways </em> </strong>
+  <strong> <em> Dynamic Application Runtime Environment (DARE): A Standards-based Middleware Framework For Building Science Gateways </em> </strong>
   <em> Sharath Maddineni, Joohyun Kim, Yaakoub el-Khamra, Shantenu Jha </em>
     2012
   Journal of Grid Computing (in press)
@@ -44,7 +44,7 @@
   <br><br>
   <a name="biochem-2012-jha"></a>
   <strong> <em> Quantized Water Access to the HIV-1 Protease Active Site as a Proposed Mechanism for Cooperative Mutations in Drug Affinity </em> </strong>
-  <em> Hall, Benjamin A., Wright, David W., Jha, Shantenu, Coveney, Peter V. </em>
+  <em> Benjamin A. Hall, David W. Wright, Shantenu Jha, Peter V. Coveney </em>
   Biochemistry, vol. 51 # 33,  2012
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/biochem-2012-jha_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/biochem-2012-jha.bib">bib</a>] : biochem-2012-jha
   <br><br>
@@ -52,7 +52,7 @@
   <strong> <em> Conformational Heterogeneity of the SAM-I Riboswitch Transcriptional ON State: A Chaperone-Like Role for S-Adenosyl Methionine </em> </strong>
   <em> Wei Huang, Joohyun Kim, Shantenu Jha, Fareed Aboul-ela </em>
   Journal of Molecular Biology, vol. 418 # 5,  2012
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/jmb-2012-jha_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/jmb-2012-jha.bib">bib</a>] : jmb-2012-jha
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/jmb-2012-jha_draft.pdf">pdf</a>]  [<a title="link" href="http://www.sciencedirect.com/science/article/pii/S0022283612001763">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/jmb-2012-jha.bib">bib</a>] : jmb-2012-jha
   <br><br>
 
  <h2><u>2011</u></h2>
@@ -116,7 +116,7 @@
 
   <a name="sagastuff"></a>
   <strong> <em> SAGA: A Simple API for Grid applications, High-Level Application Programming on the Grid </em> </strong>
-  <em> Tom Goodale, Shantenu Jha, Harmut Kaiser, Thilo Kielmann, Pascal K leijer, Gregor von Laszewski, Craig Lee, Andre Merzky, Hrabri Rajic, John Shalf </em>
+  <em> Tom Goodale, Shantenu Jha, Harmut Kaiser, Thilo Kielmann, Pascal Kleijer, Gregor von Laszewski, Craig Lee, Andre Merzky, Hrabri Rajic, John Shalf </em>
   Computational Methods in Science and Technology, vol. 12 # 1,  2006
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/sagastuff_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/sagastuff.bib">bib</a>] : sagastuff
   <br><br>
@@ -245,7 +245,7 @@
    [<a title="link" href="http://dl.acm.org/citation.cfm?id=1555304">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/gmac09.bib">bib</a>] : gmac09
   <br><br>
   <a name="luckow2009adaptive"></a>
-  <strong> <em> Adaptive distributed replica--exchange simulations </em> </strong>
+  <strong> <em> Adaptive Distributed Replica--Exchange Simulations </em> </strong>
   <em> Andre Luckow, Shantenu Jha, Joohyun Kim, Andre Merzky, Bettina Schnor </em>
   Theme Issue of the Philosophical Transactions of the Royal Society A: Crossing Boundaries: Computational Science, E-Science and Global E-Infrastructure Proceedings of the UK e-Science All Hands Meeting, vol. 367,  2009
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/luckow2009adaptive_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/luckow2009adaptive.bib">bib</a>] : luckow2009adaptive
@@ -318,15 +318,6 @@
 
 <a name="Standards,_White_Papers,_Technical_Reports"></a><h1><hr/><u>Standards, White Papers, Technical Reports</u></h1>
 
-
- <h2><u>2012</u></h2>
-
-  <a name="2012arXiv1207.6644L"></a>
-  <strong> <em> P*: A Model of Pilot-Abstractions </em> </strong>
-  <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
-  ArXiv e-prints, Jul 2012
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2012arXiv1207.6644L_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2012arXiv1207.6644L.bib">bib</a>] : 2012arXiv1207.6644L
-  <br><br>
 
  <h2><u>2011</u></h2>
 
