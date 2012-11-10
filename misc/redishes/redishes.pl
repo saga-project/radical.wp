@@ -59,6 +59,8 @@ sub cleaner ($)
 {
   while ( 1 )
   {
+    my $purged = 0;
+
     # take care not to purge 'ports/'
     my @server = glob ("$ROOT/*-*/");
 
@@ -98,6 +100,8 @@ sub cleaner ($)
         my $pid  = `cat $pwd/redis.pid`;   chomp ($pid);
         my $port = `cat $pwd/redis.port`;  chomp ($port);
 
+        print "pid: $pid $pwd\n";
+
         kill  (2, $pid); # INT
         sleep (1);
         kill  (9, $pid); # KILL
@@ -105,17 +109,30 @@ sub cleaner ($)
         `rm    $ROOT/ports/$port`;
         `touch $pwd/purged`;
 
+        if ( -e "$ROOT/action.shutdown" )
+        {
+          `rm -rf $pwd`;
+        }
+
+        $purged ++;
+
         print " - purged $pwd : $pid / $port\n";
       }
     }
 
-    if ( -e "$ROOT/action.shutdown" )
+    if ( -e "$ROOT/action.shutdown" && $purged == 0 )
     {
       `rm -rf $ROOT`;
       exit (0);
     }
 
     sleep (1);
+  }
+
+  if ( -e "$ROOT/action.shutdown" )
+  {
+    `rm -rf $ROOT`;
+    exit (0);
   }
 }
 
@@ -136,7 +153,7 @@ sub Run ($)
 
     chomp $line; # Remove CRLF
 
-    if ( $line =~ /^\s*REDIS\s+CREATE(?:\s+\S.*?)?\s*$/io )
+    if ( $line =~ /^\s*REDIS\s+CREATE(?:\s+(\S.*?))?\s*$/io )
     {
       my $opts = $1 || "";
       my $key  = `uuidgen`;
@@ -155,26 +172,67 @@ sub Run ($)
     }
 
 
+    elsif ( $line =~ /^\s*REDIS\s+EXTENT\s+(\S+)\s*$/io )
+    {
+      my $key = $1;
+
+      if ( ! -d "$ROOT/$key" )
+      {
+        $ret = "404 redis instance '$key' not found.";
+      }
+      else
+      {
+        $ret = "200 redis instance '$key' revitalized.";
+        `touch $ROOT/$key/redis.pid`;
+      }
+    }
+
+
     elsif ( $line =~ /^\s*REDIS\s+PURGE\s+(\S+)\s*$/io )
     {
       my $key = $1;
 
-      if ( ! -d "$ROOT/$key" ) {
+      if ( ! -d "$ROOT/$key" ) 
+      {
         $ret = "404 redis instance '$key' not found.";
       }
 
-      else {
+      else 
+      {
         $ret = "202 redis instance '$key' will be purged.";
         `touch $ROOT/$key/action.purge`;
       }
     }
 
     
-    elsif ( $line =~ /^\s*REDIS\s+STATUS\s*$/io )
+    elsif ( $line =~ /^\s*REDIS\s+LIST\s*$/io )
     {
-      $ret = `ls -a $ROOT/`;
+      $ret = `cd $ROOT && ls -d *-*`;
       print $ret;
     }
+
+
+    elsif ( $line =~ /^\s*REDIS\s+STATUS\s*$/io )
+    {
+      my @keys = `cd $ROOT && ls -d *-*`;
+      foreach my $key ( @keys )
+      {
+        chomp ($key);
+
+        my $status = "running";
+
+        if ( -e "$ROOT/$key/purged" ) { $status = "purged"; }
+
+        my $pid  = `cat $ROOT/$key/redis.pid`;  chomp ($pid);
+        my $ttl  = `cat $ROOT/$key/redis.ttl`;  chomp ($ttl);
+        my $port = `cat $ROOT/$key/redis.port`; chomp ($port);
+        my $url  = `cat $ROOT/$key/redis.url`;  chomp ($url);
+
+        $ret .= sprintf ("%s : %6d : %6d : %-8s : %s\n", 
+                         $key, $pid, $port, $status, $url);
+      }
+    }
+
 
     elsif ( $line =~ /^\s*REDIS\s+STATUS\s+(\S+)\s*$/io )
     {
@@ -225,6 +283,7 @@ sub Run ($)
     $self->Error ("Client connection error %s", $sock->error ());
   }
 
+  $sock->flush ();
   $sock->close ();
 }
 
@@ -248,12 +307,14 @@ sub run_server ($$$)
 
   print "opts: $opts\n";
 
-  if ( $opts  =~ /\bTTL\s*=\s*\d+\b/io )  { $ttl  = $1; }
-  if ( $opts  =~ /\bPASS\s*=\s*\S+\b/io ) { $pass = $1; }
-  if ( $opts  =~ /\bPORT\s*=\s*\d+\b/io ) { $port = $1; }
+  if ( $opts  =~ /\bTTL\s*=\s*(\d+)\b/io )  { $ttl  = $1; }
+  if ( $opts  =~ /\bPASS\s*=\s*(\S+)\b/io ) { $pass = $1; }
+  if ( $opts  =~ /\bPORT\s*=\s*(\d+)\b/io ) { $port = $1; }
+
+  print "port: $port ($opts)\n";
 
   if ( $port == -1 ) { $port = $self->find_port ($key); }
-  if ( $pass       ) { $confpass = "requirepass             $1"; }
+  if ( $pass       ) { $confpass = "requirepass $pass"; }
 
 
   open (CONF, ">$conf") or die "cannot write config file '$conf': $!\n";
@@ -278,7 +339,7 @@ glueoutputbuf yes
 hash-max-zipmap-entries 64
 hash-max-zipmap-value 512
 activerehashing yes
-$pass
+$confpass
 EOT
   close (CONF);
 
@@ -297,7 +358,23 @@ EOT
   my $pid = `head -n 1 $log | cut -f 1 -d ] | cut -f 2 -d [`; chomp ($pid);
   `echo $pid  > $pwd/redis.pid`;
 
-  return "redis://user:$pass\@localhost:$port/";
+  my $url = "";
+  my $ret = "";
+  
+  if ( $pass ) 
+  { 
+    $url = "redis://:XXXXX\@localhost:$port/"; 
+    $ret = "redis://:$pass\@localhost:$port/"; 
+  }
+  else         
+  {
+    $url = "redis://localhost:$port/"; 
+    $ret = "redis://localhost:$port/"; 
+  }
+
+  `echo $url  > $pwd/redis.url`;
+
+  return $ret;
 }
 
 
