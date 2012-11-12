@@ -29,6 +29,7 @@ my $SERVER_TTL   = 60 * 60 * 24;  # one day
 my $PORT_MIN     = 10000;
 my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT;
 my $ROOT         = "/tmp/redishes/";
+my $SECRET       = $ENV{'REDISHES_SECRET'} or die "please set 'REDISHES_SECRET' before running\n";
 
 
 #---------------------------------------------------------------------
@@ -166,8 +167,7 @@ sub Run ($)
       }
 
       else {
-        $ret  = "201 creating redis instance '$key': ";
-        $ret .= $self->run_server ($key, $opts);
+        $ret = $self->run_server ($key, $opts);
       }
     }
 
@@ -302,16 +302,25 @@ sub run_server ($$$)
   my $conf     = "$pwd/redis.conf";
   my $pass     = "";
   my $confpass = "";
+  my $secrest  = undef;
 
   mkdir ($pwd) or die "Cannot create dir: $!\n";
 
   print "opts: $opts\n";
 
-  if ( $opts  =~ /\bTTL\s*=\s*(\d+)\b/io )  { $ttl  = $1; }
-  if ( $opts  =~ /\bPASS\s*=\s*(\S+)\b/io ) { $pass = $1; }
-  if ( $opts  =~ /\bPORT\s*=\s*(\d+)\b/io ) { $port = $1; }
+  if ( $opts  =~ /\bSECRET\s*=\s*(\d+)\b/io ) { $secret = $1; }
+  if ( $opts  =~ /\bTTL\s*=\s*(\d+)\b/io )    { $ttl    = $1; }
+  if ( $opts  =~ /\bPASS\s*=\s*(\S+)\b/io )   { $pass   = $1; }
+  if ( $opts  =~ /\bPORT\s*=\s*(\d+)\b/io )   { $port   = $1; }
 
   print "port: $port ($opts)\n";
+
+  if ( ! defined ($secret) or $secret ne $SECRET )
+  {
+    # starve eventual passwd space scans
+    sleep (1);
+    return "401 Unauthorized: invalid secret provided";
+  }
 
   if ( $port == -1 ) { $port = $self->find_port ($key); }
   if ( $pass       ) { $confpass = "requirepass $pass"; }
@@ -359,7 +368,7 @@ EOT
   `echo $pid  > $pwd/redis.pid`;
 
   my $url = "";
-  my $ret = "";
+  my $ret  = "201 creating redis instance '$key': ";
   
   if ( $pass ) 
   { 
@@ -399,5 +408,6 @@ sub find_port ($$)
 package main;
 
 Redishes->new ({'pidfile'   => 'none',
-                'localport' => 2000})-> Bind ();
+                'localport' => 2000,
+                'mode'      => 'single'})-> Bind ();
 
