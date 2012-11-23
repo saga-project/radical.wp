@@ -25,18 +25,6 @@
 ####################
 # 2012
 
-@article{cpe_pmr_cloud_2012,
-  author      = {Andre Luckow and Pradeep Mantha and Melissa Romanus
-                  and Shantenu Jha},
-  title       = {{Pilot-Abstractions for Data-Intensive Cloud
-                  Applications}},
-  year        = 2012,
-  note        = {Computing and Concurrency: Practise and Experience
-                  (in press)}, 
-  OPTurl      = {},
-}
-
-
 @article{dpa-surveypaper,
   author      = {Shantenu Jha and Murray Cole and Daniel S. Katz and
                 Manish Parashar and Omer Rana and Jon Weissman},
