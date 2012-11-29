@@ -338,6 +338,21 @@
 <a name="Standards,_White_Papers,_Technical_Reports"></a><h1><hr/><u>Standards, White Papers, Technical Reports</u></h1>
 
 
+ <h2><u>2012</u></h2>
+
+  <a name="fgpc2012-project-45"></a>
+  <strong> <em> FutureGrid 2012 Project Challenge: Project 45: Building Scalable, Dynamic and Distributed Applications Using SAGA </em> </strong>
+  <em> Pradeep Kumar Mantha, Sivakarthik Natesan, Melissa Romanus, Sai Saripalli, Ashley Zebrowski </em>
+  FutureGrid Project Challenge Award Winner,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/fgpc2012-project-45_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/fgpc2012-project-45.bib">bib</a>] : fgpc2012-project-45
+  <br><br>
+  <a name="ogf-gfd-isn"></a>
+  <strong> <em> SAGA Extension: Information Service Navigator API </em> </strong>
+  <em> Steve Fisher, Antony Wilson </em>
+  Open Grid Forum, OGF Proposed Recommendation, GFD.195,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-isn_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ogf-gfd-isn.bib">bib</a>] : ogf-gfd-isn
+  <br><br>
+
  <h2><u>2011</u></h2>
 
   <a name="ogf-gfd-msg"></a>
