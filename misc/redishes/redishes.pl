@@ -285,6 +285,9 @@ sub Run ($)
 
   $sock->flush ();
   $sock->close ();
+
+  # make this service slow...
+  sleep (1);
 }
 
 
