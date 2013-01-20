@@ -21,6 +21,13 @@
 
  <h2><u>2012</u></h2>
 
+  <a name="cpe_pmr_cloud_2012"></a>
+  <strong> <em> Pilot-Abstractions for Data-Intensive Cloud Applications </em> </strong>
+  <em> Andre Luckow, Pradeep Mantha, Melissa Romanus, Shantenu Jha </em>
+    2012
+  Computing and Concurrency: Practise and Experience (in press)
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/cpe_pmr_cloud_2012_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/cpe_pmr_cloud_2012.bib">bib</a>] : cpe_pmr_cloud_2012
+  <br><br>
   <a name="dpa-surveypaper"></a>
   <strong> <em> Distributed Computing Practice for Large-Scale Science & Engineering Applications </em> </strong>
   <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
@@ -127,17 +134,29 @@
 
  <h2><u>2012</u></h2>
 
+  <a name="ccgrid-pilotapi"></a>
+  <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
+  <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
+  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (submitted),  2013
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ccgrid-pilotapi_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid-pilotapi.bib">bib</a>] : ccgrid-pilotapi
+  <br><br>
   <a name="pstar12"></a>
   <strong> <em> P*: A Model of Pilot-Abstractions </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
   8th IEEE International Conference on e-Science 2012,  2012
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pstar12_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pstar12.bib">bib</a>] : pstar12
   <br><br>
-  <a name="Mantha:2012:PEF:2287016.2287020"></a>
+  <a name="pilot-mapreduce2012"></a>
   <strong> <em> Pilot-MapReduce: an extensible and flexible MapReduce implementation for distributed data </em> </strong>
   <em> Pradeep Kumar Mantha, Andre Luckow, Shantenu Jha </em>
   Proceedings of third international workshop on MapReduce and its Applications,  2012
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/Mantha:2012:PEF:2287016.2287020_draft.pdf">pdf</a>]  [<a title="link" href="http://dl.acm.org/citation.cfm?id=2287020\&dl=ACM\&coll=DL\&CFID=137661901\&CFTOKEN=34365530">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/Mantha:2012:PEF:2287016.2287020.bib">bib</a>] : Mantha:2012:PEF:2287016.2287020
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pilot-mapreduce2012_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pilot-mapreduce2012.bib">bib</a>] : pilot-mapreduce2012
+  <br><br>
+  <a name="pmr-ecmls12"></a>
+  <strong> <em>  </em> </strong>
+  <em> Pradeep Mantha, Nayong Kim, Joohyun Kim, Andre Luckow, Shantenu Jha </em>
+  3rd International Workshop on Emerging Methods in Computational Life Sciences, Proceedings of the 21st International Symposium on High-Performance Parallel and Distributed Computing, HPDC'12, June 2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pmr-ecmls12_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/pmr-ecmls12.bib">bib</a>] : pmr-ecmls12
   <br><br>
   <a name="pilotjob-hpdc"></a>
   <strong> <em> Towards a common model for pilot-jobs </em> </strong>
@@ -318,6 +337,21 @@
 
 <a name="Standards,_White_Papers,_Technical_Reports"></a><h1><hr/><u>Standards, White Papers, Technical Reports</u></h1>
 
+
+ <h2><u>2012</u></h2>
+
+  <a name="fgpc2012-project-45"></a>
+  <strong> <em> FutureGrid 2012 Project Challenge: Project 45: Building Scalable, Dynamic and Distributed Applications Using SAGA </em> </strong>
+  <em> Pradeep Kumar Mantha, Sivakarthik Natesan, Melissa Romanus, Sai Saripalli, Ashley Zebrowski </em>
+  FutureGrid Project Challenge Award Winner,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/fgpc2012-project-45_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/fgpc2012-project-45.bib">bib</a>] : fgpc2012-project-45
+  <br><br>
+  <a name="ogf-gfd-isn"></a>
+  <strong> <em> SAGA Extension: Information Service Navigator API </em> </strong>
+  <em> Steve Fisher, Antony Wilson </em>
+  Open Grid Forum, OGF Proposed Recommendation, GFD.195,  2012
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ogf-gfd-isn_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ogf-gfd-isn.bib">bib</a>] : ogf-gfd-isn
+  <br><br>
 
  <h2><u>2011</u></h2>
 
