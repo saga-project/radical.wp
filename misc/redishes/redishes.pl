@@ -61,6 +61,7 @@ sub cleaner ($)
   while ( 1 )
   {
     my $purged = 0;
+    my $active = 0;
 
     # take care not to purge 'ports/'
     my @server = glob ("$ROOT/*-*/");
@@ -83,6 +84,10 @@ sub cleaner ($)
       {
         $purge = 1;
       }
+      elsif ( not -e "$pwd/redis.ttl" )
+      {
+        $purge = 1;
+      }
       else
       {
         my $ttl = `cat $pwd/redis.ttl`;  chomp ($ttl);
@@ -98,17 +103,28 @@ sub cleaner ($)
 
       if ( $purge )
       {
-        my $pid  = `cat $pwd/redis.pid`;   chomp ($pid);
-        my $port = `cat $pwd/redis.port`;  chomp ($port);
+        my $pid  = undef;
+        my $port = undef;
 
-        print "pid: $pid $pwd\n";
+        if ( -e  "$pwd/redis.pid"  ) { $pid  = `cat $pwd/redis.pid`;   chomp ($pid);  }
+        if ( -e  "$pwd/redis.port" ) { $port = `cat $pwd/redis.port`;  chomp ($port); }
 
-        kill  (2, $pid); # INT
-        sleep (1);
-        kill  (9, $pid); # KILL
+        # print "pid: $pid $pwd\n";
 
-        `rm    $ROOT/ports/$port`;
+        if ( defined $pid )
+        {
+          kill  (2, $pid); # INT
+          sleep (1);
+          kill  (9, $pid); # KILL
+        }
+
+        if ( defined $port )
+        {
+          `rm    $ROOT/ports/$port`;
+        }
+
         `touch $pwd/purged`;
+        `rm -f $pwd/action.purge`;
 
         if ( -e "$ROOT/action.shutdown" )
         {
@@ -119,21 +135,20 @@ sub cleaner ($)
 
         print " - purged $pwd : $pid / $port\n";
       }
+      else
+      {
+        $active ++;
+      }
     }
 
-    if ( -e "$ROOT/action.shutdown" && $purged == 0 )
+    if ( -e "$ROOT/action.shutdown" && $active == 0 )
     {
       `rm -rf $ROOT`;
+      print " - shutdown $ROOT\n";
       exit (0);
     }
 
     sleep (1);
-  }
-
-  if ( -e "$ROOT/action.shutdown" )
-  {
-    `rm -rf $ROOT`;
-    exit (0);
   }
 }
 
@@ -207,8 +222,12 @@ sub Run ($)
     
     elsif ( $line =~ /^\s*REDIS\s+LIST\s*$/io )
     {
-      $ret = `cd $ROOT && ls -d *-*`;
-      print $ret;
+      my @server = split (/\s+/, `cd $ROOT && ls -d *-*`);
+      foreach my $server ( @server )
+      {
+        $ret .= " < $server - ";
+        $ret .= `cat $ROOT/$server/redis.url`;
+      }
     }
 
 
@@ -228,7 +247,7 @@ sub Run ($)
         my $port = `cat $ROOT/$key/redis.port`; chomp ($port);
         my $url  = `cat $ROOT/$key/redis.url`;  chomp ($url);
 
-        $ret .= sprintf ("%s : %6d : %6d : %-8s : %s\n", 
+        $ret .= sprintf (" < %s : %6d : %6d : %-8s : %s\n", 
                          $key, $pid, $port, $status, $url);
       }
     }
@@ -257,13 +276,16 @@ sub Run ($)
       `touch $ROOT/action.shutdown`;
       $ret = "202 service will shut down";
       print $sock "$ret\n";
-      exit (0);
+      sleep (1);
+      exit  (0);
     }
 
     else
     {
       $ret = "418 I'm a teapot.";
     }
+
+    $ret =~ s/^ <\s*//o ;
 
     print " > $line\n";
     print " < $ret\n";
@@ -305,18 +327,19 @@ sub run_server ($$$)
   my $conf     = "$pwd/redis.conf";
   my $pass     = "";
   my $confpass = "";
-  my $secrest  = undef;
+  my $secret   = "";
 
   mkdir ($pwd) or die "Cannot create dir: $!\n";
 
-  print "opts: $opts\n";
+  # print "opts: $opts\n";
+  # print "pwd : $pwd\n";
 
-  if ( $opts  =~ /\bSECRET\s*=\s*(\d+)\b/io ) { $secret = $1; }
+  if ( $opts  =~ /\bSECRET\s*=\s*(\S+)\b/io ) { $secret = $1; }
   if ( $opts  =~ /\bTTL\s*=\s*(\d+)\b/io )    { $ttl    = $1; }
   if ( $opts  =~ /\bPASS\s*=\s*(\S+)\b/io )   { $pass   = $1; }
   if ( $opts  =~ /\bPORT\s*=\s*(\d+)\b/io )   { $port   = $1; }
 
-  print "port: $port ($opts)\n";
+  # print "port: $port ($secret - $ttl - $pass)\n";
 
   if ( ! defined ($secret) or $secret ne $SECRET )
   {
@@ -367,7 +390,7 @@ EOT
   } while ( ! -e $log );
 
   # store pid for convenience
-  my $pid = `head -n 1 $log | cut -f 1 -d ] | cut -f 2 -d [`; chomp ($pid);
+  my $pid = `ps -e -o pid,cmd| grep $key | grep -v grep | cut -c 1-6`; chomp ($pid);
   `echo $pid  > $pwd/redis.pid`;
 
   my $url = "";
