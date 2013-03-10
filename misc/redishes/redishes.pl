@@ -133,7 +133,14 @@ sub cleaner ($)
 
         $purged ++;
 
-        print " - purged $pwd : $pid / $port\n";
+        if ( defined $pid )
+        {
+          print " - purged $pwd : $pid / $port\n";
+        }
+        else
+        {
+          print " - purged $pwd / $port\n";
+        }
       }
       else
       {
