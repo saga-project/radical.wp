@@ -74,8 +74,7 @@ use POSIX ":sys_wait_h";
 
 my $SERVER_BIN   = 'redis-server';
 my $SERVER_LIMIT = 128;
-# my $SERVER_TTL   = 60 * 60 * 24;  # one day
-my $SERVER_TTL   = 10;
+my $SERVER_TTL   = 60 * 60 * 24;  # one day
 my $PORT_MIN     = 10000;
 my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT;
 my $ROOT         = "/tmp/redishes/";
