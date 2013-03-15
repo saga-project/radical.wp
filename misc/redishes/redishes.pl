@@ -73,10 +73,10 @@ use POSIX ":sys_wait_h";
 
 
 my $SERVER_BIN   = 'redis-server';
-my $SERVER_LIMIT = 128;
 my $SERVER_TTL   = 60 * 60 * 24;  # one day
+my $SERVER_LIMIT = 128;
 my $PORT_MIN     = 10000;
-my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT;
+my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT + 1;
 my $ROOT         = "/tmp/redishes/";
 my $SECRET       = $ENV{'REDISHES_SECRET'} or die "please set 'REDISHES_SECRET' before running\n";
 
@@ -575,7 +575,7 @@ sub find_port ($$)
   my $self  = shift;
   my $key   = shift;
 
-  foreach my $p ( $PORT_MIN..$PORT_MAX )
+  foreach my $p ( ($PORT_MIN+1)..$PORT_MAX )
   {
     if ( ! -e "$ROOT/ports/$p" )
     {
@@ -591,6 +591,6 @@ sub find_port ($$)
 package main;
 
 Redishes->new ({'pidfile'   => 'none',
-                'localport' => 2000,
+                'localport' => $PORT_MIN,
                 'mode'      => 'single'})-> Bind ();
 
