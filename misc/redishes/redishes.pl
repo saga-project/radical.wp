@@ -206,6 +206,7 @@ sub cleaner ($)
 
     if ( -e "$ROOT/action.quit" )
     {
+      sleep (2);
       `rm -rf $ROOT/action.quit`;
       print " - quit $ROOT\n";
       exit (0);
@@ -486,10 +487,12 @@ sub Run ($)
 
     elsif ( $line =~ /^\s*QUIT\s*$/io )
     {
-      $ret = "202 service will quit\n";
+      $ret = "202 bye\n";
       $sock->print ("$ret\n");
-      print "$ret\n";
-      `touch $ROOT/action.quit`;
+      $sock->flush ();
+      `killall redishes.pl`;
+      sleep (1);
+      `killall -9 redishes.pl`;
       exit  (0);
     }
 
