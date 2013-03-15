@@ -5,6 +5,9 @@ BEGIN {
   use Net::Daemon;
 }
 
+my $HOST = `hostname -f`;
+chomp ($HOST);
+
 ################################################################################
 #
 my $help = <<EOT;
@@ -209,7 +212,7 @@ sub cleaner ($)
     }
 
     sleep (1);
-    print "cleaning $ROOT/action.quit\n";
+    # print "cleaning $ROOT/action.quit\n";
   }
 }
 
@@ -636,13 +639,13 @@ EOT
   
   if ( $pass ) 
   { 
-    $url = "redis://:XXXXX\@localhost:$port/"; 
-    $ret = "redis://:$pass\@localhost:$port/"; 
+    $url = "redis://:XXXXX\@$HOST:$port/"; 
+    $ret = "redis://:$pass\@$HOST:$port/"; 
   }
   else         
   {
-    $url = "redis://localhost:$port/"; 
-    $ret = "redis://localhost:$port/"; 
+    $url = "redis://$HOST:$port/"; 
+    $ret = "redis://$HOST:$port/"; 
   }
 
   `echo $url  > $pwd/url`;
