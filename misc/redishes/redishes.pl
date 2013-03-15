@@ -5,6 +5,9 @@ BEGIN {
   use Net::Daemon;
 }
 
+my $HOST = `hostname -f`;
+chomp ($HOST);
+
 ################################################################################
 #
 my $help = <<EOT;
@@ -203,13 +206,14 @@ sub cleaner ($)
 
     if ( -e "$ROOT/action.quit" )
     {
+      sleep (2);
       `rm -rf $ROOT/action.quit`;
       print " - quit $ROOT\n";
       exit (0);
     }
 
     sleep (1);
-    print "cleaning $ROOT/action.quit\n";
+    # print "cleaning $ROOT/action.quit\n";
   }
 }
 
@@ -483,10 +487,12 @@ sub Run ($)
 
     elsif ( $line =~ /^\s*QUIT\s*$/io )
     {
-      $ret = "202 service will quit\n";
+      $ret = "202 bye\n";
       $sock->print ("$ret\n");
-      print "$ret\n";
-      `touch $ROOT/action.quit`;
+      $sock->flush ();
+      `killall redishes.pl`;
+      sleep (1);
+      `killall -9 redishes.pl`;
       exit  (0);
     }
 
@@ -636,13 +642,13 @@ EOT
   
   if ( $pass ) 
   { 
-    $url = "redis://:XXXXX\@localhost:$port/"; 
-    $ret = "redis://:$pass\@localhost:$port/"; 
+    $url = "redis://:XXXXX\@$HOST:$port/"; 
+    $ret = "redis://:$pass\@$HOST:$port/"; 
   }
   else         
   {
-    $url = "redis://localhost:$port/"; 
-    $ret = "redis://localhost:$port/"; 
+    $url = "redis://$HOST:$port/"; 
+    $ret = "redis://$HOST:$port/"; 
   }
 
   `echo $url  > $pwd/url`;
