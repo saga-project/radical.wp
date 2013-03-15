@@ -5,9 +5,52 @@ BEGIN {
   use Net::Daemon;
 }
 
+################################################################################
+#
+my $help = <<EOT;
+
+  This service manages on-demand redis service instances.  Instances can be
+  created, listed, and killed (canceled).  Creation requires a password.
+  Instances are shut down autimatically after some timeout (default: 1 day).  
+
+  Commands:
+  ---------
+
+    HELP
+          This message.
+
+    CREATE SECRET
+           [PASS  = ""          ]
+           [TTL   = 60 * 60 * 24]
+           [PORT  = <auto>      ]
+          Creates a new redis instance on <PORT> with <PASS> and for <TTL> seconds.
+          <SECRET> is a password required to create a new redis instance.
+
+    EXTENT id
+          Restart ttl counter for server <id>
+
+    CANCEL id
+          Kill and remove state of server <id>
+
+    STATUS
+          List status for all servers.
+
+    STATUS id
+          Show status for server <id>
+
+    SHUTDOWN SECRET
+          Kill this very service
+
+  Example:
+  --------
+
+    telnet 
+
+EOT
 
 
-######################################################################
+
+################################################################################
 #
 # the server module
 #
@@ -25,11 +68,13 @@ use POSIX ":sys_wait_h";
 
 my $SERVER_BIN   = 'redis-server';
 my $SERVER_LIMIT = 128;
-my $SERVER_TTL   = 60 * 60 * 24;  # one day
+# my $SERVER_TTL   = 60 * 60 * 24;  # one day
+my $SERVER_TTL   = 10;
 my $PORT_MIN     = 10000;
 my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT;
 my $ROOT         = "/tmp/redishes/";
 my $SECRET       = $ENV{'REDISHES_SECRET'} or die "please set 'REDISHES_SECRET' before running\n";
+my $CLEANER      = undef;
 
 
 #---------------------------------------------------------------------
@@ -47,11 +92,11 @@ sub new ($$;$)
 
   bless ($self, $type);
 
-  if ( ! fork () )
+  $CLEANER = fork ();
+  if ( ! $CLEANER )
   {
     $self->cleaner ();
   }
-
 
   return $self;
 }
@@ -60,86 +105,78 @@ sub cleaner ($)
 {
   while ( 1 )
   {
-    my $purged = 0;
     my $active = 0;
 
     # take care not to purge 'ports/'
     my @server = glob ("$ROOT/*-*/");
 
-    PURGE:
+    CANCEL:
     foreach my $pwd ( @server )
     {
-      if ( -e "$pwd/purged" )
-      {
-        next PURGE;
-      }
+      next CANCEL if -e "$pwd/canceled";
+      next CANCEL if -e "$pwd/timeout";
+      next CANCEL if -e "$pwd/done";
+      next CANCEL if -e "$pwd/killed";
+      next CANCEL if -e "$pwd/timeout";
 
-      my $purge = 0;
+      my $cancel = 0;
 
-      if ( -e "$ROOT/action.shutdown" )
-      {
-        $purge = 1;
-      }
-      elsif ( -e "$pwd/action.purge" )
-      {
-        $purge = 1;
-      }
-      elsif ( not -e "$pwd/redis.ttl" )
-      {
-        $purge = 1;
-      }
+      if    (     -e "$ROOT/action.shutdown" ) { $cancel = 1; }
+      elsif (     -e "$pwd/action.cancel"    ) { $cancel = 1; }
+      elsif ( not -e "$pwd/redis.ttl"        ) { $cancel = 2; }
       else
       {
-        my $ttl = `cat $pwd/redis.ttl`;  chomp ($ttl);
-
-        my $ctime = ( stat "$pwd/redis.pid" )[10] || next PURGE;
+        my $ttl   = `cat $pwd/redis.ttl`;  chomp ($ttl);
+        my $ctime = ( stat "$pwd/redis.pid" )[10] || next CANCEL;
         my $now   = time;
 
-        if ( $now - $ctime > $ttl )
-        {
-          $purge = 1;
-        }
+        if ( $now - $ctime > $ttl )            { $cancel = 2; }
       }
 
-      if ( $purge )
+
+      if ( $cancel )
       {
         my $pid  = undef;
         my $port = undef;
 
         if ( -e  "$pwd/redis.pid"  ) { $pid  = `cat $pwd/redis.pid`;   chomp ($pid);  }
+        if ( -e  "$pwd/redis.ppid" ) { $ppid = `cat $pwd/redis.ppid`;  chomp ($ppid); }
         if ( -e  "$pwd/redis.port" ) { $port = `cat $pwd/redis.port`;  chomp ($port); }
 
         # print "pid: $pid $pwd\n";
 
         if ( defined $pid )
         {
-          kill  (2, $pid); # INT
+          kill  ( 9, $pid ); # KILL
+          kill  (15, $pid ); # TERM
+        }
+          
+        if ( defined $ppid )
+        {
           sleep (1);
-          kill  (9, $pid); # KILL
+          kill  ( 9, $ppid); # KILL
+          kill  (15, $ppid); # TERM
+
+          # reap...
+          waitpid ($ppid, WNOHANG);
         }
 
         if ( defined $port )
         {
-          `rm    $ROOT/ports/$port`;
+          `rm $ROOT/ports/$port`;
         }
 
-        `touch $pwd/purged`;
-        `rm -f $pwd/action.purge`;
+        `rm -f $pwd/action.* >/dev/null 2>&1`;   
 
-        if ( -e "$ROOT/action.shutdown" )
+        if ( $cancel == 1 )
         {
-          `rm -rf $pwd`;
+          print " - canceled $pwd\n";
+          `touch $pwd/canceled`;   
         }
-
-        $purged ++;
-
-        if ( defined $pid )
+        elsif ( $cancel == 2 )
         {
-          print " - purged $pwd : $pid / $port\n";
-        }
-        else
-        {
-          print " - purged $pwd / $port\n";
+          print " - timeout $pwd\n";
+          `touch $pwd/timeout`;   
         }
       }
       else
@@ -152,6 +189,13 @@ sub cleaner ($)
     {
       `rm -rf $ROOT`;
       print " - shutdown $ROOT\n";
+      exit (0);
+    }
+
+    if ( -e "$ROOT/action.quit" && $active == 0 )
+    {
+      `rm -rf $ROOT/action.quit`;
+      print " - quit $ROOT\n";
       exit (0);
     }
 
@@ -169,6 +213,9 @@ sub Run ($)
   # read from client socket
   my $sock = $self->{'socket'};
   
+  $sock->print ("REDIS > "); 
+  $sock->flush ();
+
   while ( defined (my $line = $sock->getline ()) ) 
   {
     my $ret = undef;
@@ -176,7 +223,13 @@ sub Run ($)
 
     chomp $line; # Remove CRLF
 
-    if ( $line =~ /^\s*REDIS\s+CREATE(?:\s+(\S.*?))?\s*$/io )
+    if ( $line =~ /^\s*HELP\s*$/io )
+    {
+      $ret = $help
+    }
+
+
+    elsif ( $line =~ /^\s*CREATE(?:\s+(\S.*?))?\s*$/io )
     {
       my $opts = $1 || "";
       my $key  = `uuidgen`;
@@ -194,7 +247,7 @@ sub Run ($)
     }
 
 
-    elsif ( $line =~ /^\s*REDIS\s+EXTENT\s+(\S+)\s*$/io )
+    elsif ( $line =~ /^\s*EXTENT\s+(\S+)\s*$/io )
     {
       my $key = $1;
 
@@ -210,7 +263,7 @@ sub Run ($)
     }
 
 
-    elsif ( $line =~ /^\s*REDIS\s+PURGE\s+(\S+)\s*$/io )
+    elsif ( $line =~ /^\s*CANCEL\s+(\S+)\s*$/io )
     {
       my $key = $1;
 
@@ -221,46 +274,39 @@ sub Run ($)
 
       else 
       {
-        $ret = "202 redis instance '$key' will be purged.";
-        `touch $ROOT/$key/action.purge`;
+        $ret = "202 redis instance '$key' will be canceled.";
+        `touch $ROOT/$key/action.cancel`;
       }
     }
 
     
-    elsif ( $line =~ /^\s*REDIS\s+LIST\s*$/io )
-    {
-      my @server = split (/\s+/, `cd $ROOT && ls -d *-*`);
-      foreach my $server ( @server )
-      {
-        $ret .= " < $server - ";
-        $ret .= `cat $ROOT/$server/redis.url`;
-      }
-    }
-
-
-    elsif ( $line =~ /^\s*REDIS\s+STATUS\s*$/io )
+    elsif ( $line =~ /^\s*STATUS\s*$/io )
     {
       my @keys = `cd $ROOT && ls -d *-*`;
       foreach my $key ( @keys )
       {
         chomp ($key);
 
-        my $status = "running";
+        my $status = "unknown";
 
-        if ( -e "$ROOT/$key/purged" ) { $status = "purged"; }
+        if ( -e "$ROOT/$key/running" ) { $status = "running";  }
+        if ( -e "$ROOT/$key/killed"  ) { $status = "killed";   }
+        if ( -e "$ROOT/$key/done"    ) { $status = "done";     }
+        if ( -e "$ROOT/$key/canceled") { $status = "canceled"; }
+        if ( -e "$ROOT/$key/timeout" ) { $status = "timeout";  }
 
         my $pid  = `cat $ROOT/$key/redis.pid`;  chomp ($pid);
         my $ttl  = `cat $ROOT/$key/redis.ttl`;  chomp ($ttl);
         my $port = `cat $ROOT/$key/redis.port`; chomp ($port);
         my $url  = `cat $ROOT/$key/redis.url`;  chomp ($url);
 
-        $ret .= sprintf (" < %s : %6d : %6d : %-8s : %s\n", 
+        $ret .= sprintf ("%s : %6s : %6s : %-8s : %s\n", 
                          $key, $pid, $port, $status, $url);
       }
     }
 
 
-    elsif ( $line =~ /^\s*REDIS\s+STATUS\s+(\S+)\s*$/io )
+    elsif ( $line =~ /^\s*STATUS\s+(\S+)\s*$/io )
     {
       my $key = $1;
 
@@ -278,11 +324,22 @@ sub Run ($)
       }
     }
 
-    elsif ( $line =~ /^\s*REDIS\s+SHUTDOWN\s*$/io )
+    elsif ( $line =~ /^\s*SHUTDOWN\s*$/io )
     {
       `touch $ROOT/action.shutdown`;
       $ret = "202 service will shut down";
-      print $sock "$ret\n";
+      $sock->print ("$ret\n");
+
+      # reap cleaner
+      waitpid ($CLEANER, 0);
+      exit  (0);
+    }
+
+    elsif ( $line =~ /^\s*QUIT\s*$/io )
+    {
+      `touch $ROOT/action.quit`;
+      $ret = "202 service will quit";
+      $sock->print ("$ret\n");
       sleep (1);
       exit  (0);
     }
@@ -292,12 +349,13 @@ sub Run ($)
       $ret = "418 I'm a teapot.";
     }
 
-    $ret =~ s/^ <\s*//o ;
+    my $log = $ret;
+    $log =~ s/^/ > /omg ;
 
     print " > $line\n";
-    print " < $ret\n";
+    print "$log\n";
 
-    my $rc = print $sock "$ret\n";
+    my $rc = $sock->print ("$ret\n");
     if ( ! $rc )
     {
       print "error: " . $sock->error () . "\n";
@@ -305,6 +363,9 @@ sub Run ($)
       $sock->close ();
       return;
     }
+
+    $sock->print ("REDIS > "); 
+    $sock->flush ();
   }
 
   if ( $sock->error () ) 
@@ -361,7 +422,7 @@ sub run_server ($$$)
 
   open (CONF, ">$conf") or die "cannot write config file '$conf': $!\n";
   print CONF <<EOT;
-daemonize yes
+daemonize no
 port $port
 timeout $ttl
 loglevel notice
@@ -377,7 +438,6 @@ maxclients 128
 appendonly no
 appendfsync everysec
 vm-enabled no
-glueoutputbuf yes
 hash-max-zipmap-entries 64
 hash-max-zipmap-value 512
 activerehashing yes
@@ -387,9 +447,41 @@ EOT
 
   `echo $port > $pwd/redis.port`;
   `echo $ttl  > $pwd/redis.ttl`;
+  `touch        $pwd/running`;
 
   # new process, start redis server
-  system ("$SERVER_BIN $conf");
+  my $ppid = fork ();
+  if ( ! $ppid )
+  {
+    my $retval = system ("$SERVER_BIN $conf");
+
+    if ( $retval == -1 ) 
+    {
+      `echo "failed to execute: $!" >> $pwd/log`;
+    }
+    elsif ( $retval & 127 )
+    {
+      my $msg = sprintf ("child died with signal %d", ($retval & 127));
+      `echo "$msg" >> $pwd/redis.log`;
+      `touch $pwd/killed`;
+    }
+    else 
+    {
+      my $exitval = $retval >> 8;
+      my $msg = sprintf ("child exited with value %d", $exitval);
+
+      `echo "$msg" >> $pwd/log`;
+
+      if ( $exitval == 0 ) { `touch $pwd/done`  ; }
+      if ( $exitval != 0 ) { `touch $pwd/failed`; }
+    }
+
+    exit (0);
+  }
+  else
+  {
+    `echo "$ppid" >> $pwd/ppid`;
+  }
 
   do 
   {
