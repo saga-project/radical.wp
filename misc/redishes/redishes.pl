@@ -27,19 +27,25 @@ my $help = <<EOT;
           <SECRET> is a password required to create a new redis instance.
 
     EXTENT id
-          Restart ttl counter for server <id>
+          Restart ttl counter for server <id>.
 
     CANCEL id
-          Kill and remove state of server <id>
+          Kill server <id>.
+
+    PURGE id 
+          Remove state of server <id>.
+
+    PURGE
+          Remove state of all finished servers.
 
     STATUS
           List status for all servers.
 
     STATUS id
-          Show status for server <id>
+          Show status for server <id>.
 
     SHUTDOWN SECRET
-          Kill this very service
+          Kill this very service.
 
   Example:
   --------
@@ -74,7 +80,6 @@ my $PORT_MIN     = 10000;
 my $PORT_MAX     = $PORT_MIN + $SERVER_LIMIT;
 my $ROOT         = "/tmp/redishes/";
 my $SECRET       = $ENV{'REDISHES_SECRET'} or die "please set 'REDISHES_SECRET' before running\n";
-my $CLEANER      = undef;
 
 
 #---------------------------------------------------------------------
@@ -92,11 +97,18 @@ sub new ($$;$)
 
   bless ($self, $type);
 
-  $CLEANER = fork ();
-  if ( ! $CLEANER )
+  my $tmp_pid = fork ();
+  if ( ! $tmp_pid )
   {
-    $self->cleaner ();
+    if ( ! fork () )
+    {
+      $self->cleaner ();
+      exit (0)
+    }
+    exit (0);
   }
+
+  waitpid ($tmp_pid, 0);
 
   return $self;
 }
@@ -123,11 +135,11 @@ sub cleaner ($)
 
       if    (     -e "$ROOT/action.shutdown" ) { $cancel = 1; }
       elsif (     -e "$pwd/action.cancel"    ) { $cancel = 1; }
-      elsif ( not -e "$pwd/redis.ttl"        ) { $cancel = 2; }
+      elsif ( not -e "$pwd/ttl"              ) { $cancel = 2; }
       else
       {
-        my $ttl   = `cat $pwd/redis.ttl`;  chomp ($ttl);
-        my $ctime = ( stat "$pwd/redis.pid" )[10] || next CANCEL;
+        my $ttl   = `cat $pwd/ttl`;  chomp ($ttl);
+        my $ctime = ( stat "$pwd/pid" )[10] || next CANCEL;
         my $now   = time;
 
         if ( $now - $ctime > $ttl )            { $cancel = 2; }
@@ -139,9 +151,8 @@ sub cleaner ($)
         my $pid  = undef;
         my $port = undef;
 
-        if ( -e  "$pwd/redis.pid"  ) { $pid  = `cat $pwd/redis.pid`;   chomp ($pid);  }
-        if ( -e  "$pwd/redis.ppid" ) { $ppid = `cat $pwd/redis.ppid`;  chomp ($ppid); }
-        if ( -e  "$pwd/redis.port" ) { $port = `cat $pwd/redis.port`;  chomp ($port); }
+        if ( -e  "$pwd/pid"  ) { $pid  = `cat $pwd/pid`;   chomp ($pid);  }
+        if ( -e  "$pwd/port" ) { $port = `cat $pwd/port`;  chomp ($port); }
 
         # print "pid: $pid $pwd\n";
 
@@ -151,16 +162,6 @@ sub cleaner ($)
           kill  (15, $pid ); # TERM
         }
           
-        if ( defined $ppid )
-        {
-          sleep (1);
-          kill  ( 9, $ppid); # KILL
-          kill  (15, $ppid); # TERM
-
-          # reap...
-          waitpid ($ppid, WNOHANG);
-        }
-
         if ( defined $port )
         {
           `rm $ROOT/ports/$port`;
@@ -218,7 +219,7 @@ sub Run ($)
 
   while ( defined (my $line = $sock->getline ()) ) 
   {
-    my $ret = undef;
+    my $ret = "";
     my $ttl = $SERVER_TTL;
 
     chomp $line; # Remove CRLF
@@ -238,7 +239,7 @@ sub Run ($)
       my @server = glob ("$ROOT/*-*/");
 
       if ( scalar (@server) >= $SERVER_LIMIT ) {
-        $ret = "429 insufficient resources for new redis instance, try again later.";
+        $ret = "429 insufficient resources for new redis instance, try again later.\n";
       }
 
       else {
@@ -253,12 +254,12 @@ sub Run ($)
 
       if ( ! -d "$ROOT/$key" )
       {
-        $ret = "404 redis instance '$key' not found.";
+        $ret = "404 redis instance '$key' not found.\n";
       }
       else
       {
-        $ret = "200 redis instance '$key' revitalized.";
-        `touch $ROOT/$key/redis.pid`;
+        $ret = "200 redis instance '$key' revitalized.\n";
+        `touch $ROOT/$key/pid`;
       }
     }
 
@@ -269,13 +270,60 @@ sub Run ($)
 
       if ( ! -d "$ROOT/$key" ) 
       {
-        $ret = "404 redis instance '$key' not found.";
+        $ret = "404 redis instance '$key' not found.\n";
       }
 
       else 
       {
-        $ret = "202 redis instance '$key' will be canceled.";
+        $ret = "202 redis instance '$key' will be canceled.\n";
         `touch $ROOT/$key/action.cancel`;
+      }
+    }
+
+    
+    elsif ( $line =~ /^\s*PURGE\s+(\S+)\s*$/io )
+    {
+      my $key = $1;
+      my $pwd = "$ROOT/$key";
+
+      if ( ! -d $pwd ) 
+      {
+        $ret = "404 redis instance '$key' not found.\n";
+      }
+
+      else 
+      {
+        if ( -e "$pwd/killed"   or
+             -e "$pwd/canceled" or
+             -e "$pwd/timeout"  or
+             -e "$pwd/done"     )
+        {
+          `test -e "$pwd/port && rm -f rm $ROOT/ports/\`cat $pwd/port\``;
+          `rm -rf $pwd`;
+          $ret = "200 redis instance '$key' purged.\n";
+        }
+        else 
+        {
+          $ret = "409 redis instance '$key' still running.\n";
+        }
+      }
+    }
+
+    
+    elsif ( $line =~ /^\s*PURGE\s*$/io )
+    {
+      my @pwds = glob ("$ROOT/*-*/");
+      for my $pwd ( @pwds )
+      {
+        if ( -e "$pwd/killed"   or
+             -e "$pwd/canceled" or
+             -e "$pwd/timeout"  or
+             -e "$pwd/done"     )
+        {
+          `test -e "$pwd/port && rm -f rm $ROOT/ports/\`cat $pwd/port\``;
+          `rm -rf $pwd`;
+          $ret .= "200 redis instance '$pwd' purged.\n";
+        }
       }
     }
 
@@ -295,10 +343,10 @@ sub Run ($)
         if ( -e "$ROOT/$key/canceled") { $status = "canceled"; }
         if ( -e "$ROOT/$key/timeout" ) { $status = "timeout";  }
 
-        my $pid  = `cat $ROOT/$key/redis.pid`;  chomp ($pid);
-        my $ttl  = `cat $ROOT/$key/redis.ttl`;  chomp ($ttl);
-        my $port = `cat $ROOT/$key/redis.port`; chomp ($port);
-        my $url  = `cat $ROOT/$key/redis.url`;  chomp ($url);
+        my $pid  = `cat $ROOT/$key/pid`;  chomp ($pid);
+        my $ttl  = `cat $ROOT/$key/ttl`;  chomp ($ttl);
+        my $port = `cat $ROOT/$key/port`; chomp ($port);
+        my $url  = `cat $ROOT/$key/url`;  chomp ($url);
 
         $ret .= sprintf ("%s : %6s : %6s : %-8s : %s\n", 
                          $key, $pid, $port, $status, $url);
@@ -312,35 +360,44 @@ sub Run ($)
 
       if ( ! -d "$ROOT/$key" )
       {
-        $ret = "404 redis instance '$key' not found.";
+        $ret = "404 redis instance '$key' not found.\n";
       }
       else
       {
-        my $pid = `cat $ROOT/$key/redis.pid`;  chomp ($pid);
-        print "pid: 'pid'\n";
-        $ret = `ls -la $ROOT/$key`;
-        $ret = `ps -lf -p $pid`;
-        print $ret;
+        my $status = "unknown";
+
+        if ( -e "$ROOT/$key/running" ) { $status = "running";  }
+        if ( -e "$ROOT/$key/killed"  ) { $status = "killed";   }
+        if ( -e "$ROOT/$key/done"    ) { $status = "done";     }
+        if ( -e "$ROOT/$key/canceled") { $status = "canceled"; }
+        if ( -e "$ROOT/$key/timeout" ) { $status = "timeout";  }
+
+        my $pid  = `cat $ROOT/$key/pid`;  chomp ($pid);
+        my $ttl  = `cat $ROOT/$key/ttl`;  chomp ($ttl);
+        my $port = `cat $ROOT/$key/port`; chomp ($port);
+        my $url  = `cat $ROOT/$key/url`;  chomp ($url);
+
+        $ret .= sprintf ("%s : %6s : %6s : %-8s : %s\n", 
+                         $key, $pid, $port, $status, $url);
       }
     }
 
     elsif ( $line =~ /^\s*SHUTDOWN\s*$/io )
     {
       `touch $ROOT/action.shutdown`;
-      $ret = "202 service will shut down";
+      $ret = "202 service will shut down\n";
       $sock->print ("$ret\n");
 
-      # reap cleaner
-      waitpid ($CLEANER, 0);
+      print "$ret\n";
       exit  (0);
     }
 
     elsif ( $line =~ /^\s*QUIT\s*$/io )
     {
       `touch $ROOT/action.quit`;
-      $ret = "202 service will quit";
+      $ret = "202 service will quit\n";
       $sock->print ("$ret\n");
-      sleep (1);
+      print "$ret\n";
       exit  (0);
     }
 
@@ -390,9 +447,9 @@ sub run_server ($$$)
   my $ttl      = $SERVER_TTL;
   my $port     = -1;
   my $pwd      = "$ROOT/$key";
-  my $db       = "$pwd/redis.db";
-  my $log      = "$pwd/redis.log";
-  my $conf     = "$pwd/redis.conf";
+  my $db       = "$pwd/db";
+  my $log      = "$pwd/log";
+  my $conf     = "$pwd/conf";
   my $pass     = "";
   my $confpass = "";
   my $secret   = "";
@@ -445,43 +502,45 @@ $confpass
 EOT
   close (CONF);
 
-  `echo $port > $pwd/redis.port`;
-  `echo $ttl  > $pwd/redis.ttl`;
+  `echo $port > $pwd/port`;
+  `echo $ttl  > $pwd/ttl`;
   `touch        $pwd/running`;
 
-  # new process, start redis server
-  my $ppid = fork ();
-  if ( ! $ppid )
+  # double fork to avoid zombies
+  my $tmp_pid = fork ();
+  if ( ! $tmp_pid )
   {
-    my $retval = system ("$SERVER_BIN $conf");
-
-    if ( $retval == -1 ) 
+    if ( ! fork () )
     {
-      `echo "failed to execute: $!" >> $pwd/log`;
-    }
-    elsif ( $retval & 127 )
-    {
-      my $msg = sprintf ("child died with signal %d", ($retval & 127));
-      `echo "$msg" >> $pwd/redis.log`;
-      `touch $pwd/killed`;
-    }
-    else 
-    {
-      my $exitval = $retval >> 8;
-      my $msg = sprintf ("child exited with value %d", $exitval);
+      my $retval = system ("$SERVER_BIN $conf");
 
-      `echo "$msg" >> $pwd/log`;
+      if ( $retval == -1 ) 
+      {
+        `echo "failed to execute: $!" >> $pwd/log`;
+      }
+      elsif ( $retval & 127 )
+      {
+        my $msg = sprintf ("child died with signal %d", ($retval & 127));
+        `echo "$msg" >> $pwd/log`;
+        `touch $pwd/killed`;
+      }
+      else 
+      {
+        my $exitval = $retval >> 8;
+        my $msg = sprintf ("child exited with value %d", $exitval);
 
-      if ( $exitval == 0 ) { `touch $pwd/done`  ; }
-      if ( $exitval != 0 ) { `touch $pwd/failed`; }
+        `echo "$msg" >> $pwd/log`;
+
+        if ( $exitval == 0 ) { `touch $pwd/done`  ; }
+        if ( $exitval != 0 ) { `touch $pwd/failed`; }
+      }
+
+      exit (0);
     }
-
     exit (0);
   }
-  else
-  {
-    `echo "$ppid" >> $pwd/ppid`;
-  }
+
+  waitpid ($tmp_pid, 0);
 
   do 
   {
@@ -490,7 +549,7 @@ EOT
 
   # store pid for convenience
   my $pid = `ps -e -o pid,cmd| grep $key | grep -v grep | cut -c 1-6`; chomp ($pid);
-  `echo $pid  > $pwd/redis.pid`;
+  `echo $pid  > $pwd/pid`;
 
   my $url = "";
   my $ret  = "201 creating redis instance '$key': ";
@@ -506,9 +565,9 @@ EOT
     $ret = "redis://localhost:$port/"; 
   }
 
-  `echo $url  > $pwd/redis.url`;
+  `echo $url  > $pwd/url`;
 
-  return $ret;
+  return "$key - $ret";
 }
 
 
