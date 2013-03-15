@@ -3,6 +3,12 @@
 use strict;
 use Data::Dumper;
 
+# # redirect stdout and stderr to a log file
+# open STDOUT, '>>', "$ENV{HOME}/kill_sshd.log";
+# open STDERR, '>>', "$ENV{HOME}/kill_sshd.log";
+# 
+# printf ("%s: killing idle/orphaned ssh daemons\n", scalar (localtime()));
+
 sub parse_ps_proc ($)
 {
   my  $ps_line =  shift;
@@ -60,7 +66,7 @@ for my $proc_info ( @proc_infos )
 
   if ( $cmd !~ /^sshd:\s+$USER\@notty$/io )
   {
-    # not an tty-less sshd -- ignore<F2>
+    # not an tty-less sshd -- ignore
     next PS_INFO;
   }
 
@@ -70,12 +76,8 @@ for my $proc_info ( @proc_infos )
     if ( int($tmp->{'pid'}) == int($ppid) )
     {
       # this is daddy -- check if it is a root owned sshd process
-      if ( $tmp->{'cmd'} !~ /^sshd:\s+$USER\s+\[priv\]$/io )
-      {
-        # this is not the process you are looking for...
-        next PS_INFO;
-      }
-      if ( $tmp->{'user'} ne 'root' )
+      if ( $tmp->{'cmd'} !~ /^sshd:\s+$USER\s+\[priv\]$/io or
+           $tmp->{'user'} ne 'root' )
       {
         # this is not the process you are looking for...
         next PS_INFO;
@@ -83,7 +85,7 @@ for my $proc_info ( @proc_infos )
     }
   }
 
-  # ok, this *is* the process I was looking for -- now get rid of it
+  # ok, this *is* the process we were looking for -- now get rid of it
   print "killing $proc_info->{'line'} -- ";
   kill (15, $proc_info->{'pid'}) and print "ok\n" or print "failed ($!)\n";
 }
