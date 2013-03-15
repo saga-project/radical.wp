@@ -19,23 +19,23 @@ my $help = <<EOT;
     HELP
           This message.
 
-    CREATE SECRET
+    CREATE SECRET=<secret>
            [PASS  = ""          ]
            [TTL   = 60 * 60 * 24]
            [PORT  = <auto>      ]
           Creates a new redis instance on <PORT> with <PASS> and for <TTL> seconds.
           <SECRET> is a password required to create a new redis instance.
 
-    EXTENT id
+    EXTENT [PASS=<pass>] id
           Restart ttl counter for server <id>.
 
-    CANCEL id
+    CANCEL [PASS=<pass>] id
           Kill server <id>.
 
-    PURGE id 
+    PURGE [PASS=<pass>] id
           Remove state of server <id>.
 
-    PURGE
+    PURGE SECRET=<secret>
           Remove state of all finished servers.
 
     STATUS
@@ -44,7 +44,7 @@ my $help = <<EOT;
     STATUS id
           Show status for server <id>.
 
-    SHUTDOWN SECRET
+    SHUTDOWN SECRET=<secret>
           Kill this very service.
 
   Example:
@@ -71,6 +71,8 @@ our @ISA = "Net::Daemon";
 use Data::Dumper;
 use POSIX ":sys_wait_h";
 
+#---------------------------------------------------------------------
+$ENV{'PATH'} = "/bin/:/usr/bin/:/usr/local/bin/";
 
 my $SERVER_BIN   = 'redis-server';
 my $SERVER_TTL   = 60 * 60 * 24;  # one day
@@ -187,12 +189,19 @@ sub cleaner ($)
 
     if ( -e "$ROOT/action.shutdown" && $active == 0 )
     {
-      `rm -rf $ROOT`;
-      print " - shutdown $ROOT\n";
-      exit (0);
+      if ( $active )
+      {
+        print " - shutdown delayed -- $active active services found\n";
+      }
+      else
+      {
+        `rm -rf $ROOT`;
+        print " - shutdown $ROOT\n";
+        exit (0);
+      }
     }
 
-    if ( -e "$ROOT/action.quit" && $active == 0 )
+    if ( -e "$ROOT/action.quit" )
     {
       `rm -rf $ROOT/action.quit`;
       print " - quit $ROOT\n";
@@ -200,6 +209,7 @@ sub cleaner ($)
     }
 
     sleep (1);
+    print "cleaning $ROOT/action.quit\n";
   }
 }
 
@@ -208,28 +218,97 @@ sub cleaner ($)
 # each client connection.
 sub Run ($) 
 {
-  my $self   = shift;
+  my $self = shift;
 
   # read from client socket
   my $sock = $self->{'socket'};
   
-  $sock->print ("REDIS > "); 
+
+  $sock->print ("SECRET > "); 
   $sock->flush ();
 
-  while ( defined (my $line = $sock->getline ()) ) 
+  SECRET_LINE:
+  while ( defined (my $tainted_line = $sock->getline ()) ) 
   {
-    my $ret = "";
-    my $ttl = $SERVER_TTL;
+    # Remove CRLF
+    $tainted_line =~ s/\r\n//iog;
 
-    chomp $line; # Remove CRLF
+    # remove taint
+    my $line = "";
 
-    if ( $line =~ /^\s*HELP\s*$/io )
+    if ( $tainted_line =~ /^\s*(
+                            (?:[\s0-9a-z\-_=\+\(\)\{\}\[\];:\<\>\~]+)?
+                            )\s*
+                           $/ixo)
     {
-      $ret = $help
+      $line = $1;
+      print "--$line--\n";
+
+      if ( $line eq $SECRET )
+      {
+        last SECRET_LINE;
+        print " - correct secret: '$line'\n";
+        $sock->print (" > 202 authorized\n"); 
+      }
+      else
+      {
+        # starve eventual passwd space scans
+        sleep (1);
+        print " - incorrect secret: '$line'\n";
+        $sock->print (" > 401 not authorized\n"); 
+        $sock->print ("SECRET > "); 
+        $sock->flush ();
+      }
+    }
+    else
+    {
+      # starve eventual passwd space scans
+      sleep (1);
+      print " - parse error: '" . $tainted_line . "'\n";
+      $sock->print (" > 406 parse error: '" . $tainted_line . "'\n");
+      $sock->print ("SECRET > "); 
+      $sock->flush ();
+    }
+  }
+
+  $sock->print ("REDIS  > "); 
+  $sock->flush ();
+
+  LINE:
+  while ( defined (my $tainted_line = $sock->getline ()) ) 
+  {
+    chomp ($tainted_line); # Remove CRLF 
+
+    # remove taint
+    my $line = "";
+
+    if ( $tainted_line =~ /^\s*(
+                            (?:HELP|CREATE|EXTENT|CANCEL|PURGE|STATUS|SHUTDOWN|QUIT)
+                            (?:\s+[0-9a-z\-_=\+\(\)\{\}\[\];:\<\>\~]+)?
+                            )\s*
+                           $/ixo)
+    {
+      $line = $1;
+    }
+    else
+    {
+      print " - parse error: '" . $tainted_line . "'\n";
+      $sock->print (" > 406 parse error: '" . $tainted_line . "'\n");
+      $sock->print ("REDIS  > "); 
+      $sock->flush ();
+      next LINE;
     }
 
 
-    elsif ( $line =~ /^\s*CREATE(?:\s+(\S.*?))?\s*$/io )
+    my $ret = "";
+    my $ttl = $SERVER_TTL;
+
+    if ( $line =~ /^\s*HELP\s*$/io )
+    {
+      $ret = $help;
+    }
+
+    elsif ( $line =~ /^\s*CREATE\s*(.*?)?\s*$/io )
     {
       my $opts = $1 || "";
       my $key  = `uuidgen`;
@@ -257,21 +336,32 @@ sub Run ($)
       }
       else
       {
-        $ret = "200 redis instance '$key' revitalized.\n";
-        `touch $ROOT/$key/pid`;
+        my $pwd = "$ROOT/$key";
+
+        if ( -e "$pwd/killed"   or
+             -e "$pwd/canceled" or
+             -e "$pwd/timeout"  or
+             -e "$pwd/done"     )
+        {
+          $ret = "409 redis instance '$key' is pining for the fjords.\n";
+        }
+        else
+        {
+          $ret = "200 redis instance '$key' revitalized.\n";
+          `touch $ROOT/$key/pid`;
+        }
       }
     }
 
 
     elsif ( $line =~ /^\s*CANCEL\s+(\S+)\s*$/io )
     {
-      my $key = $1;
+      my $key    = $1;
 
       if ( ! -d "$ROOT/$key" ) 
       {
         $ret = "404 redis instance '$key' not found.\n";
       }
-
       else 
       {
         $ret = "202 redis instance '$key' will be canceled.\n";
@@ -282,8 +372,8 @@ sub Run ($)
     
     elsif ( $line =~ /^\s*PURGE\s+(\S+)\s*$/io )
     {
-      my $key = $1;
-      my $pwd = "$ROOT/$key";
+      my $key    = $1;
+      my $pwd    = "$ROOT/$key";
 
       if ( ! -d $pwd ) 
       {
@@ -393,10 +483,10 @@ sub Run ($)
 
     elsif ( $line =~ /^\s*QUIT\s*$/io )
     {
-      `touch $ROOT/action.quit`;
       $ret = "202 service will quit\n";
       $sock->print ("$ret\n");
       print "$ret\n";
+      `touch $ROOT/action.quit`;
       exit  (0);
     }
 
@@ -420,7 +510,7 @@ sub Run ($)
       return;
     }
 
-    $sock->print ("REDIS > "); 
+    $sock->print ("REDIS  > "); 
     $sock->flush ();
   }
 
@@ -451,26 +541,17 @@ sub run_server ($$$)
   my $conf     = "$pwd/conf";
   my $pass     = "";
   my $confpass = "";
-  my $secret   = "";
 
   mkdir ($pwd) or die "Cannot create dir: $!\n";
 
   # print "opts: $opts\n";
   # print "pwd : $pwd\n";
 
-  if ( $opts  =~ /\bSECRET\s*=\s*(\S+)\b/io ) { $secret = $1; }
   if ( $opts  =~ /\bTTL\s*=\s*(\d+)\b/io )    { $ttl    = $1; }
   if ( $opts  =~ /\bPASS\s*=\s*(\S+)\b/io )   { $pass   = $1; }
   if ( $opts  =~ /\bPORT\s*=\s*(\d+)\b/io )   { $port   = $1; }
 
-  # print "port: $port ($secret - $ttl - $pass)\n";
-
-  if ( ! defined ($secret) or $secret ne $SECRET )
-  {
-    # starve eventual passwd space scans
-    sleep (1);
-    return "401 Unauthorized: invalid secret provided";
-  }
+  # print "port: $port ($ttl - $pass)\n";
 
   if ( $port == -1 ) { $port = $self->find_port ($key); }
   if ( $pass       ) { $confpass = "requirepass $pass"; }
@@ -566,7 +647,7 @@ EOT
 
   `echo $url  > $pwd/url`;
 
-  return "$key - $ret";
+  return "$key - $ret\n";
 }
 
 
