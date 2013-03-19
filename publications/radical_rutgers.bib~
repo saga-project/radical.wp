@@ -32,7 +32,7 @@
                   Applications}},
   year        = 2012,
   note        = {Computing and Concurrency: Practise and Experience
-                  (in press)}, 
+                  (accepted, in press)}, 
   OPTurl      = {},
 }
 
@@ -311,9 +311,39 @@
 ## Conference and Workshop Papers
 
 ###################
+# 2013
+@inproceedings{2013-xsede-cdi,
+  author      = {Melissa Romanus and Ole Weidner and Shantenu Jha and
+                 Brian K. Radak and Emilio Gallicchio and Tai-Sung Lee and
+                 Darrin M. York and Peng He and Nan-Jie Deng and Dai Wei and
+                 Ronald M. Levy },
+  title       = {{A Framework for Flexible and Scalable Replica-Exchange on 
+                 Production Distributed CI}},
+  booktitle   = {XSEDE13: Gateway to Discovery (submitted)},
+  year        = {2013},
+  location    = {San Diego, California, USA},
+  OPTurl
+    = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi.pdf},
+}
+
+
+@inproceedings{2013-xsede-hthpc,
+  author      = {Jack Smith and Melissa Romanus and James Solow and Pradeep
+                 Kumar Mantha and Yaakoub El Khamra and Thomas C. Bishop and
+                 Shantenu Jha},
+  title       = {{Scalable Online Comparative Genomics of Mononucleosomes:
+                 A BigJob}}.
+  booktitle   = {XSEDE13: Gateway to Discovery (submitted)},
+  year        = {2013},
+  location    = {San Diego, California, USA},
+  OPTurl      = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc.pdf},
+}
+
+
+###################
 # 2012
 
-@inproceedings{ccgrid-pilotapi,
+@inproceedings{ccgrid12-pilotdata,
   author      = {Mark Santcroos and Barbera DC van Schaik and Shayan
                   Shahand and Silvia Delgado Olabarriaga and Andre
                   Luckow and Shantenu Jha},
@@ -363,7 +393,7 @@
 
 @inproceedings{pmr-ecmls12,
   author      = {Pradeep Mantha and Nayong Kim and Joohyun Kim and Andre Luckow and Shantenu Jha},
-  title       = {{}},
+  title       = {{Understanding MapReduce-based Next-Generation Sequencing Alignment on Distributed Cyberinfrastructure}},
   booktitle   = {{3rd International Workshop on Emerging Methods in
                   Computational Life Sciences, Proceedings of the 21st
                   International Symposium on High-Performance Parallel
@@ -431,7 +461,7 @@
   articleno   = {46},
   numpages    = {9},
   url         = {http://dl.acm.org/ft_gateway.cfm?id=2335843&ftid=1264202&dwn=1&CFID=178712210&CFTOKEN=50835868},
-  OPTdoi         = {10.1145/2335755.2335843},
+  OPTdoi      = {10.1145/2335755.2335843},
   acmid       = {2335843},
   isbn        = {978-1-4503-1602-6},
   keywords    = {ECSS projects, SAGA, distributed computing, high performance, high throughput},
@@ -924,7 +954,7 @@
   type        = {{OGF Proposed Recommendation, GFD.195}},
   institution = {{Open Grid Forum}},
   year        = 2012,
-  url         = {http://ogf.org/Public_Comment_Docs/Documents/2011-06/ISNSpec.pdf},
+  url         = {http://ogf.org/documents/GFD.195.pdf},
 }
 
 ###################
@@ -1096,9 +1126,6 @@ techreport{ogf-gfd-sd,
   url         = {http://saga-project.github.com/BigJob/sphinxdoc/},
 }
 
-
-
-
 @misc{bj_xsede_url,
   institution = {{SAGA-BigJob}},
   note         = {\url{http://xsede.org/bigjob}},
@@ -1126,10 +1153,6 @@ techreport{ogf-gfd-sd,
   title       = {{BigJob on XSEDE}},
   url         = {\url{https://www.xsede.org/bigjob}},
 }
-
-
-
-
 
 ################################################################################
 ## miscellaneous
