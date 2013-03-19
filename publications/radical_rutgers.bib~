@@ -322,7 +322,7 @@
   booktitle   = {XSEDE13: Gateway to Discovery (submitted)},
   year        = {2013},
   location    = {San Diego, California, USA},
-  OPTurl
+  note 
     = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi.pdf},
 }
 
@@ -335,7 +335,7 @@
   booktitle   = {XSEDE13: Gateway to Discovery (submitted)},
   year        = {2013},
   location    = {San Diego, California, USA},
-  OPTurl      = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc.pdf},
+  note      = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc.pdf},
 }
 
 
@@ -1112,7 +1112,7 @@ techreport{ogf-gfd-sd,
 }
 
 @misc{dare-url,
-  url         = {http://gw68.quarry.iu.teragrid.org:8080/},
+  note        = {\url{http://gw68.quarry.iu.teragrid.org:8080/}},
 }
 
 @misc{bj_url,
@@ -1145,18 +1145,18 @@ techreport{ogf-gfd-sd,
 
 @misc{async_bigjob_git_url,
   title       = {{Library to Support Flexible and Scalable Replica Exchange Simulations}},
-  url         = {\url{https://github.com/saga-project/asyncre-bigjob}},
+  note         = {\url{https://github.com/saga-project/asyncre-bigjob}},
 }
 
 @misc{xsede_bigjob_url,
   title       = {{BigJob on XSEDE}},
-  url         = {\url{https://www.xsede.org/bigjob}},
+  note         = {\url{https://www.xsede.org/bigjob}},
 }
 
 
 @misc{saga-python-url,
   title       = {{SAGA Python}},
-  url         = {\url{http://saga-project.github.com/saga-python/}},
+  note         = {\url{http://saga-project.github.com/saga-python/}},
 }
 
 
