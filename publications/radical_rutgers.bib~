@@ -331,8 +331,7 @@
   author      = {Jack Smith and Melissa Romanus and James Solow and Pradeep
                  Kumar Mantha and Yaakoub El Khamra and Thomas C. Bishop and
                  Shantenu Jha},
-  title       = {{Scalable Online Comparative Genomics of Mononucleosomes:
-                 A BigJob}}.
+  title       = {{Scalable Online Comparative Genomics of Mononucleosomes: A BigJob}},
   booktitle   = {XSEDE13: Gateway to Discovery (submitted)},
   year        = {2013},
   location    = {San Diego, California, USA},
@@ -343,7 +342,7 @@
 ###################
 # 2012
 
-@inproceedings{ccgrid12-pilotdata,
+@inproceedings{ccgrid13-pilotdata,
   author      = {Mark Santcroos and Barbera DC van Schaik and Shayan
                   Shahand and Silvia Delgado Olabarriaga and Andre
                   Luckow and Shantenu Jha},
@@ -1113,17 +1112,17 @@ techreport{ogf-gfd-sd,
 }
 
 @misc{dare-url,
-  url         = {http://dare.cct.lsu.edu/},
+  url         = {http://gw68.quarry.iu.teragrid.org:8080/},
 }
 
 @misc{bj_url,
-  institution = {{SAGA-BigJob}},
-  url         = {https://github.com/saga-project/BigJob/wiki},
+  title  = {{SAGA-BigJob}},
+  note   = {\url{https://github.com/saga-project/BigJob/wiki}},
 }
 
 @misc{bj_doc_url,
-  institution = {{RADICAL}},
-  url         = {http://saga-project.github.com/BigJob/sphinxdoc/},
+  title        = {{RADICAL}},
+  note        = {\url{http://saga-project.github.com/BigJob/sphinxdoc/}},
 }
 
 @misc{bj_xsede_url,
@@ -1153,6 +1152,20 @@ techreport{ogf-gfd-sd,
   title       = {{BigJob on XSEDE}},
   url         = {\url{https://www.xsede.org/bigjob}},
 }
+
+
+@misc{saga-python-url,
+  title       = {{SAGA Python}},
+  url         = {\url{http://saga-project.github.com/saga-python/}},
+}
+
+
+@misc{xsede-campus-champion-fellow,
+  title = {XSEDE names first Campus Champions Fellows},
+  url   = {https://www.xsede.org/ccfellows-july2012}
+}
+
+
 
 ################################################################################
 ## miscellaneous
