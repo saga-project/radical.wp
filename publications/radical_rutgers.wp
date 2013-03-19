@@ -132,13 +132,28 @@
 <a name="Conference_and_Workshop_Papers"></a><h1><hr/><u>Conference and Workshop Papers</u></h1>
 
 
+ <h2><u>2013</u></h2>
+
+  <a name="2013-xsede-cdi"></a>
+  <strong> <em> A Framework for Flexible and Scalable Replica-Exchange on Production Distributed CI </em> </strong>
+  <em> Melissa Romanus, Ole Weidner, Shantenu Jha, Brian K. Radak, Emilio Gallicchio, Tai-Sung Lee, Darrin M. York, Peng He, Nan-Jie Deng, Dai Wei, Ronald M. Levy  </em>
+  XSEDE13: Gateway to Discovery (submitted),  2013
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-cdi.bib">bib</a>] : 2013-xsede-cdi
+  <br><br>
+  <a name="2013-xsede-hthpc"></a>
+  <strong> <em> Scalable Online Comparative Genomics of Mononucleosomes: A BigJob </em> </strong>
+  <em> Jack Smith, Melissa Romanus, James Solow, Pradeep Kumar Mantha, Yaakoub El Khamra, Thomas C. Bishop, Shantenu Jha </em>
+    2013
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-hthpc.bib">bib</a>] : 2013-xsede-hthpc
+  <br><br>
+
  <h2><u>2012</u></h2>
 
-  <a name="ccgrid-pilotapi"></a>
+  <a name="ccgrid12-pilotdata"></a>
   <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
   <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
   13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (submitted),  2013
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ccgrid-pilotapi_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid-pilotapi.bib">bib</a>] : ccgrid-pilotapi
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ccgrid12-pilotdata_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid12-pilotdata.bib">bib</a>] : ccgrid12-pilotdata
   <br><br>
   <a name="pstar12"></a>
   <strong> <em> P*: A Model of Pilot-Abstractions </em> </strong>
