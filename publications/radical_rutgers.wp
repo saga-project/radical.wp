@@ -25,7 +25,7 @@
   <strong> <em> Pilot-Abstractions for Data-Intensive Cloud Applications </em> </strong>
   <em> Andre Luckow, Pradeep Mantha, Melissa Romanus, Shantenu Jha </em>
     2012
-  Computing and Concurrency: Practise and Experience (in press)
+  Computing and Concurrency: Practise and Experience (accepted, in press)
    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/cpe_pmr_cloud_2012_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/cpe_pmr_cloud_2012.bib">bib</a>] : cpe_pmr_cloud_2012
   <br><br>
   <a name="dpa-surveypaper"></a>
@@ -138,23 +138,23 @@
   <strong> <em> A Framework for Flexible and Scalable Replica-Exchange on Production Distributed CI </em> </strong>
   <em> Melissa Romanus, Ole Weidner, Shantenu Jha, Brian K. Radak, Emilio Gallicchio, Tai-Sung Lee, Darrin M. York, Peng He, Nan-Jie Deng, Dai Wei, Ronald M. Levy  </em>
   XSEDE13: Gateway to Discovery (submitted),  2013
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-cdi.bib">bib</a>] : 2013-xsede-cdi
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi_draft.pdf">pdf</a>]  [<a title="link" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-cdi.pdf">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-cdi.bib">bib</a>] : 2013-xsede-cdi
   <br><br>
   <a name="2013-xsede-hthpc"></a>
   <strong> <em> Scalable Online Comparative Genomics of Mononucleosomes: A BigJob </em> </strong>
   <em> Jack Smith, Melissa Romanus, James Solow, Pradeep Kumar Mantha, Yaakoub El Khamra, Thomas C. Bishop, Shantenu Jha </em>
-    2013
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-hthpc.bib">bib</a>] : 2013-xsede-hthpc
+  XSEDE13: Gateway to Discovery (submitted),  2013
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc_draft.pdf">pdf</a>]  [<a title="link" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-xsede-hthpc.pdf">link</a>] [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/2013-xsede-hthpc.bib">bib</a>] : 2013-xsede-hthpc
+  <br><br>
+  <a name="ccgrid13-pilotdata"></a>
+  <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
+  <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
+  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (accepted),  2013
+    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid13-pilotdata.bib">bib</a>] : ccgrid13-pilotdata
   <br><br>
 
  <h2><u>2012</u></h2>
 
-  <a name="ccgrid12-pilotdata"></a>
-  <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
-  <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
-  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (submitted),  2013
-   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ccgrid12-pilotdata_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid12-pilotdata.bib">bib</a>] : ccgrid12-pilotdata
-  <br><br>
   <a name="pstar12"></a>
   <strong> <em> P*: A Model of Pilot-Abstractions </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
@@ -315,7 +315,6 @@
   <strong> <em> Developing Large-Scale Adaptive Scientific Applications with Hard to Predict Runtime Resource Requirements </em> </strong>
   <em> Shantenu Jha, Yaakoub El-Khamra, Hartmut Kaiser, Ole Weidner, Andre Merzky </em>
   Proceedings of TeraGrid08,  2008
-  Winner of the Performance Challenge Award http://www.cct.lsu.edu/~sjha/select_publications/tg08-performance-award.pdf
     [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/saga_tg08.bib">bib</a>] : saga_tg08
   <br><br>
   <a name="Luckow:2008la"></a>
