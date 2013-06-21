@@ -244,7 +244,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   $out->print  ($res);
   $out->print  ("<hr><br><br>\n");
   $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
-  $out->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n");();
+  $out->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n\n");();
 
   $out->close (); # done, close output.
 

@@ -150,7 +150,7 @@
   <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
   <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
   13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (accepted),  2013
-    [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid13-pilotdata.bib">bib</a>] : ccgrid13-pilotdata
+   [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/ccgrid13-pilotdata_draft.pdf">pdf</a>]   [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/ccgrid13-pilotdata.bib">bib</a>] : ccgrid13-pilotdata
   <br><br>
 
  <h2><u>2012</u></h2>
@@ -426,3 +426,4 @@
  <a name="bibtex"></a><h1><u>BibTeX</u></h1>
 
  &bull; <a href="https://raw.github.com/saga-project/radical.wp/master/publications/radical_rutgers.bib"><b>radical_rutgers.bib</b></a> <br>
+
