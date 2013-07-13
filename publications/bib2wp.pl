@@ -18,7 +18,9 @@ BEGIN
 # globals, args and syntax check
 #
 my $BIB = shift || usage ("Missing 'bib' argument.");
-my $WP  = shift || usage ("Missing 'wp'  argument.");
+my $WP  = shift || "$BIB.wp";
+my $WPD = shift || "$WP.drafts";
+
 scalar (@ARGV)  && usage ("Too many arguments.");
 
 my $BIBROOT = "https://raw.github.com/saga-project/radical.wp/master/publications";
@@ -33,10 +35,12 @@ my $PDFROOT = "$BIBROOT/pdf";
   # open input/output files, and alloc vars which survive the parsing loop
   my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
   my $out     = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
+  my $outd    = new IO::File ($WPD, 'w') || die "Cannot open bib file '$WPD': $!\n";
 
   my @lines   = <$in>; # slurp in lines from input file, to be parsed
   my @section = ();    # lines for a single bibtex entry
-  my $res     = "";    # resulting WP text
+  my $txt     = "";    # resulting WP text
+  my $txtd    = "";    # resulting WP drafts text
   my $links   = "";    # links to page sections at top
   my $heading = "";    # heading (year) to be printed if there are entries for that year
   my $headed  =  0;    # was heading printed?
@@ -70,7 +74,7 @@ my $PDFROOT = "$BIBROOT/pdf";
       $lnk =~ s/\s/_/iog;
 
       # add the section heading to the result, and add an entry in the top links
-      $res   .= sprintf ("\n\n<a name=\"$lnk\"></a><h1><hr/><u>$title</u></h1>\n\n");
+      $txt   .= sprintf ("\n\n<a name=\"$lnk\"></a><h1><hr/><u>$title</u></h1>\n\n");
       $links .= sprintf (" &bull; <a href=\"#$lnk\"><b>$title</b></a> <br>\n");
     }
     elsif ( $line =~ /^#\s+(\d+?)\s*$/io )
@@ -213,18 +217,32 @@ my $PDFROOT = "$BIBROOT/pdf";
             # print year heading if not done so before
             if ( ! $headed )
             {
-              $res   .= sprintf ($heading);
+              $txt   .= sprintf ($heading);
               $headed = 1;
             }
 
-            # print entry
-            $res .= "  <a name=\"$key\"></a>\n";
-            $res .= "  <strong> <em> $title </em> </strong>\n";
-            $res .= "  <em> $author </em>\n";
-            $res .= "  $book $month $year\n";
-            $res .= "  $note\n" if ( $note);
-            $res .= "  $pdflnk $notelnk $biblnk : $key\n";
-            $res .= "  <br><br>\n";
+            if ( $key =~ /draft/io )
+            {
+              # print entry to drafts
+              $txtd .= "  <a name=\"$key\"></a>\n";
+              $txtd .= "  <strong> <em> $title </em> </strong>\n";
+              $txtd .= "  <em> $author </em>\n";
+              $txtd .= "  $book $month $year\n";
+              $txtd .= "  $note\n" if ( $note);
+              $txtd .= "  $notelnk $pdflnk $biblnk : $key\n";
+              $txtd .= "  <br><br>\n";
+            }
+            else
+            {
+              # print entry to pubs
+              $txt .= "  <a name=\"$key\"></a>\n";
+              $txt .= "  <strong> <em> $title </em> </strong>\n";
+              $txt .= "  <em> $author </em>\n";
+              $txt .= "  $book $month $year\n";
+              $txt .= "  <br>$note<br>\n" if ( $note);
+              $txt .= "  $notelnk $pdflnk $biblnk : $key\n";
+              $txt .= "  <br><br>\n";
+            }
 
           } # parse ok
         } # parser->next
@@ -241,12 +259,26 @@ my $PDFROOT = "$BIBROOT/pdf";
   $out->print  ("<hr>\n");
   $out->print  ($links);
   $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a>\n");
-  $out->print  ($res);
+  $out->print  ($txt);
   $out->print  ("<hr><br><br>\n");
   $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
   $out->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n\n");();
+  $out->close  (); # done, close output.
 
-  $out->close (); # done, close output.
+  $outd->print  ("<hr>\n");
+  $outd->print  ("\n"); 
+  $outd->print  ("These publications are work in progress, are under review, or\n");
+  $outd->print  ("are not yet published for other reasons.  As such, they are\n");
+  $outd->print  ("likely to change, sometimes significantly, and should not\n");
+  $outd->print  ("(yet) be referenced directly.  Please contact the repective\n");
+  $outd->print  ("authors for further details.\n");
+  $outd->print  ("\n");
+  $outd->print  ("<a name=\"under_review\"></a><h1><hr/><u>Under Review</u></h1>\n");
+  $outd->print  ($txtd);
+  $outd->print  ("<hr><br><br>\n");
+  $outd->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
+  $outd->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n\n");();
+  $outd->close  (); # done, close output.
 
 } # main
 #

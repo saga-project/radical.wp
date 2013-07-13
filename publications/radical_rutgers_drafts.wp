@@ -1,0 +1,22 @@
+<hr>
+
+These publications are work in progress, are under review, or
+are not yet published for other reasons.  As such, they are
+likely to change, sometimes significantly, and should not
+(yet) be referenced directly.  Please contact the repective
+authors for further details.
+
+<a name="under_review"></a><h1><hr/><u>Under Review</u></h1>
+  <a name="draft_exascale"></a>
+  <strong> <em> Towards Distributed E* Computing </em> </strong>
+  <em> Shantenu Jha, Andre Merzky, Matteo Turilli </em>
+  Submitted to: Workshop on Modeling & Simulation of Exascale Systems & Applications, June 2013
+  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/draft_exascale_draft.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/draft_exascale.bib">bib</a>] : draft_exascale
+  <br><br>
+<hr><br><br>
+
+
+ <a name="bibtex"></a><h1><u>BibTeX</u></h1>
+
+ &bull; <a href="https://raw.github.com/saga-project/radical.wp/master/publications/radical_rutgers.bib"><b>radical_rutgers.bib</b></a> <br>
+
