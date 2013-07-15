@@ -221,7 +221,7 @@ my $PDFROOT = "$BIBROOT/pdf";
               $headed = 1;
             }
 
-            if ( $key =~ /draft/io )
+            if ( $key =~ /^(draft|review)_/io )
             {
               # print entry to drafts
               $txtd .= "  <a name=\"$key\"></a>\n";
