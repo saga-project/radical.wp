@@ -7,11 +7,23 @@ likely to change, sometimes significantly, and should not
 authors for further details.
 
 <a name="under_review"></a><h1><hr/><u>Under Review</u></h1>
-  <a name="draft_exascale"></a>
-  <strong> <em> Towards Distributed E* Computing </em> </strong>
-  <em> Shantenu Jha, Andre Merzky, Matteo Turilli </em>
+  <a name="review_aimes_perspective"></a>
+  <strong> <em> Distributed Exascale Computing: An AIMES Perspective </em> </strong>
+  <em> Shantenu Jha, Andre Merzky, Matteo Turilli, Daniel S. Katz, Jon Weissman </em>
   Submitted to: Workshop on Modeling & Simulation of Exascale Systems & Applications, June 2013
-  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/draft_exascale_draft.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/draft_exascale.bib">bib</a>] : draft_exascale
+  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/review_aimes_perspective.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/review_aimes_perspective.bib">bib</a>] : review_aimes_perspective
+  <br><br>
+  <a name="review_jcc_compana_2013"></a>
+  <strong> <em> Comparative Analysis of Nucleotide Translocation through Protein Nanopores using Steered Molecular Dynamics and an Adaptive Biasing Force </em> </strong>
+  <em> Hugh S.C. Martin, Shantenu Jha, Peter V. Coveney </em>
+  Submitted to: Journal of Computational Chemistry,  2013
+    [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/review_jcc_compana_2013.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/review_jcc_compana_2013.bib">bib</a>] : review_jcc_compana_2013
+  <br><br>
+  <a name="review_sc_pilotdata_2013"></a>
+  <strong> <em> Pilot-Data: An Abstraction for Distributed Data </em> </strong>
+  <em> Andre Luckow, Mark Santcroos, Ashley Zebrowski, Shantenu Jha </em>
+  Submitted to: SuperComputing 2013 (SC'13),  2013
+  [<a title="link" href="http://arxiv.org/abs/1301.6228">link</a>]  [<a title="pdf" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/review_sc_pilotdata_2013.pdf">pdf</a>]  [<a title="bib" href="https://raw.github.com/saga-project/radical.wp/master/publications/bib/review_sc_pilotdata_2013.bib">bib</a>] : review_sc_pilotdata_2013
   <br><br>
 <hr><br><br>
 
