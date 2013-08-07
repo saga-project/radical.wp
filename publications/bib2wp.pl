@@ -23,7 +23,7 @@ my $WPD = shift || "$WP.drafts";
 
 scalar (@ARGV)  && usage ("Too many arguments.");
 
-my $BIBROOT = "https://raw.github.com/saga-project/radical.wp/master/publications";
+my $BIBROOT = "https://www.github.com/saga-project/radical.wp/raw/master/publications";
 my $PDFROOT = "$BIBROOT/pdf";
 ################################################################################
 
