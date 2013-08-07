@@ -33,11 +33,16 @@ something needs fixing of course).
 
 Once you have done that, you can run:
 
-  - rm bib/*.bib
-  - ./bib2wp.pl radical_rutgers.bib radical_rutgers.wp
+  - make
 
-The last command may need the BibTex/Parser perl module - let me know
-of that is missing on your system, and you need help installing it...
+which basically runs 
+
+	- rm -f bib/*
+	- ./bib2wp.pl radical_rutgers.bib radical_rutgers.wp radical_rutgers_drafts.wp
+	- git add radical_rutgers*.wp bib2wp.pl pdf/ bib/
+
+The perl command may need the BibTex::Parser perl module - let me know
+if that is missing on your system, and you need help installing it...
 
 That program does a couple of things:
 
@@ -59,10 +64,11 @@ stored files are indeed PDFs, like:
 
 Once that is done, please commit everything to git:
 
-  - git add radical_rutgers.bib radical_rutgers.wp bib/* pdf/*
-  - git commit -m 'update bib with PDF urls, fetch pdfs'
+  - git add radical_rutgers.bib radical_rutgers*.wp bib/* pdf/*
+  - git commit -m 'update bib with PDF urls, fetch pdfs, perl is great'
   - git push
 
 Also, the contents of radical_rutgers.wp need to be cut/pasted into
-the wordpress editor for the publications page (HTML version).
+the wordpress editor for the publications page (HTML version), and 
+similar for the drafts page..
 
