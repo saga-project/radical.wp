@@ -149,7 +149,7 @@
   <a name="ccgrid13-pilotdata"></a>
   <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
   <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
-  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (accepted),  2013
+  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing,  2013
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccgrid13-pilotdata_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccgrid13-pilotdata.bib">bib</a>] : ccgrid13-pilotdata
   <br><br>
 
@@ -160,6 +160,12 @@
   <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
   8th IEEE International Conference on e-Science 2012,  2012
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar12.bib">bib</a>] : pstar12
+  <br><br>
+  <a name="pstar-network12"></a>
+  <strong> <em> Pilot abstractions for compute, data, and network </em> </strong>
+  <em> Mark Santcroos, Silvia Delgado Olabarriaga, Daniel S. Katz, Shantenu Jha </em>
+  2012 IEEE 8th International Conference on E-Science,  2012
+    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar-network12.bib">bib</a>] : pstar-network12
   <br><br>
   <a name="pilot-mapreduce2012"></a>
   <strong> <em> Pilot-MapReduce: an extensible and flexible MapReduce implementation for distributed data </em> </strong>
