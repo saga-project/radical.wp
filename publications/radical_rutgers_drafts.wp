@@ -7,6 +7,12 @@ likely to change, sometimes significantly, and should not
 authors for further details.
 
 <a name="under_review"></a><h1><hr/><u>Under Review</u></h1>
+  <a name="review_jctc_prcrossdrug_2013"></a>
+  <strong> <em> Computing Clinically Relevant Binding Free Energies of HIV-1 Protease Inhibitors </em> </strong>
+  <em> David W. Wright, Benjamin A. Hall, Owain A. Kenway, Shantenu Jha, Peter V. Coveney </em>
+  Submitted to: Journal of Chemical Theory and Computation,  2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_jctc_prcrossdrug_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_jctc_prcrossdrug_2013.bib">bib</a>] : review_jctc_prcrossdrug_2013
+  <br><br>
   <a name="review_aimes_perspective"></a>
   <strong> <em> Distributed Exascale Computing: An AIMES Perspective </em> </strong>
   <em> Shantenu Jha, Andre Merzky, Matteo Turilli, Daniel S. Katz, Jon Weissman </em>
