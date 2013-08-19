@@ -1,8 +1,18 @@
-
 ################################################################################
 ### Drafts / Under Review (note the 'review_' prefix).  These need to be sorted 
 ### into the list after publication (with a non-prefixed key!)
 ################################################################################
+
+@misc{review_jctc_prcrossdrug_2013, 
+  author      = {David W. Wright and Benjamin A. Hall and Owain A. Kenway and 
+                 Shantenu Jha and Peter V. Coveney},
+  title       = {{Computing Clinically Relevant Binding Free Energies
+                  of HIV-1 Protease Inhibitors}},
+  journal     = {{Submitted to: Journal of Chemical Theory and Computation}},
+  year        = 2013,
+}
+
+
 
 @misc{review_aimes_perspective, 
   author      = {Shantenu Jha and Andre Merzky and Matteo Turilli and 
@@ -355,7 +365,7 @@
   title       = {{A Framework for Flexible and Scalable Replica-Exchange on 
                  Production Distributed CI}},
   booktitle   = {Proceedings of the Conference on Extreme Science and 
-		Engineering Discovery Environment: Gateway to Discovery},
+		             Engineering Discovery Environment: Gateway to Discovery},
   series      = {XSEDE '13},
   isbn        = {978-1-4503-2170-9},
   year        = {2013},
@@ -365,8 +375,7 @@
   numpages    = {8},
   doi         = {10.1145/2484762.2484830},
   acmid       = {2484830},
-  note 
-    = {\url{https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-cdi-xsede.pdf}},
+  note        = {\url{https://raw.github.com/saga-project/radical.wp/master/publications/pdf/2013-cdi-xsede.pdf}},
 }
 
 
@@ -377,31 +386,35 @@
   title       = {{Scalable Online Comparative Genomics of Mononucleosomes: A BigJob}},
   isbn 	      = {978-1-4503-2170-9},
   booktitle   = {Proceedings of the Conference on Extreme Science and
-                Engineering Discovery Environment: Gateway to Discovery},
+                 Engineering Discovery Environment: Gateway to Discovery},
   series      = {XSEDE '13},
   year        = {2013},
   location    = {San Diego, California, USA},
   pages       = {23:1--23:8},
   articleno   = {23},
   numpages    = {8},
-  doi = {10.1145/2484762.2484819},
-  acmid = {2484819},
-  note      = {\url{https://github.com/saga-project/radical.wp/raw/master/publications/pdf/2013-xsede-hthpc.pdf}},
+  doi         = {10.1145/2484762.2484819},
+  acmid       = {2484819},
+  note        = {\url{https://github.com/saga-project/radical.wp/raw/master/publications/pdf/2013-xsede-hthpc.pdf}},
 }
 
 
 @inproceedings{ccgrid13-pilotdata,
   author      = {Mark Santcroos and Barbera DC van Schaik and Shayan
-                  Shahand and Silvia Delgado Olabarriaga and Andre
-                  Luckow and Shantenu Jha},
+                 Shahand and Silvia Delgado Olabarriaga and Andre
+                 Luckow and Shantenu Jha},
   title       = {{Exploring Dynamic Enactment of Scientific Workflows
-                  using Pilot-Abstractions}},
+                 using Pilot-Abstractions}},
   booktitle   = {13th IEEE/ACM International Conference on Cluster,
-                  Cloud and Grid Computing (accepted)},
+                 Cloud and Grid Computing},
   year        = {2013},
+  pages       = {311-318},
+  publisher   = {IEEE Computer Society},
+  address     = {Los Alamitos, CA, USA},
   location    = {Delft, Netherlands},
+  doi         = {http://doi.ieeecomputersociety.org/10.1109/CCGrid.2013.17},
+  isbn        = {978-1-4673-6465-2},
 }
-
 
 
 ###################
@@ -418,12 +431,26 @@
 }
 
 
+@inproceedings{pstar-network12,
+	address     = {Los Alamitos, CA, USA},
+	author      = {Mark Santcroos and Silvia Delgado Olabarriaga and Daniel S. Katz and Shantenu Jha},
+	journal     = {2012 IEEE 8th International Conference on E-Science},
+	pages       = {1-2},
+	publisher   = {IEEE Computer Society},
+	title       = {Pilot abstractions for compute, data, and network},
+	volume      = {0},
+	year        = {2012},
+	doi         = {http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404459},
+	isbn        = {978-1-4673-4467-8},
+}
+
+
 @inproceedings{pilot-mapreduce2012,
   author      = {Pradeep Kumar Mantha and Andre Luckow and Shantenu Jha},
   title       = {{Pilot-MapReduce: an extensible and flexible MapReduce 
-                implementation for distributed data}},
+                 implementation for distributed data}},
   booktitle   = {{Proceedings of third international workshop on MapReduce and
-                its Applications}},
+                 its Applications}},
   series      = {MapReduce '12},
   location    = {Delft, The Netherlands},
   year        = {2012},
@@ -431,23 +458,25 @@
   numpages    = {8},
   publisher   = {ACM},
   address     = {New York, NY, USA},
-  OPTnote        = {\url{http://dl.acm.org/citation.cfm?id=2287020\&dl=ACM\&coll=DL\&CFID=137661901\&CFTOKEN=34365530}},
-  url      =    {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pilot-mapreduce2012.pdf},
+  OPTnote     = {\url{http://dl.acm.org/citation.cfm?id=2287020\&dl=ACM\&coll=DL\&CFID=137661901\&CFTOKEN=34365530}},
+  url         = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/pilot-mapreduce2012.pdf},
   doi         = {http://doi.acm.org/10.1145/2287016.2287020},
   isbn        = {978-1-4503-1343-8},
   acmid       = {2287020},
   keywords    = {bwa, distributed computing, genome sequence alignment, human genome, 
-                mapreduce, pilot job and data, simple api for grid applications (saga)},
+                 mapreduce, pilot job and data, simple api for grid applications (saga)},
 } 
 
 
 @inproceedings{pmr-ecmls12,
-  author      = {Pradeep Mantha and Nayong Kim and Joohyun Kim and Andre Luckow and Shantenu Jha},
-  title       = {{Understanding MapReduce-based Next-Generation Sequencing Alignment on Distributed Cyberinfrastructure}},
+  author      = {Pradeep Mantha and Nayong Kim and Joohyun Kim 
+                 and Andre Luckow and Shantenu Jha},
+  title       = {{Understanding MapReduce-based Next-Generation Sequencing 
+                 Alignment on Distributed Cyberinfrastructure}},
   booktitle   = {{3rd International Workshop on Emerging Methods in
-                  Computational Life Sciences, Proceedings of the 21st
-                  International Symposium on High-Performance Parallel
-                  and Distributed Computing, HPDC'12}},
+                 Computational Life Sciences, Proceedings of the 21st
+                 International Symposium on High-Performance Parallel
+                 and Distributed Computing, HPDC'12}},
   year        = {2012},
   publisher   = {ACM},
   month       = {June},
@@ -885,7 +914,7 @@
                 Hard to Predict Runtime Resource Requirements}},
   booktitle   = {{Proceedings of TeraGrid08}},
   year        = 2008, 
-  OPTnote        = {{Winner of the Performance Challenge Award
+  OPTnote     = {{Winner of the Performance Challenge Award
                 http://www.cct.lsu.edu/~sjha/select_publications/tg08-performance-award.pdf}},
 }
 
@@ -989,8 +1018,10 @@
 # 2012
 
 @techreport{fgpc2012-project-45,
-  author      = {{Pradeep Kumar Mantha and Sivakarthik Natesan and Melissa Romanus and Sai Saripalli and Ashley Zebrowski}},
-  title       = {{FutureGrid 2012 Project Challenge: Project 45: Building Scalable, Dynamic and Distributed Applications Using SAGA}},
+  author      = {{Pradeep Kumar Mantha and Sivakarthik Natesan and
+                 Melissa Romanus and Sai Saripalli and Ashley Zebrowski}},
+  title       = {{FutureGrid 2012 Project Challenge: Project 45: Building 
+                 Scalable, Dynamic and Distributed Applications Using SAGA}},
   type        = {{FutureGrid Project Challenge Award Winner}},
   year        = {2012},
   url         = {https://raw.github.com/saga-project/radical.wp/master/publications/pdf/fgpc2012-project-45.pdf},
@@ -1159,7 +1190,7 @@ techreport{ogf-gfd-sd,
 
 @misc{saga_url, 
   institution = {{The SAGA Project}},  
-  note         = {The SAGA Project, \url{http://www.saga-project.org}}
+  note        = {The SAGA Project, \url{http://www.saga-project.org}}
 }
 
 @misc{dare-url,
@@ -1167,12 +1198,12 @@ techreport{ogf-gfd-sd,
 }
 
 @misc{bj_url,
-  title  = {{SAGA-BigJob}},
-  note   = {\url{https://github.com/saga-project/BigJob/wiki}},
+  title       = {{SAGA-BigJob}},
+  note        = {\url{https://github.com/saga-project/BigJob/wiki}},
 }
 
 @misc{bj_doc_url,
-  title        = {{RADICAL}},
+  title       = {{RADICAL}},
   note        = {\url{http://saga-project.github.com/BigJob/sphinxdoc/}},
 }
 
@@ -1183,7 +1214,7 @@ techreport{ogf-gfd-sd,
 
 @misc{bj_xsede_url,
   institution = {{SAGA-BigJob}},
-  note         = {\url{http://xsede.org/bigjob}},
+  note        = {\url{http://xsede.org/bigjob}},
 }
 
 
@@ -1201,24 +1232,24 @@ techreport{ogf-gfd-sd,
 
 @misc{async_bigjob_git_url,
   title       = {{Library to Support Flexible and Scalable Replica Exchange Simulations}},
-  note         = {\url{https://github.com/saga-project/asyncre-bigjob}},
+  note        = {\url{https://github.com/saga-project/asyncre-bigjob}},
 }
 
 @misc{xsede_bigjob_url,
   title       = {{BigJob on XSEDE}},
-  note         = {\url{https://www.xsede.org/bigjob}},
+  note        = {\url{https://www.xsede.org/bigjob}},
 }
 
 
 @misc{saga-python-url,
   title       = {{SAGA Python}},
-  note         = {\url{http://saga-project.github.com/saga-python/}},
+  note        = {\url{http://saga-project.github.com/saga-python/}},
 }
 
 
 @misc{xsede-campus-champion-fellow,
-  title = {XSEDE names first Campus Champions Fellows},
-  note   = {\url{https://www.xsede.org/ccfellows-july2012}},
+  title       = {XSEDE names first Campus Champions Fellows},
+  note        = {\url{https://www.xsede.org/ccfellows-july2012}},
 }
 
 

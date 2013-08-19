@@ -25,28 +25,28 @@
   <strong> <em> Pilot-Abstractions for Data-Intensive Cloud Applications </em> </strong>
   <em> Andre Luckow, Pradeep Mantha, Melissa Romanus, Shantenu Jha </em>
     2012
-  <br>Computing and Concurrency: Practise and Experience (accepted, in press)<br>
+  Computing and Concurrency: Practise and Experience (accepted, in press)<br>
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/cpe_pmr_cloud_2012_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/cpe_pmr_cloud_2012.bib">bib</a>] : cpe_pmr_cloud_2012
   <br><br>
   <a name="dpa-surveypaper"></a>
   <strong> <em> Distributed Computing Practice for Large-Scale Science & Engineering Applications </em> </strong>
   <em> Shantenu Jha, Murray Cole, Daniel S. Katz, Manish Parashar, Omer Rana, Jon Weissman </em>
     2012
-  <br>Computing and Concurrency: Practise and Experience (in press)<br>
+  Computing and Concurrency: Practise and Experience (in press)<br>
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/dpa-surveypaper_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/dpa-surveypaper.bib">bib</a>] : dpa-surveypaper
   <br><br>
   <a name="jogc-2012-dare"></a>
   <strong> <em> Dynamic Application Runtime Environment (DARE): A Standards-based Middleware Framework For Building Science Gateways </em> </strong>
   <em> Sharath Maddineni, Joohyun Kim, Yaakoub el-Khamra, Shantenu Jha </em>
     2012
-  <br>Journal of Grid Computing (in press)<br>
+  Journal of Grid Computing (in press)<br>
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/jogc-2012-dare_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/jogc-2012-dare.bib">bib</a>] : jogc-2012-dare
   <br><br>
   <a name="ccpe-2012-ngs"></a>
   <strong> <em> Advancing Next-Generation Sequencing Data Analytics with Scalable Distributed Infrastructure </em> </strong>
   <em> Sharath Maddineni, Joohyun Kim, Yaakoub el-Khamra, Shantenu Jha </em>
     2012
-  <br>Concurrency and Computation: Practise and Experience (in press)<br>
+  Concurrency and Computation: Practise and Experience (in press)<br>
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccpe-2012-ngs_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccpe-2012-ngs.bib">bib</a>] : ccpe-2012-ngs
   <br><br>
   <a name="biochem-2012-jha"></a>
@@ -149,7 +149,7 @@
   <a name="ccgrid13-pilotdata"></a>
   <strong> <em> Exploring Dynamic Enactment of Scientific Workflows using Pilot-Abstractions </em> </strong>
   <em> Mark Santcroos, Barbera DC van Schaik, Shayan Shahand, Silvia Delgado Olabarriaga, Andre Luckow, Shantenu Jha </em>
-  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing (accepted),  2013
+  13th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing,  2013
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccgrid13-pilotdata_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccgrid13-pilotdata.bib">bib</a>] : ccgrid13-pilotdata
   <br><br>
 
@@ -160,6 +160,12 @@
   <em> Andre Luckow, Mark Santcroos, Ole Weidner, Andre Merzky, Pradeep Mantha, Shantenu Jha </em>
   8th IEEE International Conference on e-Science 2012,  2012
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar12.bib">bib</a>] : pstar12
+  <br><br>
+  <a name="pstar-network12"></a>
+  <strong> <em> Pilot abstractions for compute, data, and network </em> </strong>
+  <em> Mark Santcroos, Silvia Delgado Olabarriaga, Daniel S. Katz, Shantenu Jha </em>
+  2012 IEEE 8th International Conference on E-Science,  2012
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar-network12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar-network12.bib">bib</a>] : pstar-network12
   <br><br>
   <a name="pilot-mapreduce2012"></a>
   <strong> <em> Pilot-MapReduce: an extensible and flexible MapReduce implementation for distributed data </em> </strong>

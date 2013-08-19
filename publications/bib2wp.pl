@@ -239,7 +239,7 @@ my $PDFROOT = "$BIBROOT/pdf";
               $txt .= "  <strong> <em> $title </em> </strong>\n";
               $txt .= "  <em> $author </em>\n";
               $txt .= "  $book $month $year\n";
-              $txt .= "  <br>$note<br>\n" if ( $note);
+              $txt .= "  $note<br>\n" if ( $note);
               $txt .= "  $notelnk $pdflnk $biblnk : $key\n";
               $txt .= "  <br><br>\n";
             }
