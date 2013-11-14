@@ -4,7 +4,7 @@ This repository hosts the bibliography of the radical group.  This is maintained
   - git clone git@github.com:saga-project/radical.wp.git
     # you should have write permissions now
   - cd radical.wp/publications/
-  - vi radical_rutgers.bib
+  - vi radical_publications.bib
     # yes, use vi.  No, Emacs won't work ;-)
     # Just kidding...
 
@@ -38,15 +38,15 @@ Once you have done that, you can run:
 which basically runs 
 
 	- rm -f bib/*
-	- ./bib2wp.pl radical_rutgers.bib radical_rutgers.wp radical_rutgers_drafts.wp
-	- git add radical_rutgers*.wp bib2wp.pl pdf/ bib/
+	- ./bib2wp.pl radical_publications.bib radical_publications.wp radical_publications_drafts.wp
+	- git add radical_publications*.wp bib2wp.pl pdf/ bib/
 
 The perl command may need the BibTex::Parser perl module - let me know
 if that is missing on your system, and you need help installing it...
 
 That program does a couple of things:
 
-  - creates radical_rutgers.wp (see below)
+  - creates radical_publications.wp (see below)
   - creates a number of bibtex snippets in bib/*.bib
   - fetches all PDF links it finds in the bibtex, and stores them in pdf/
 
@@ -64,11 +64,11 @@ stored files are indeed PDFs, like:
 
 Once that is done, please commit everything to git:
 
-  - git add radical_rutgers.bib radical_rutgers*.wp bib/* pdf/*
+  - git add radical_publications.bib radical_publications*.wp bib/* pdf/*
   - git commit -m 'update bib with PDF urls, fetch pdfs, perl is great'
   - git push
 
-Also, the contents of radical_rutgers.wp need to be cut/pasted into
+Also, the contents of radical_publications.wp need to be cut/pasted into
 the wordpress editor for the publications page (HTML version), and 
 similar for the drafts page..
 

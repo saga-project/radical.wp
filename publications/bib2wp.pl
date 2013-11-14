@@ -44,7 +44,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   my $links   = "";    # links to page sections at top
   my $heading = "";    # heading (year) to be printed if there are entries for that year
   my $headed  =  0;    # was heading printed?
-  my $biburl  = "$BIBROOT/radical_rutgers.bib";
+  my $biburl  = "$BIBROOT/radical_publications.bib";
 
   $in->close ();       # got all lines - can be closed
 
@@ -262,7 +262,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   $out->print  ($txt);
   $out->print  ("<hr><br><br>\n");
   $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
-  $out->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n\n");();
+  $out->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
   $out->close  (); # done, close output.
 
   $outd->print  ("<hr>\n");
@@ -277,7 +277,7 @@ my $PDFROOT = "$BIBROOT/pdf";
   $outd->print  ($txtd);
   $outd->print  ("<hr><br><br>\n");
   $outd->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
-  $outd->printf (" &bull; <a href=\"$BIBROOT/radical_rutgers.bib\"><b>radical_rutgers.bib</b></a> <br>\n\n");();
+  $outd->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
   $outd->close  (); # done, close output.
 
 } # main
