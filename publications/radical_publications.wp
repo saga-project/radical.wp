@@ -3,6 +3,7 @@
  &bull; <a href="#Journal_Publications"><b>Journal Publications</b></a> <br>
  &bull; <a href="#Conference_and_Workshop_Papers"><b>Conference and Workshop Papers</b></a> <br>
  &bull; <a href="#Standards,_White_Papers,_Technical_Reports"><b>Standards, White Papers, Technical Reports</b></a> <br>
+ &bull; <a href="#drafts"><b>Drafts / Under Review</b></a> <br>
  &bull; <a href="#bibtex"><b>BibTeX</b></a>
 
 
@@ -425,6 +426,49 @@
   <em> Andre Merzky, Shantenu Jha </em>
   Global Grid Forum, GGF Proposed Recommendation, GFD.70,  2006
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ogf-gfd-uc_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ogf-gfd-uc.bib">bib</a>] : ogf-gfd-uc
+  <br><br>
+<hr>
+
+<a name="drafts"></a><h1><hr/><u>Drafts / Under Review</u></h1>
+
+
+These publications are work in progress, are under review, or are not yet published for other reasons.  As such, they are likely to change, sometimes significantly, and should not (yet) be referenced directly.  Please contact the repective authors for further details.
+
+  <a name="review_pilotreview_2013"></a>
+  <strong> <em> A Fresh Perspective on Pilot-Jobs </em> </strong>
+  <em> Shatenu Jha, Andre Luckow, Melissa Romanus, Ashley Zebrowsky, Mark Santcroos, Matteo Turilli, Ole Weidner, Andre Merzky </em>
+  Not yet published,  2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_pilotreview_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_pilotreview_2013.bib">bib</a>] : review_pilotreview_2013
+  <br><br>
+  <a name="review_ccgrid_maii_2013"></a>
+  <strong> <em> Toward Integrated Modeling of Distributed Applications and Infrastructure </em> </strong>
+  <em> Andre Merzky, Christian Straube, Shantenu Jha, Dieter Kranzlmueller </em>
+  Submitted to: CCGrid 2013,  2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_ccgrid_maii_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_ccgrid_maii_2013.bib">bib</a>] : review_ccgrid_maii_2013
+  <br><br>
+  <a name="review_jctc_prcrossdrug_2013"></a>
+  <strong> <em> Computing Clinically Relevant Binding Free Energies of HIV-1 Protease Inhibitors </em> </strong>
+  <em> David W. Wright, Benjamin A. Hall, Owain A. Kenway, Shantenu Jha, Peter V. Coveney </em>
+  Submitted to: Journal of Chemical Theory and Computation,  2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_jctc_prcrossdrug_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_jctc_prcrossdrug_2013.bib">bib</a>] : review_jctc_prcrossdrug_2013
+  <br><br>
+  <a name="review_aimes_perspective"></a>
+  <strong> <em> Distributed Exascale Computing: An AIMES Perspective </em> </strong>
+  <em> Shantenu Jha, Andre Merzky, Matteo Turilli, Daniel S. Katz, Jon Weissman </em>
+  Submitted to: Workshop on Modeling & Simulation of Exascale Systems & Applications, June 2013
+  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_aimes_perspective_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_aimes_perspective.bib">bib</a>] : review_aimes_perspective
+  <br><br>
+  <a name="review_jcc_compana_2013"></a>
+  <strong> <em> Comparative Analysis of Nucleotide Translocation through Protein Nanopores using Steered Molecular Dynamics and an Adaptive Biasing Force </em> </strong>
+  <em> Hugh S.C. Martin, Shantenu Jha, Peter V. Coveney </em>
+  Submitted to: Journal of Computational Chemistry,  2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_jcc_compana_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_jcc_compana_2013.bib">bib</a>] : review_jcc_compana_2013
+  <br><br>
+  <a name="review_sc_pilotdata_2013"></a>
+  <strong> <em> Pilot-Data: An Abstraction for Distributed Data </em> </strong>
+  <em> Andre Luckow, Mark Santcroos, Ashley Zebrowski, Shantenu Jha </em>
+  Submitted to: SuperComputing 2013 (SC'13),  2013
+  [<a title="link" href="http://arxiv.org/abs/1301.6228">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_sc_pilotdata_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_sc_pilotdata_2013.bib">bib</a>] : review_sc_pilotdata_2013
   <br><br>
 <hr><br><br>
 
