@@ -26,31 +26,31 @@
   <strong> <em> Pilot-Data: An Abstraction for Distributed Data </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ashley Zebrowski, Shantenu Jha </em>
   Parallel and Distributed Computing, October 2014
-  [<a title="link" href="http://arxiv.org/abs/1301.6228">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-data-jpdc-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-data-jpdc-2014.bib">bib</a>] : pilot-data-jpdc-2014
+  [<a title="link" href="http://arxiv.org/abs/1301.6228">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-data-jpdc-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-data-jpdc-2014.bib">bib</a>] : pilot-data-jpdc-2014
   <br><br>
   <a name="ethread-biomed-2014"></a>
   <strong> <em> Developing eThread Pipeline Using SAGA- Pilot Abstraction for Large-Scale Structural Bioinformatics </em> </strong>
   <em> Anjani Ragothaman, Sairam Chowdary Boddu, Nayong Kim, Wei Feinstein, Michal Brylinski, Shantenu Jha, Joohyun Kim </em>
   BioMed Research International, vol. 2014,  2014
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ethread-biomed-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ethread-biomed-2014.bib">bib</a>] : ethread-biomed-2014
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ethread-biomed-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ethread-biomed-2014.bib">bib</a>] : ethread-biomed-2014
   <br><br>
   <a name="nanopore-jcc-2014"></a>
   <strong> <em> Comparative analysis of nucleotide translocation through protein nanopores using steered molecular dynamics and an adaptive biasing force </em> </strong>
   <em> Hugh S. C. Martin, Shantenu Jha, Peter V.Coveney </em>
   Computational Chemistry, vol. 35 # 9, April 2014
-  [<a title="link" href="http://onlinelibrary.wiley.com/doi/10.1002/jcc.23572/abstract">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/nanopore-jcc-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/nanopore-jcc-2014.bib">bib</a>] : nanopore-jcc-2014
+  [<a title="link" href="http://onlinelibrary.wiley.com/doi/10.1002/jcc.23572/abstract">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/nanopore-jcc-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/nanopore-jcc-2014.bib">bib</a>] : nanopore-jcc-2014
   <br><br>
   <a name="bfe-jctc-2014"></a>
   <strong> <em> Computing Clinically Relevant Binding Free Energies of HIV-1 Protease Inhibitors </em> </strong>
   <em> David W. Wright, Benjamin A. Hall, Owain A. Kenway, Shantenu Jha, Peter V. Coveney </em>
   Chemical Theory and Computation, vol. 10 # 3,  2014
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/bfe-jctc-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/bfe-jctc-2014.bib">bib</a>] : bfe-jctc-2014
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/bfe-jctc-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/bfe-jctc-2014.bib">bib</a>] : bfe-jctc-2014
   <br><br>
   <a name="cfd-multiscale-2014"></a>
   <strong> <em> Numerical Experiments of Solving Moderate-velocity Flow Field Using a Hybrid Computational Fluid Dynamics Molecular Dynamics Approach </em> </strong>
   <em> Soon-Heum Ko, Nayong Kim, Shantenu Jha, Dimitris E. Nikitopoulos, Dorel Moldovan </em>
   Mechanical Science and Technology, vol. 1 # 28,  2014
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/cfd-multiscale-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/cfd-multiscale-2014.bib">bib</a>] : cfd-multiscale-2014
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/cfd-multiscale-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/cfd-multiscale-2014.bib">bib</a>] : cfd-multiscale-2014
   <br><br>
 
  <h2><u>2012</u></h2>
@@ -166,13 +166,23 @@
 <a name="Conference_and_Workshop_Papers"></a><h1><hr/><u>Conference and Workshop Papers</u></h1>
 
 
+ <h2><u>2015</u></h2>
+
+  <a name="2015-hpdc"></a>
+  <strong> <em> Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application on HPC, Hadoop and Cloud Infrastructures? </em> </strong>
+  <em> Andre Luckow, Pradeep Mantha, Shantenu Jha </em>
+  The 24th International ACM Symposium on High Performance Distributed Computing,  2015
+  Submitted, Under Review<br>
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/2015-hpdc_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/2015-hpdc.bib">bib</a>] : 2015-hpdc
+  <br><br>
+
  <h2><u>2014</u></h2>
 
   <a name="tale-of-two-ieee-2014"></a>
   <strong> <em> A Tale of Two Data-Intensive Paradigms: Applications, Abstractions, and Architectures </em> </strong>
   <em> Shantenu Jha, Judy Qiu, Andre Luckow, Pradeep Mantha, Geoffrey C.Fox </em>
   Big Data (BigData Congress), 2014 IEEE International Congress on,  2014
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/tale-of-two-ieee-2014.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/tale-of-two-ieee-2014.bib">bib</a>] : tale-of-two-ieee-2014
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/tale-of-two-ieee-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/tale-of-two-ieee-2014.bib">bib</a>] : tale-of-two-ieee-2014
   <br><br>
 
  <h2><u>2013</u></h2>
