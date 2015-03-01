@@ -20,6 +20,15 @@
 <a name="Journal_Publications"></a><h1><hr/><u>Journal Publications</u></h1>
 
 
+ <h2><u>2015</u></h2>
+
+  <a name="ct500776j"></a>
+  <strong> <em> Characterization of the Three-Dimensional Free Energy Manifold for the Uracil Ribonucleoside from Asynchronous Replica Exchange Simulations </em> </strong>
+  <em> Radak, Brian K., Romanus, Melissa, Lee, Tai-Sung, Chen, Haoyuan, Huang, Ming, Treikalis, Antons, Balasubramanian, Vivekanandan, Jha, Shantenu, York, Darrin M. </em>
+  Journal of Chemical Theory and Computation, vol. 11 # 2,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ct500776j_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ct500776j.bib">bib</a>] : ct500776j
+  <br><br>
+
  <h2><u>2014</u></h2>
 
   <a name="pilot-data-jpdc-2014"></a>
@@ -172,7 +181,7 @@
   <strong> <em> A Tale of Two Data-Intensive Paradigms: Applications, Abstractions, and Architectures </em> </strong>
   <em> Shantenu Jha, Judy Qiu, Andre Luckow, Pradeep Mantha, Geoffrey C.Fox </em>
   Big Data (BigData Congress), 2014 IEEE International Congress on,  2014
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/tale-of-two-ieee-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/tale-of-two-ieee-2014.bib">bib</a>] : tale-of-two-ieee-2014
+  [<a title="link" href="https://raw.github.com/saga-project/radical.wp/master/publications/pdf/tale-of-two-ieee-2014.pdf">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/tale-of-two-ieee-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/tale-of-two-ieee-2014.bib">bib</a>] : tale-of-two-ieee-2014
   <br><br>
 
  <h2><u>2013</u></h2>
@@ -481,7 +490,7 @@ These publications are work in progress, are under review, or are not yet publis
   <em> Andre Luckow, Pradeep Mantha, Shantenu Jha </em>
   The 24th International ACM Symposium on High Performance Distributed Computing,  2015
   Submitted, Under Review
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_2015-hpdc.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_2015-hpdc.bib">bib</a>] : review_2015-hpdc
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_2015-hpdc_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_2015-hpdc.bib">bib</a>] : review_2015-hpdc
   <br><br>
   <a name="review_2013_bj_experimentation"></a>
   <strong> <em> BigJob: An implementation of a conceptual and performance model for Pilot-Jobs </em> </strong>
