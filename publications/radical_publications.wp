@@ -495,6 +495,13 @@
 
 These publications are work in progress, are under review, or are not yet published for other reasons.  As such, they are likely to change, sometimes significantly, and should not (yet) be referenced directly.  Please contact the repective authors for further details.
 
+  <a name="review_rp-paper-2015"></a>
+  <strong> <em> RADICAL-Pilot – A Scalable Implementation of the Pilot Abstraction </em> </strong>
+  <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
+  IEEE/ACM SC'15,  2015
+  unpublished
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_rp-paper-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_rp-paper-2015.bib">bib</a>] : review_rp-paper-2015
+  <br><br>
   <a name="review_aimes-experience-2015"></a>
   <strong> <em> Integrating Abstractions to Enhance the Execution of Distributed Applications </em> </strong>
   <em> Matteo Turilli, Feng Liu, Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel S. Katz, Shantenu Jha </em>
