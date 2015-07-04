@@ -495,6 +495,18 @@
 
 These publications are work in progress, are under review, or are not yet published for other reasons.  As such, they are likely to change, sometimes significantly, and should not (yet) be referenced directly.  Please contact the repective authors for further details.
 
+  <a name="review_3dpas_intro"></a>
+  <strong> <em> Introducing Distributed Dynamic Data-intensive (D3) Science: Understanding Applications and Infrastructure </em> </strong>
+  <em> Shantenu Jha, Neil Chue, Simon Dobson, Daniel S. Katz, Andre Luckow, Omer Rana, Yogesh Simmhan </em>
+  Under review,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_3dpas_intro_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_3dpas_intro.bib">bib</a>] : review_3dpas_intro
+  <br><br>
+  <a name="review_pilot-abstraction-2015"></a>
+  <strong> <em> A Comprehensive Perspective on Pilot-Abstraction </em> </strong>
+  <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
+  Under review,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/review_pilot-abstraction-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/review_pilot-abstraction-2015.bib">bib</a>] : review_pilot-abstraction-2015
+  <br><br>
   <a name="review_rp-paper-2015"></a>
   <strong> <em> RADICAL-Pilot – A Scalable Implementation of the Pilot Abstraction </em> </strong>
   <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
