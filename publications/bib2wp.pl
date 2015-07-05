@@ -254,7 +254,7 @@ my $PDFROOT = "$BIBROOT/pdf";
 
             if ( $redirtgt )
             {
-                $redir->printf ("http://radical.rutgers.edu/publication/%-35s : %s\n", $key, $redirtgt);
+                $redir->printf ("http://radical.rutgers.edu/publications/%-35s : %s\n", $key, $redirtgt);
                 $redirtgt = ""
             }
 
