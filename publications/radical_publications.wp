@@ -505,28 +505,28 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Introducing Distributed Dynamic Data-intensive (D3) Science: Understanding Applications and Infrastructure </em> </strong>
   <em> Shantenu Jha, Neil Chue, Simon Dobson, Daniel S. Katz, Andre Luckow, Omer Rana, Yogesh Simmhan </em>
     2015
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/3dpas_intro.bib">bib</a>] : 3dpas_intro
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/3dpas_intro_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/3dpas_intro.bib">bib</a>] : 3dpas_intro
   <br><br>
   <a name="pilot-abstraction-2015"></a>
   <strong> <em> A Comprehensive Perspective on Pilot-Abstraction </em> </strong>
   <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
   IEEE/ACM SC'15,  2015
   unpublished
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-abstraction-2015.bib">bib</a>] : pilot-abstraction-2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-abstraction-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-abstraction-2015.bib">bib</a>] : pilot-abstraction-2015
   <br><br>
   <a name="rp-paper-2015"></a>
   <strong> <em> RADICAL-Pilot – A Scalable Implementation of the Pilot Abstraction </em> </strong>
   <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
   IEEE/ACM SC'15,  2015
   unpublished
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/rp-paper-2015.bib">bib</a>] : rp-paper-2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/rp-paper-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/rp-paper-2015.bib">bib</a>] : rp-paper-2015
   <br><br>
   <a name="aimes-experience-2015"></a>
   <strong> <em> Integrating Abstractions to Enhance the Execution of Distributed Applications </em> </strong>
   <em> Matteo Turilli, Feng Liu, Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel S. Katz, Shantenu Jha </em>
   IEEE/ACM SC'15,  2015
    Submitted, Under Review
-  [<a title="link" href="http://arxiv.org/abs/1504.04720">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/aimes-experience-2015.bib">bib</a>] : aimes-experience-2015
+  [<a title="link" href="http://arxiv.org/abs/1504.04720">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/aimes-experience-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/aimes-experience-2015.bib">bib</a>] : aimes-experience-2015
   <br><br>
   <a name="2015-hpdc"></a>
   <strong> <em> Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application on HPC, Hadoop and Cloud Infrastructures? </em> </strong>
@@ -538,25 +538,25 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> BigJob: An implementation of a conceptual and performance model for Pilot-Jobs </em> </strong>
   <em> Ashley Zebrowsky, Andre Luckow Shantenu Jha </em>
   Not yet published,  2013
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/2013_bj_experimentation.bib">bib</a>] : 2013_bj_experimentation
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/2013_bj_experimentation_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/2013_bj_experimentation.bib">bib</a>] : 2013_bj_experimentation
   <br><br>
   <a name="pilotreview_2013"></a>
   <strong> <em> A Comprehensive Perspective on Pilot-Jobs </em> </strong>
   <em> Matteo Turilli, others </em>
   Not yet published,  2015
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilotreview_2013.bib">bib</a>] : pilotreview_2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilotreview_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilotreview_2013.bib">bib</a>] : pilotreview_2013
   <br><br>
   <a name="ccgrid_maii_2013"></a>
   <strong> <em> Toward Integrated Modeling of Distributed Applications and Infrastructure </em> </strong>
   <em> Christian Straube, Andre Merzky, Shantenu Jha, Dieter Kranzlmueller </em>
   Submitted to: CCGrid 2014,  2014
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccgrid_maii_2013.bib">bib</a>] : ccgrid_maii_2013
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccgrid_maii_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccgrid_maii_2013.bib">bib</a>] : ccgrid_maii_2013
   <br><br>
   <a name="aimes_perspective"></a>
   <strong> <em> Distributed Exascale Computing: An AIMES Perspective </em> </strong>
   <em> Shantenu Jha, Andre Merzky, Matteo Turilli, Daniel S. Katz, Jon Weissman </em>
   Submitted to: Workshop on Modeling & Simulation of Exascale Systems & Applications, June 2013
-  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/aimes_perspective.bib">bib</a>] : aimes_perspective
+  [<a title="link" href="http://hpc.pnl.gov/modsim/2013/">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/aimes_perspective_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/aimes_perspective.bib">bib</a>] : aimes_perspective
   <br><br>
 <hr><br><br>
 
