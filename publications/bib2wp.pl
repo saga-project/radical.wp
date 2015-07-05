@@ -19,6 +19,7 @@ BEGIN
 #
 my $BIB = shift || usage ("Missing 'bib' argument.");
 my $WP  = shift || "$BIB.wp";
+my $RED = shift || "$BIB.redir";
 # my $WPD = shift || "$WP.drafts";
 
 scalar (@ARGV)  && usage ("Too many arguments.");
@@ -33,8 +34,9 @@ my $PDFROOT = "$BIBROOT/pdf";
 #
 {
   # open input/output files, and alloc vars which survive the parsing loop
-  my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib file '$BIB': $!\n";
-  my $out     = new IO::File ($WP , 'w') || die "Cannot open bib file '$WP ': $!\n";
+  my $in      = new IO::File ($BIB, 'r') || die "Cannot open bib   file '$BIB': $!\n";
+  my $out     = new IO::File ($WP , 'w') || die "Cannot open wp    file '$WP ': $!\n";
+  my $redir   = new IO::File ($RED, 'w') || die "Cannot open redir file '$RED': $!\n";
 # my $outd    = new IO::File ($WPD, 'w') || die "Cannot open bib file '$WPD': $!\n";
 
   my @lines   = <$in>; # slurp in lines from input file, to be parsed
@@ -128,6 +130,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             my $url    = $e->{'published'}  || $e->{'url'} || "";
 
 
+
             # we expect these keys for all valid entries
             unless ( $key    ) { die  "Error  : no key    for entry ?\n";    }
             unless ( $title  ) { warn "Warning: no title  for entry $key\n"; }
@@ -139,6 +142,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             $book  .= " # $num"     if $num;
             $book  .= ", $type"     if $type;
             $book  .= ","           if $book;
+
 
             # grab pdf links
             $pdfurl = $url;
@@ -153,18 +157,21 @@ my $PDFROOT = "$BIBROOT/pdf";
                       "  || (echo 'fail' && rm pdf/$key.pdf && false)");
             }
 
-            my $pdflnk = "";
+            my $pdflnk   = "";
+            my $redirtgt = "";
             if ( -e  "pdf/$key.pdf" )
             {
               pdf2draft ("pdf/$key.pdf");
 
               if ( -e "pdf/$key\_draft.pdf" )
               {
-                $pdflnk = " [<a title=\"pdf\" href=\"$PDFROOT/$key\_draft.pdf\">pdf</a>] ";
+                $pdflnk   = " [<a title=\"pdf\" href=\"$PDFROOT/$key\_draft.pdf\">pdf</a>] ";
+                $redirtgt = "$PDFROOT/$key\_draft.pdf"
               }
               else
               {
-                $pdflnk = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] ";
+                $pdflnk   = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] ";
+                $redirtgt = "$PDFROOT/$key.pdf"
               }
             }
 
@@ -184,7 +191,7 @@ my $PDFROOT = "$BIBROOT/pdf";
             my $biblnk = "[<a title=\"bib\" href=\"$BIBROOT/bib/$key.bib\">bib</a>]";
 
 
-            my $notelnk = "";
+            my $notelnk  = "";
             if ( $note =~ /^(.*?)(?:,\s*)?\\url\{(.+?)\}(?:,\s*)?(.*)$/io )
             {
               my $note_1 = $1 || "";
@@ -198,7 +205,8 @@ my $PDFROOT = "$BIBROOT/pdf";
               }
 
               $note = "$note_1$comma$note_2";
-              $notelnk = "[<a title=\"link\" href=\"$lnktgt\">link</a>]";
+              $notelnk  = "[<a title=\"link\" href=\"$lnktgt\">link</a>]";
+              $redirtgt = $lnktgt
             }
 
 
@@ -242,6 +250,12 @@ my $PDFROOT = "$BIBROOT/pdf";
               $txt .= "  $note<br>\n" if ( $note);
               $txt .= "  $notelnk $pdflnk $biblnk : $key\n";
               $txt .= "  <br><br>\n";
+            }
+
+            if ( $redirtgt )
+            {
+                $redir->printf ("%-35s : %s\n", $key, $redirtgt);
+                $redirtgt = ""
             }
 
           } # parse ok
