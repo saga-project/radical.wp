@@ -31,6 +31,12 @@
 
  <h2><u>2014</u></h2>
 
+  <a name="drmaaocci-jogc-2014"></a>
+  <strong> <em> Towards Standardized Job Submission and Control in Infrastructure Clouds </em> </strong>
+  <em> Peter Tröger, Andre Merzky </em>
+  Journal of Grid Computing, vol. 12 # 1, March 2014
+  [<a title="link" href="http://link.springer.com/article/10.1007%2Fs10723-013-9275-2">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/drmaaocci-jogc-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/drmaaocci-jogc-2014.bib">bib</a>] : drmaaocci-jogc-2014
+  <br><br>
   <a name="pilot-data-jpdc-2014"></a>
   <strong> <em> Pilot-Data: An Abstraction for Distributed Data </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ashley Zebrowski, Shantenu Jha </em>
