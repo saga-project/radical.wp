@@ -129,6 +129,14 @@ my $PDFROOT = "$BIBROOT/pdf";
             my $type   = $e->{'type'}       || "";
             my $url    = $e->{'published'}  || $e->{'url'} || "";
 
+            my $is_draft = 0;
+
+            if ( $key =~ /^(?:draft|review)_(.+)/io )
+            {
+                $is_draft = 1;
+                $key      = $1;
+            }
+
 
 
             # we expect these keys for all valid entries
@@ -229,7 +237,7 @@ my $PDFROOT = "$BIBROOT/pdf";
               $headed = 1;
             }
 
-            if ( $key =~ /^(draft|review)_/io )
+            if ( $is_draft )
             {
               # print entry to drafts
               $txtd .= "  <a name=\"$key\"></a>\n";
