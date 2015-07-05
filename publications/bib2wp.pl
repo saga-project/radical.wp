@@ -157,21 +157,21 @@ my $PDFROOT = "$BIBROOT/pdf";
                       "  || (echo 'fail' && rm pdf/$key.pdf && false)");
             }
 
-            my $pdflnk   = "";
-            my $redirtgt = "";
+            my $pdflnk    = "";
+            my $redirtgt  = "";
             if ( -e  "pdf/$key.pdf" )
             {
               pdf2draft ("pdf/$key.pdf");
 
               if ( -e "pdf/$key\_draft.pdf" )
               {
-                $pdflnk   = " [<a title=\"pdf\" href=\"$PDFROOT/$key\_draft.pdf\">pdf</a>] ";
-                $redirtgt = "$PDFROOT/$key\_draft.pdf"
+                $pdflnk    = " [<a title=\"pdf\" href=\"$PDFROOT/$key\_draft.pdf\">pdf</a>] ";
+                $redirtgt  = "$PDFROOT/$key\_draft.pdf";
               }
               else
               {
-                $pdflnk   = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] ";
-                $redirtgt = "$PDFROOT/$key.pdf"
+                $pdflnk    = " [<a title=\"pdf\" href=\"$PDFROOT/$key.pdf\">pdf</a>] ";
+                $redirtgt  = "$PDFROOT/$key.pdf";
               }
             }
 
@@ -205,8 +205,8 @@ my $PDFROOT = "$BIBROOT/pdf";
               }
 
               $note = "$note_1$comma$note_2";
-              $notelnk  = "[<a title=\"link\" href=\"$lnktgt\">link</a>]";
-              $redirtgt = $lnktgt
+              $notelnk   = "[<a title=\"link\" href=\"$lnktgt\">link</a>]";
+              $redirtgt  = $lnktgt;
             }
 
 
@@ -254,7 +254,7 @@ my $PDFROOT = "$BIBROOT/pdf";
 
             if ( $redirtgt )
             {
-                $redir->printf ("%-35s : %s\n", $key, $redirtgt);
+                $redir->printf ("http://radical.rutgers.edu/publication/%-35s : %s\n", $key, $redirtgt);
                 $redirtgt = ""
             }
 
