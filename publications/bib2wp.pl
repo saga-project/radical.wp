@@ -131,10 +131,12 @@ my $PDFROOT = "$BIBROOT/pdf";
 
             my $is_draft = 0;
 
-            if ( $key =~ /^(?:draft|review)_(.+)/io )
+            if ( $key =~ /^(draft|review)_(.+)/io )
             {
                 $is_draft = 1;
-                $key      = $1;
+                $key      = $2;
+
+                $sec =~ s/$1_$2/$key/g;
             }
 
 
