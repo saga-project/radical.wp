@@ -27,7 +27,7 @@
   <em> Andre Merzky, Ole Weidner, Shantenu Jha </em>
   Software-X,  2015
   DOI: 10.1016/j.softx.2015.03.001<br>
-    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/saga-x.bib">bib</a>] : saga-x
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/saga-x_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/saga-x.bib">bib</a>] : saga-x
   <br><br>
   <a name="ct500776j"></a>
   <strong> <em> Characterization of the Three-Dimensional Free Energy Manifold for the Uracil Ribonucleoside from Asynchronous Replica Exchange Simulations </em> </strong>
@@ -39,7 +39,7 @@
   <strong> <em> Next Generation Workload Management System For Big Data on Heterogeneous Distributed Compu ting </em> </strong>
   <em> A Klimentov, P Buncic, K De, S Jha, T Maeno, R Mount, P Nilsson, D Oleynik, S Panitkin, A Petrosyan, R J Porter, K F Read, A Vaniachine, J C Wells, T Wenaus </em>
   Journal of Physics: Conference Series, vol. 608 # 1,  2015
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/titan-panda.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/titan-panda.bib">bib</a>] : titan-panda
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/titan-panda_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/titan-panda.bib">bib</a>] : titan-panda
   <br><br>
 
  <h2><u>2014</u></h2>
@@ -94,7 +94,7 @@
   <strong> <em> Distributed computing practice for large-scale science and engineering applications </em> </strong>
   <em> Jha, Shantenu, Cole, Murray, Katz, Daniel S., Parashar, Manish, Rana, Omer, Weissman, Jon </em>
   Concurrency and Computation: Practice and Experience, vol. 25 # 11,  2013
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/dpa_surveypaper.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/dpa_surveypaper.bib">bib</a>] : dpa_surveypaper
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/dpa_surveypaper_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/dpa_surveypaper.bib">bib</a>] : dpa_surveypaper
   <br><br>
   <a name="jogc-2012-dare"></a>
   <strong> <em> Distributed Application Runtime Environment (DARE): A Standards-based Middleware Framework for Science-Gateways </em> </strong>
@@ -521,8 +521,7 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> A Comprehensive Perspective on Pilot-Abstraction </em> </strong>
   <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
   IEEE/ACM SC'15,  2015
-  unpublished
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-abstraction-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-abstraction-2015.bib">bib</a>] : pilot-abstraction-2015
+  [<a title="link" href="http://arxiv.org/abs/1508.04180">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-abstraction-2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-abstraction-2015.bib">bib</a>] : pilot-abstraction-2015
   <br><br>
   <a name="rp-paper-2015"></a>
   <strong> <em> RADICAL-Pilot – A Scalable Implementation of the Pilot Abstraction </em> </strong>
