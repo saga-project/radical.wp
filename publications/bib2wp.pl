@@ -52,6 +52,10 @@ my $PDFROOT = "$BIBROOT/pdf";
 
   chomp (@lines);      # remove newline from all lines
 
+
+  # add drafts subsection
+  $links .= sprintf (" &bull; <a href=\"#drafts\"><b>Drafts / Under Review</b></a> <br>\n");
+
   # main parsing loop
   LINE:
   foreach my $line ( @lines )
@@ -278,8 +282,6 @@ my $PDFROOT = "$BIBROOT/pdf";
     } # section line
   } # foreach line
 
-  # add drafts subsection
-  $links .= sprintf (" &bull; <a href=\"#drafts\"><b>Drafts / Under Review</b></a> <br>\n");
 
 
   # we got all entries parsed - print top links and all entries to output file,
@@ -287,26 +289,27 @@ my $PDFROOT = "$BIBROOT/pdf";
   $out->print  ("<hr>\n");
   $out->print  ($links);
   $out->printf (" &bull; <a href=\"#bibtex\"><b>BibTeX</b></a>\n");
+  $out->print  ("<hr>\n");
+  $out->print  ("\n<a name=\"drafts\"></a><h1><hr/><u>Drafts / Under Review</u></h1>\n\n");
+  $out->print  ("\n"); 
+  $out->print  ("These publications are work in progress, are under review, or ");
+  $out->print  ("are not yet published for other reasons.  As such, they are ");
+  $out->print  ("likely to change, sometimes significantly, and should not ");
+  $out->print  ("(yet) be referenced directly.  Please contact the repective ");
+  $out->print  ("authors for further details.\n");
+  $out->print  ("\n");
+  $out->print  ("<br><br>\n");
+  $out->print  ($txtd);
+  #$out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
+  #$out->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
   $out->print  ($txt);
-# $out->print  ("<hr><br><br>\n");
-# $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
-# $out->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
+  $out->print  ("<hr><br><br>\n");
+  $out->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
+  $out->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
 # $out->close  (); # done, close output.
 
   my $outd = $out;
-  $outd->print  ("<hr>\n");
-  $outd->print  ("\n<a name=\"drafts\"></a><h1><hr/><u>Drafts / Under Review</u></h1>\n\n");
-  $outd->print  ("\n"); 
-  $outd->print  ("These publications are work in progress, are under review, or ");
-  $outd->print  ("are not yet published for other reasons.  As such, they are ");
-  $outd->print  ("likely to change, sometimes significantly, and should not ");
-  $outd->print  ("(yet) be referenced directly.  Please contact the repective ");
-  $outd->print  ("authors for further details.\n");
-  $outd->print  ("\n");
-  $outd->print  ($txtd);
-  $outd->print  ("<hr><br><br>\n");
-  $outd->printf ("\n\n <a name=\"bibtex\"></a><h1><u>BibTeX</u></h1>\n\n");
-  $outd->printf (" &bull; <a href=\"$BIBROOT/radical_publications.bib\"><b>radical_publications.bib</b></a> <br>\n\n");();
+  
 # $outd->close  (); # done, close output.
 
 } # main
