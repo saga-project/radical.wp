@@ -19,6 +19,12 @@ These publications are work in progress, are under review, or are not yet publis
   Under Review,  2015
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/radicalpilot_2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/radicalpilot_2015.bib">bib</a>] : radicalpilot_2015
   <br><br>
+  <a name="rp_cug_2016_draft"></a>
+  <strong> <em> Executing Dynamic Heterogeneous Workloads on Craus with RADICAL-Pilot </em> </strong>
+  <em> Mark Santcroos, Ralph Castain, Andre Merzky, Iain Bethune, Shantenu Jha </em>
+  CRAY User Group 2016 [accepted],  2016
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/rp_cug_2016_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/rp_cug_2016_draft.bib">bib</a>] : rp_cug_2016_draft
+  <br><br>
   <a name="pilotreview_2013"></a>
   <strong> <em> A Comprehensive Perspective on Pilot-Jobs </em> </strong>
   <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
@@ -56,7 +62,7 @@ These publications are work in progress, are under review, or are not yet publis
   <a name="ipdps-2015"></a>
   <strong> <em> Integrating Abstractions to Enhance the Execution of Distributed Applications </em> </strong>
   <em> Matteo Turilli,  Feng (Francis)Liu, Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel S. Katz, Shantenu Jha </em>
-  International Parallel and Distributed Processing Symposium (IPDPS) 2016 (Chicago) ,  
+  International Parallel and Distributed Processing Symposium (IPDPS) 2016 (Chicago) ,  2014
   newline <br>
   [<a title="link" href="http://arxiv.org/abs/1504.04720">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ipdps-2015.bib">bib</a>] : ipdps-2015
   <br><br>
