@@ -13,25 +13,19 @@
 These publications are work in progress, are under review, or are not yet published for other reasons.  As such, they are likely to change, sometimes significantly, and should not (yet) be referenced directly.  Please contact the repective authors for further details.
 
 <br><br>
-  <a name="radicalpilot_2015"></a>
-  <strong> <em> RADICAL-Pilot: Scalable Execution of Heterogeneous and Dynamic Workloads on Supercomputers </em> </strong>
+  <a name="radicalpilot"></a>
+  <strong> <em> Executing Dynamic and Heterogeneous Workloads on Super Computers </em> </strong>
   <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
-  Under Review,  2015
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/radicalpilot_2015_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/radicalpilot_2015.bib">bib</a>] : radicalpilot_2015
+    2016
+  (under review) 
+  [<a title="link" href="http://arxiv.org/abs/1512.08194">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/radicalpilot.bib">bib</a>] : radicalpilot
   <br><br>
-  <a name="pilotreview_2013"></a>
+  <a name="pilotreview"></a>
   <strong> <em> A Comprehensive Perspective on Pilot-Jobs </em> </strong>
   <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
-  Under Review,  2015
+  Under Review,  2016
   (under review) newline 
-  [<a title="link" href="http://arxiv.org/abs/1508.04180">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilotreview_2013_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilotreview_2013.bib">bib</a>] : pilotreview_2013
-  <br><br>
-  <a name="synapse_wrap"></a>
-  <strong> <em> Synapse: Bridging the Gap Towards Predictable Workload Placement </em> </strong>
-  <em> Andre Merzky, Shantenu Jha </em>
-    2015
-  under review
-  [<a title="link" href="http://arxiv.org/abs/1506.00272">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/synapse_wrap.bib">bib</a>] : synapse_wrap
+  [<a title="link" href="http://arxiv.org/abs/1508.04180">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilotreview.bib">bib</a>] : pilotreview
   <br><br>
   <a name="2015-hpdc"></a>
   <strong> <em> Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application on HPC, Hadoop and Cloud Infrastructures? </em> </strong>
@@ -46,6 +40,13 @@ These publications are work in progress, are under review, or are not yet publis
     2015
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/3dpas_intro_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/3dpas_intro.bib">bib</a>] : 3dpas_intro
   <br><br>
+  <a name="turilli2016analysis"></a>
+  <strong> <em> Analysis of Distributed Execution of Workloads </em> </strong>
+  <em> Matteo Turilli, Yadu Nand Babuji, Andre Merzky, Ming Tai Ha, Michael Wilde, Daniel S. Katz, Shantenu Jha </em>
+    2016
+  newline 
+  [<a title="link" href="http://arxiv.org/pdf/1605.09513v1.pdf">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/turilli2016analysis.bib">bib</a>] : turilli2016analysis
+  <br><br>
 
 
 <a name="Conference_and_Workshop_Papers"></a><h1><hr/><u>Conference and Workshop Papers</u></h1>
@@ -53,20 +54,43 @@ These publications are work in progress, are under review, or are not yet publis
 
  <h2><u>2016</u></h2>
 
-  <a name="rp_cug_2016"></a>
-  <strong> <em> Executing Dynamic Heterogeneous Workloads on Crays with RADICAL-Pilot </em> </strong>
-  <em> Mark Santcroos, Ralph Castain, Andre Merzky, Iain Bethune, Shantenu Jha </em>
-  CRAY User Group 2016,  2016
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/rp_cug_2016_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/rp_cug_2016.bib">bib</a>] : rp_cug_2016
+  <a name="repex-icpp-2016"></a>
+  <strong> <em> RepEx: A Flexible Framework for Scalable Replica Exchange Molecular Dynamics Simulations </em> </strong>
+  <em> Antons Treikalis, Andre Merzky, Haoyuan Chen, Tai-Sung Lee, Darrin M. York, Shantenu Jha </em>
+  Proceedings of the 45th International Conference on Parallel Processing (ICPP),  2016
+  [<a title="link" href="http://arxiv.org/abs/1601.05439">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/repex-icpp-2016.bib">bib</a>] : repex-icpp-2016
   <br><br>
-
- <h2><u>2015</u></h2>
-
-  <a name="ipdps-2015"></a>
+  <a name="entk-icpp-2016"></a>
+  <strong> <em> Ensemble Toolkit: Scalable and Flexible Execution of Ensembles of Tasks </em> </strong>
+  <em> Vivek Balasubramanian, Antons Trekalis, Ole Weidner, Shantenu Jha </em>
+  Proceedings of the 45th International Conference on Parallel Processing (ICPP),  2016
+  [<a title="link" href="http://arxiv.org/abs/1602.00678">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/entk-icpp-2016.bib">bib</a>] : entk-icpp-2016
+  <br><br>
+  <a name="aimes-ipdps-2016"></a>
   <strong> <em> Integrating Abstractions to Enhance the Execution of Distributed Applications </em> </strong>
-  <em> Matteo Turilli,  Feng (Francis)Liu, Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel S. Katz, Shantenu Jha </em>
-  International Parallel and Distributed Processing Symposium (IPDPS) 2016 (Chicago) ,  2014
-  [<a title="link" href="http://arxiv.org/abs/1504.04720">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ipdps-2015.bib">bib</a>] : ipdps-2015
+  <em> Matteo Turilli, Feng (Francis) Liu, Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel S. Katz, Shantenu Jha </em>
+  Proceedings of 30th IEEE International Parallel and Distributed Processing Symposium (IPDPS),  2016
+  [<a title="link" href="http://arxiv.org/abs/1504.04720">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/aimes-ipdps-2016.bib">bib</a>] : aimes-ipdps-2016
+  <br><br>
+  <a name="synapse_wrap"></a>
+  <strong> <em> Synapse: Synthetic Application Profiler and Emulator </em> </strong>
+  <em> Andre Merzky, Shantenu Jha </em>
+  Parallel and Distributed Scientific and Engineering Computing Workshop,  2016
+  under review<br>
+  [<a title="link" href="http://arxiv.org/abs/1506.00272">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/synapse_wrap.bib">bib</a>] : synapse_wrap
+  <br><br>
+  <a name="hadoop-on-hpc"></a>
+  <strong> <em> Hadoop on HPC: Integrating Hadoop and Pilot-based Dynamic Resource Management  </em> </strong>
+  <em> Andre Luckow, Ioannis Paraskevakos, George Chantzialexiou, Shantenu Jha </em>
+  Workshop on High-Performance Big Data Computing,  2016
+  newline <br>
+  [<a title="link" href="http://arxiv.org/abs/1602.00345">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/hadoop-on-hpc.bib">bib</a>] : hadoop-on-hpc
+  <br><br>
+  <a name="cug-2016"></a>
+  <strong> <em> Executing dynamic heterogeneous workloads on Blue Waters with RADICAL-Pilot </em> </strong>
+  <em> Santcroos, Mark, Castain, Ralph, Merzky, Andre, Bethune, Iain, Jha, Shantenu </em>
+  Cray User Group 2016,  2016
+    [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/cug-2016.bib">bib</a>] : cug-2016
   <br><br>
 
  <h2><u>2014</u></h2>
@@ -104,9 +128,9 @@ These publications are work in progress, are under review, or are not yet publis
   <a name="pstar12"></a>
   <strong> <em> P*: A model of pilot-abstractions </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Andre Merzky, Ole Weidner, Pradeep Mantha, Shantenu Jha </em>
-  2012 IEEE 8th International Conference on E-Science,  2012
+  IEEE 8th International Conference on e-Science,  2012
   newline <br>
-  [<a title="link" href="http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404423">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar12.bib">bib</a>] : pstar12
+  [<a title="link" href="http://dx.doi.org/10.1109/eScience.2012.6404423">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar12.bib">bib</a>] : pstar12
   <br><br>
   <a name="pstar-network12"></a>
   <strong> <em> Pilot abstractions for compute, data, and network </em> </strong>
@@ -305,16 +329,25 @@ These publications are work in progress, are under review, or are not yet publis
 <a name="Journal_Publications"></a><h1><hr/><u>Journal Publications</u></h1>
 
 
+ <h2><u>2016</u></h2>
+
+  <a name="ccpe-2016-error"></a>
+  <strong> <em> On the complexities of utilizing large-scale lightpath-connected distributed cyberinfrastructure </em> </strong>
+  <em> Jason Maassen, Ben van Werkhoven, Maarten van Meersbergen, Henri E. Bal, Michael Kliphuis, Sandra E. Brunnabend, Henk A. Dijkstra, Gerben van Malenstein, Migiel de Vos, Sylvia Kuijpers, Sander Boele, Jules Wolfrat, Nick Hill, David Wallom, Christian Grimm, Dieter Kranzlmüller, Dinesh Ganpathi, Shantenu Jha, Yaakoub El Khamra, Frank O. Bryan, Benjamin Kirtman, Frank J. Seinstra </em>
+  Concurrency and Computation: Practice and Experience,  2016
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccpe-2016-error_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccpe-2016-error.bib">bib</a>] : ccpe-2016-error
+  <br><br>
+
  <h2><u>2015</u></h2>
 
   <a name="skeleton-synapse15"></a>
   <strong> <em> Application skeletons: Construction and use in eScience  </em> </strong>
   <em> Daniel S. Katz, Andre Merzky, Zhao Zhang, Shantenu Jha </em>
   Future Generation Computer Systems ,  2015
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/skeleton-synapse15_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/skeleton-synapse15.bib">bib</a>] : skeleton-synapse15
+  [<a title="link" href="http://dx.doi.org/10.1016/j.future.2015.10.001">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/skeleton-synapse15_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/skeleton-synapse15.bib">bib</a>] : skeleton-synapse15
   <br><br>
   <a name="saga-x"></a>
-  <strong> <em> SAGA: A Standardized Access Layer to Heterogeneous Distributed Computing Infrastructure  </em> </strong>
+  <strong> <em> SAGA: A Standardized Access Layer to Heterogeneous Distributed Computing Infrastructure </em> </strong>
   <em> Andre Merzky, Ole Weidner, Shantenu Jha </em>
   Software-X,  2015
   DOI: 10.1016/j.softx.2015.03.001<br>
@@ -322,9 +355,10 @@ These publications are work in progress, are under review, or are not yet publis
   <br><br>
   <a name="ct500776j"></a>
   <strong> <em> Characterization of the Three-Dimensional Free Energy Manifold for the Uracil Ribonucleoside from Asynchronous Replica Exchange Simulations </em> </strong>
-  <em>  Brian K. Radak, Melissa Romanus, Tai-Sung Lee, Haoyuan Chen, Ming Huang, Antons Treikalis, Vivekanandan Balasubramanian, Shantenu Jha, Darrin M. York </em>
+  <em> Brian K. Radak, Melissa Romanus, Tai-Sung Lee, Haoyuan Chen, Ming Huang, Antons Treikalis, Vivekanandan Balasubramanian, Shantenu Jha, Darrin M. York </em>
   Journal of Chemical Theory and Computation, vol. 11 # 2,  2015
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ct500776j_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ct500776j.bib">bib</a>] : ct500776j
+  newline<br>
+  [<a title="link" href="http://dx.doi.org/10.1021/ct500776j">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ct500776j_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ct500776j.bib">bib</a>] : ct500776j
   <br><br>
   <a name="titan-panda"></a>
   <strong> <em> Next Generation Workload Management System For Big Data on Heterogeneous Distributed Compu ting </em> </strong>
@@ -379,7 +413,7 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Distributed computing practice for large-scale science and engineering applications </em> </strong>
   <em> Jha, Shantenu, Cole, Murray, Katz, Daniel S., Parashar, Manish, Rana, Omer, Weissman, Jon </em>
   Concurrency and Computation: Practice and Experience, vol. 25 # 11,  2013
-    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/dpa_surveypaper_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/dpa_surveypaper.bib">bib</a>] : dpa_surveypaper
+  [<a title="link" href="http://dx.doi.org/10.1002/cpe.2897">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/dpa_surveypaper_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/dpa_surveypaper.bib">bib</a>] : dpa_surveypaper
   <br><br>
   <a name="jogc-2012-dare"></a>
   <strong> <em> Distributed Application Runtime Environment (DARE): A Standards-based Middleware Framework for Science-Gateways </em> </strong>
@@ -478,6 +512,36 @@ These publications are work in progress, are under review, or are not yet publis
 
  <h2><u>2015</u></h2>
 
+  <a name="ascr-wp-2015"></a>
+  <strong> <em> From Abstractions to MOD- ELS: MOdels for Distributed and Extremely Large-scale Science </em> </strong>
+  <em> Shantenu Jha, Daniel S. Katz, Matteo Turilli, Jon Weissman </em>
+  White Paper Submitted to Advanced Scientific Computing and Research, DOE Office of Science, August 2015
+  [<a title="link" href="https://zenodo.org/deposit/91947/">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ascr-wp-2015.bib">bib</a>] : ascr-wp-2015
+  <br><br>
+  <a name="steering-workflow-1"></a>
+  <strong> <em> owards Scalable Execution Across Multiple XSEDE Resources </em> </strong>
+  <em> Shantenu Jha </em>
+  , A White Paper submitted to DOE Workshop on Future of Scientific Workflows,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/steering-workflow-1_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/steering-workflow-1.bib">bib</a>] : steering-workflow-1
+  <br><br>
+  <a name="steering-workflow-2"></a>
+  <strong> <em> Implications of the HPC-ABDS High Performance Com- puting Enhanced Apache Big Data Stack for Workflows </em> </strong>
+  <em> Geoffrey Fox, Judy Qiu, Shantnu Jha, Supun Kamburugamuve, Andre Luckow </em>
+  , A White Paper submitted to DOE Workshop on Future of Scientific Workflows,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/steering-workflow-2_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/steering-workflow-2.bib">bib</a>] : steering-workflow-2
+  <br><br>
+  <a name="steeringsystems"></a>
+  <strong> <em> Workshop on Streaming Systems, Draft Report v0.1 (08 Jan 2016) </em> </strong>
+  <em> Geoffrey Fox, Shantenu Jha, Lavanya Ramakrishnan </em>
+  , NSF DOE Workshop,  2015
+    [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/steeringsystems_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/steeringsystems.bib">bib</a>] : steeringsystems
+  <br><br>
+  <a name="nextgen-molsim"></a>
+  <strong> <em> High-level software frameworks to surmount the challenge of 100x scaling for biomolecul ar simulation science </em> </strong>
+  <em> Shantenu Jha, Peter M. Kasson </em>
+  , White Paper submitted to NIH-NSF Request for Information (2015) urlhttp://www.nsf.gov/pubs/2016/nsf16008/nsf16008.jsp,  2015
+  [<a title="link" href="http://dx.doi.org/10.5281/zenodo.44377">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/nextgen-molsim.bib">bib</a>] : nextgen-molsim
+  <br><br>
   <a name="nsf-aci-multi-exec"></a>
   <strong> <em> Towards Scalable Execution Across Multiple XSEDE Resources </em> </strong>
   <em> Shantenu Jha </em>

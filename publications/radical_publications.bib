@@ -4,29 +4,21 @@
 ################################################################################
 
 
-
-@misc{review_radicalpilot_2015, 
+@misc{review_radicalpilot,
   author      = {Andre Merzky and Mark Santcroos and Matteo Turilli and Shantenu Jha},
-  title       = {{RADICAL-Pilot: Scalable Execution of Heterogeneous and Dynamic Workloads on Supercomputers}},
-  journal     = {{Under Review}},
-  url         = {http://arxiv.org/abs/1512.08194},
-  year        = 2015,
+  title       = {{Executing Dynamic and Heterogeneous Workloads on Super Computers}},
+  OPTjournal     = {{Under Review}},
+  note         = {(under review) \url{http://arxiv.org/abs/1512.08194}},
+  year        = 2016,
 }
 
-@misc{review_pilotreview_2013, 
+
+@misc{review_pilotreview, 
   author      = {Matteo Turilli and Mark Santcroos and Shantenu Jha},
-  title       = {{A Comprehensive Perspective on Pilot-Jobs}},
+  title       = {A Comprehensive Perspective on Pilot-Jobs},
   journal     = {{Under Review}},
   note       = {(under review) \newline \url{http://arxiv.org/abs/1508.04180}},
-  year        = 2015,
-}
-
-@article{review_synapse_wrap,
-  author    = {Andre Merzky and Shantenu Jha},
-  title     = {Synapse: Bridging the Gap Towards Predictable Workload
-               Placement},
-  year      = {2015},
-  note      = {under review, \url{http://arxiv.org/abs/1506.00272}}
+  year        = 2016,
 }
 
 
@@ -49,6 +41,14 @@
    }
 
 
+@misc{review_turilli2016analysis,
+  author={Matteo Turilli and Yadu Nand Babuji and Andre Merzky and Ming Tai Ha and Michael Wilde and Daniel S. Katz and Shantenu Jha},
+  title={{Analysis of Distributed Execution of Workloads}},
+  OPTjournal={Under review},
+  year={2016},
+  note = {\newline \url{http://arxiv.org/pdf/1605.09513v1.pdf}}
+}
+
 
 
 ################################################################################
@@ -56,38 +56,69 @@
 
 ###################
 # 2016
-
-@inproceedings{rp_cug_2016, 
-  author      = {Mark Santcroos and Ralph Castain and Andre Merzky and Iain
-                 Bethune and Shantenu Jha},
-  title       = {{Executing Dynamic Heterogeneous Workloads on Crays with RADICAL-Pilot}},
-  booktitle   = {{CRAY User Group 2016}},
-  year        = 2016,
-  location    = {London, UK}
+@inproceedings{repex-icpp-2016,
+  author      = {Antons Treikalis and Andre Merzky and Haoyuan Chen and 
+                 Tai-Sung Lee and Darrin M. York and Shantenu Jha},
+  title       = {RepEx: A Flexible Framework for Scalable Replica
+                 Exchange Molecular Dynamics Simulations},
+  booktitle   = {Proceedings of the 45th International Conference on Parallel Processing (ICPP)},
+  location    = {Philadelphia, USA},
+  year = {2016},
+  note         = {\url{http://arxiv.org/abs/1601.05439}},
 }
 
+@inproceedings{entk-icpp-2016,
+    author      = {Vivek Balasubramanian and Antons Trekalis and Ole Weidner and Shantenu Jha},
+    title       = {{Ensemble Toolkit: Scalable and Flexible Execution of Ensembles of Tasks}},
+    booktitle   = {Proceedings of the 45th International Conference on Parallel Processing (ICPP)},
+    location    = {Philadelphia, Pennsylvania, USA},
+    year        = {2016},
+    note        = {\url{http://arxiv.org/abs/1602.00678}},
+}
+
+
+@inproceedings{aimes-ipdps-2016,
+  author      = {Matteo Turilli and Feng (Francis) Liu and Zhao Zhang and Andre
+                  Merzky and Michael Wilde and Jon Weissman and Daniel S. Katz
+                  and Shantenu Jha},
+  title       = {Integrating Abstractions to Enhance the Execution of
+                  Distributed Applications},
+  booktitle   = {Proceedings of 30th IEEE International  Parallel and Distributed Processing Symposium (IPDPS)},
+  location    = {Chicago, Illinois, USA},
+  year = {2016 (in press)},
+  note         = {\url{http://arxiv.org/abs/1504.04720}},
+}
+
+@inproceedings{synapse_wrap,
+   author    = {Andre Merzky and Shantenu Jha},
+   title     = {Synapse: Synthetic Application Profiler and Emulator},
+   year      = {2016},
+   booktitle = {Parallel and Distributed Scientific and Engineering Computing Workshop},
+   location  = {Chicago, Illinois, USA},
+   note      = {under review, \url{http://arxiv.org/abs/1506.00272}}
+}
+
+@inproceedings{hadoop-on-hpc,
+    author      = {Andre Luckow and Ioannis Paraskevakos and George
+                  Chantzialexiou and Shantenu Jha},
+    title       = {{Hadoop on HPC: Integrating Hadoop and Pilot-based Dynamic
+                  Resource Management }},
+    booktitle   = {Workshop on High-Performance Big Data Computing},
+    year        = {2016 (in press)},
+    location    = {Chicago, Illinois, USA},
+    note         = {\newline \url{http://arxiv.org/abs/1602.00345}}
+}
+
+@inproceedings{cug-2016,
+    title={Executing dynamic heterogeneous workloads on Blue Waters with RADICAL-Pilot},
+    author={Santcroos, Mark and Castain, Ralph and Merzky, Andre and
+    Bethune, Iain and Jha, Shantenu},
+    booktitle={Cray User Group 2016},
+    year={2016}
+}
 
 ###################
 # 2015
-
-@inproceedings{ipdps-2015,
-  author      = {Matteo Turilli and \ Feng (Francis)Liu, Zhao Zhang and Andre
-                  Merzky and Michael Wilde and Jon Weissman and Daniel S. Katz
-                  and Shantenu Jha},
-  title       = {{Integrating Abstractions to Enhance the Execution of
-                  Distributed Applications}},
-  booktitle   = {International  Parallel and Distributed Processing Symposium (IPDPS) 2016 (Chicago) },
-  year        = 2014,
-  OPTseries      = {},
-  OPTisbn        = {978-1-4799-5056-0},
-  OPTyear        = {2014},
-  location    = {Chicago, USA},
-  OPTpages       = {645 - 652},
-  OPTnumpages    = {7},
-  OPTdoi         = {10.1109/BigData.Congress.2014.137},
-  note         = {\url{http://arxiv.org/abs/1504.04720}},
-  OPTnote        = {\url{https://raw.github.com/saga-project/radical.wp/master/publications/pdf/tale-of-two-ieee-2014.pdf}},
-}
 
 ###################
 # 2014
@@ -112,13 +143,13 @@
 # 2013
 @inproceedings{2013-xsede-cdi,
   author      = {Brian K. Radak and Melissa Romanus and Emilio Gallicchio
-                     and Tai-Sung Lee and Ole Weidner and Nan-Jie Deng and
-                     Peng He and Wei Dai and Darrin M. York and Ronald M. Levy
-                     and Shantenu Jha},
+                 and Tai-Sung Lee and Ole Weidner and Nan-Jie Deng and
+                 Peng He and Wei Dai and Darrin M. York and Ronald M. Levy
+                 and Shantenu Jha},
   title       = {{A Framework for Flexible and Scalable Replica-Exchange on 
                  Production Distributed CI}},
   booktitle   = {Proceedings of the Conference on Extreme Science and 
-                     Engineering Discovery Environment: Gateway to Discovery},
+                 Engineering Discovery Environment: Gateway to Discovery},
   series      = {XSEDE '13},
   isbn        = {978-1-4503-2170-9},
   year        = {2013},
@@ -177,28 +208,28 @@
 @article{pstar12,
 author = {Andre Luckow and Mark Santcroos and Andre Merzky and Ole Weidner and Pradeep Mantha and Shantenu Jha},
 title = {P*: A model of pilot-abstractions},
-journal ={2012 IEEE 8th International Conference on E-Science},
+journal ={IEEE 8th International Conference on e-Science},
 isbn = {978-1-4673-4467-8},
 year = {2012},
 pages = {1-10},
 doi = {http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404423},
-note  = {\newline \url{http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404423}},
+note  = {\newline \url{http://dx.doi.org/10.1109/eScience.2012.6404423}},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 }
 
 
-@inproceedings{pstar-network12,
-    address     = {Los Alamitos, CA, USA},
-    author      = {Mark Santcroos and Silvia Delgado Olabarriaga and Daniel S. Katz and Shantenu Jha},
-    journal     = {2012 IEEE 8th International Conference on E-Science},
-    pages       = {1-2},
-    publisher   = {IEEE Computer Society},
-    title       = {Pilot abstractions for compute, data, and network},
-    volume      = {0},
-    year        = {2012},
-    doi         = {http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404459},
-    isbn        = {978-1-4673-4467-8},
+@article{pstar-network12,
+  address     = {Los Alamitos, CA, USA},
+  author      = {Mark Santcroos and Silvia Delgado Olabarriaga and Daniel S. Katz and Shantenu Jha},
+  journal     = {2012 IEEE 8th International Conference on E-Science},
+  pages       = {1-2},
+  publisher   = {IEEE Computer Society},
+  title       = {Pilot abstractions for compute, data, and network},
+  volume      = {0},
+  year        = {2012},
+  doi         = {http://doi.ieeecomputersociety.org/10.1109/eScience.2012.6404459},
+  isbn        = {978-1-4673-4467-8},
 }
 
 
@@ -764,23 +795,38 @@ address = {Los Alamitos, CA, USA},
 ###################
 # 2000
 
-
 ################################################################################
 ## Journal Publications
 ################################################################################
 
 ####################
+# 2016
+
+﻿@article {ccpe-2016-error,
+author = {Jason Maassen and Ben van Werkhoven and Maarten van Meersbergen and Henri E. Bal and Michael Kliphuis and Sandra E. Brunnabend and Henk A. Dijkstra and Gerben van Malenstein and Migiel de Vos and Sylvia Kuijpers and Sander Boele and Jules Wolfrat and Nick Hill and David Wallom and Christian Grimm and Dieter Kranzlmüller and Dinesh Ganpathi and Shantenu Jha and Yaakoub El Khamra and Frank O. Bryan and Benjamin Kirtman and Frank J. Seinstra},
+title = {On the complexities of utilizing large-scale lightpath-connected distributed cyberinfrastructure},
+journal = {Concurrency and Computation: Practice and Experience},
+issn = {1532-0634},
+url = {http://dx.doi.org/10.1002/cpe.3853},
+doi = {10.1002/cpe.3853},
+pages = {n/a--n/a},
+keywords = {distributed cyberinfrastructure, lightpaths, global climate modeling},
+optkeywords = {next-generation sequencing data analytics, science gateway, BFAST, mapping, ChIP-Seq, human genome, Burkerholderia glumae, mouse genome, runtime environment, distributed computing, simple API for grid applications (SAGA), pilot-job abstraction},
+year = {2016},
+}
+
+
+####################
 # 2015
 
-
 @article{skeleton-synapse15,
-title = "Application skeletons: Construction and use in eScience ",
+title = "Application skeletons: Construction and use in e{S}cience ",
 journal = "Future Generation Computer Systems ",
 volume = "",
 number = "",
-pages = " - ",
+OPTpages = " - ",
 year = "2015",
-note = "",
+note = "\url{http://dx.doi.org/10.1016/j.future.2015.10.001}",
 issn = "0167-739X",
 doi = "http://dx.doi.org/10.1016/j.future.2015.10.001",
 url = "http://www.sciencedirect.com/science/article/pii/S0167739X15003143",
@@ -790,14 +836,13 @@ keywords = "Data science",
 keywords = "Application modeling",
 keywords = "System modeling",
 keywords = "Performance modeling",
-keywords = "Parallel and distributed systems "
+keywords = "Parallel and distributed systems ",
 }
-
 
 @article{saga-x,
  author = {Andre Merzky and Ole Weidner and Shantenu Jha},
- title = {{SAGA}: A Standardized Access Layer to Heterogeneous Distributed Computing Infrastructure\
-},
+ title = {{SAGA}: A Standardized Access Layer to Heterogeneous Distributed
+                  Computing Infrastructure},
  journal = {Software-X},
  year = 2015,
  doi = {10.1016/j.softx.2015.03.001},
@@ -807,8 +852,9 @@ keywords = "Parallel and distributed systems "
 
 
 @article{ct500776j,
-author = { Brian K. Radak and Melissa Romanus and Tai-Sung Lee and Haoyuan Chen and Ming Huang and Antons Treikalis and Vivekanandan Balasubramanian and Shantenu Jha and Darrin M. York},
-title = {{Characterization of the Three-Dimensional Free Energy Manifold for the Uracil Ribonucleoside from Asynchronous Replica Exchange Simulations}},
+author = {Brian K. Radak and Melissa Romanus and Tai-Sung Lee and Haoyuan Chen and Ming Huang and Antons Treikalis and Vivekanandan Balasubramanian and Shantenu Jha and Darrin M. York},
+title = {Characterization of the Three-Dimensional Free Energy Manifold for the
+    {Uracil Ribonucleoside} from Asynchronous Replica Exchange Simulations},
 journal = {Journal of Chemical Theory and Computation},
 volume = {11},
 number = {2},
@@ -816,7 +862,8 @@ pages = {373-377},
 year = {2015},
 doi = {10.1021/ct500776j},
 URL = {http://dx.doi.org/10.1021/ct500776j},
-eprint = {http://dx.doi.org/10.1021/ct500776j}
+eprint = {http://dx.doi.org/10.1021/ct500776j},
+note = {\newline\url{http://dx.doi.org/10.1021/ct500776j}},
 }
 
 @article{titan-panda,
@@ -926,11 +973,12 @@ ting},
 author = {Jha, Shantenu and Cole, Murray and Katz, Daniel S. and Parashar, Manish and Rana, Omer and Weissman, Jon},
 title = {Distributed computing practice for large-scale science and engineering applications},
 journal = {Concurrency and Computation: Practice and Experience},
+note = "\url{http://dx.doi.org/10.1002/cpe.2897}",
 volume = {25},
 number = {11},
 issn = {1532-0634},
-url = {http://dx.doi.org/10.1002/cpe.2897},
-doi = {10.1002/cpe.2897},
+XXurl = {http://dx.doi.org/10.1002/cpe.2897},
+XXdoi = {10.1002/cpe.2897},
 pages = {1559--1585},
 year = {2013},
 }
@@ -1207,13 +1255,61 @@ year = {2013},
 # 2000
 
 
-
 ################################################################################
 ## Standards, White Papers, Technical Reports
 ################################################################################
 
 ###################
 # 2015
+
+
+@techreport{ascr-wp-2015, 
+  author      = {Shantenu Jha and Daniel S. Katz and Matteo Turilli and Jon
+                  Weissman},
+  title       = {{From Abstractions to MOD- ELS: MOdels for Distributed and Extremely Large-scale Science}},
+  journal     = {{White Paper Submitted to Advanced Scientific Computing and Research, DOE Office of Science}},
+  year        = {2015},
+  month       = {August},
+  note        = {\url{https://zenodo.org/deposit/91947/}},
+}
+
+
+@techreport{steering-workflow-1,
+  author      = {{Shantenu Jha}},
+  title       = {{owards Scalable Execution Across Multiple XSEDE Resources}},
+  type        = {{A White Paper submitted to DOE Workshop on Future of Scientific Workflows}},
+  year        = {2015},
+  url         = {https://zenodo.org/record/17909},
+}
+
+
+@techreport{steering-workflow-2,
+  author      = {{Geoffrey Fox and Judy Qiu and Shantnu Jha and Supun Kamburugamuve and Andre Luckow}},
+  title       = {{Implications of the HPC-ABDS High Performance Com-
+puting Enhanced Apache Big Data Stack for Workflows}},
+  type        = {{A White Paper submitted to DOE Workshop on Future of Scientific Workflows}},
+  year        = {2015},
+  url         = {http://dsc.soic.indiana.edu/publications/WorkflowsandHPC-ABDS.pdf}
+}
+
+
+@techreport{steeringsystems,
+  author      = {{Geoffrey Fox and Shantenu Jha and Lavanya Ramakrishnan}},
+  title       = {{Workshop on Streaming Systems, Draft Report v0.1 (08 Jan 2016)}},
+  type        = {{NSF DOE Workshop}},
+  year        = {2015},
+  url         = {https://goo.gl/LaHWnq},
+}
+
+@techreport{nextgen-molsim,
+  author      = {{Shantenu Jha and Peter M. Kasson}},
+  title       = {{High-level software frameworks to surmount the challenge of 100x scaling for biomolecul\
+ar simulation science}},
+  type        = {{White Paper submitted to NIH-NSF Request for Information (2015)\\
+                  \url{http://www.nsf.gov/pubs/2016/nsf16008/nsf16008.jsp}}},
+  year        = {2015},
+  note         = {\url{http://dx.doi.org/10.5281/zenodo.44377}},
+}
 
 @techreport{nsf-aci-multi-exec,
   author      = {{Shantenu Jha}},
@@ -1226,7 +1322,7 @@ year = {2013},
 ###################
 # 2014
 
-@misc{modsim2014, 
+@techreport{modsim2014, 
   author      = {Shantenu Jha and Andre Merzky and Matteo Turilli},
   title       = {{Modeling Distributed Extreme-Scale Applications and Systems}},
   journal     = {{Workshop on Modeling \& Simulation of Exascale
@@ -1240,7 +1336,7 @@ year = {2013},
 ###################
 # 2013
 
-@misc{modsim2013, 
+@techreport{modsim2013, 
   author      = {Shantenu Jha and Andre Merzky and Matteo Turilli and 
                  Daniel S. Katz and Jon Weissman},
   title       = {{Distributed Exascale Computing: An AIMES Perspective}},
@@ -1390,7 +1486,6 @@ techreport{ogf-gfd-sd,
 ###################
 # 2000
 
-
 ################################################################################
 ## Book Chapters
 ################################################################################
@@ -1410,7 +1505,6 @@ techreport{ogf-gfd-sd,
   isbn        = {978-0-470-88799-8},
 }
 
-
 ################################################################################
 ## END
 #  ignore everything below
@@ -1422,8 +1516,8 @@ techreport{ogf-gfd-sd,
 ################################################################################
 
 @misc{sc15_tutorial_url,
-  title = {{SC15 Tutorial: Data-Intensive Applications on HPC Using Hadoop,
-                  Spark and RADICAL-Cybertools}},
+  title = {{SC15} Tutorial: Data-Intensive Applications on {HPC} Using {Hadoop},
+      {Spark} and {RADICAL-Cybertools}},
   note  = {\url{https://github.com/radical-cybertools/supercomputing2015-tutorial/wiki}},
 }
 
@@ -1436,12 +1530,12 @@ techreport{ogf-gfd-sd,
 
 @misc{extasy_project_url,
   title = {{ExTASY Project}},
-  note         = {\url{http://www.extasy-project.org/}},
+  note  = {\newline\url{http://www.extasy-project.org/}},
 }
 
 @misc{spidal_url,
   title   = {{SPIDAL Project}},
-  note         = {\url{http://www.spidal.org/}},
+  note    = {\newline\url{http://www.spidal.org/}},
 }
 
 
@@ -1460,24 +1554,10 @@ techreport{ogf-gfd-sd,
   url         = {http://www.ogf.org/},
 }
 
-@misc{egi_url,  
-  institution = {{European Grid Initiative (EGI)}},
-  url         = {http://web.eu-egi.eu/},
-}
 
 @misc{futuregrid_url, 
   institution = {{FutureGrid}},
   url         = {http://www.futuregrid.org/},
-}
-
-@misc{xsede_url, 
-  institution = {{XSEDE}}, 
-  url         = {https://www.xsede.org/},
-}
-
-@misc{saga_url, 
-  institution = {{The SAGA Project}},  
-  note        = {The SAGA Project, \url{http://www.saga-project.org}}
 }
 
 @misc{bj_url,
@@ -1508,9 +1588,15 @@ techreport{ogf-gfd-sd,
 }
 
 
+@misc{saga_url,
+  howpublished = {The {SAGA} Project, {RADICAL} CyberTools, \url{http://radical-cybertools.github.io/saga-python/index.html}},
+	note={Accessed: 2015-11-5}
+}
+
 @misc{radical_url,
-  title       = {{RADICAL: Research in Advanced Distribued Cyberinfrastructure and Applications Laboratory}},
+  title       = {{RADICAL: Research in Advanced Distribued Cyberinfrastructure and Applications Laboratory}, {Rutgers University}},
   url         = {http://radical.rutgers.edu},
+  note = {Accessed: 2015-11-5}
 }
 
 @misc{async_bigjob_git_url,
@@ -1540,14 +1626,6 @@ techreport{ogf-gfd-sd,
 ################################################################################
 ## miscellaneous
 ################################################################################
-
-@misc{aimes-sop, note = {Integrating Abstractions to Enhance the Execution of
-                  Distributed Applications, Matteo Turilli, \ Feng (Francis)Liu,
-                  Zhao Zhang, Andre Merzky, Michael Wilde, Jon Weissman, Daniel
-                  S. Katz, Shantenu Jha, accepted for IPD\ PS'16 (Chicago),
-                  available at arXiv:1504.04720
-                  \url{http://arxiv.org/abs/1504.04720}}}
-
 
 
 @misc{saga-xsede, 
