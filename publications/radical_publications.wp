@@ -17,28 +17,27 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> ExTASY: Scalable and Flexible Coupling of MD Simulations and Advanced Sampling Techniques </em> </strong>
   <em> Vivekanandan Balasubramanian, Iain Bethune, Ardita Shkurti, Elena Breitmoser, Eugen Hruska, Cecilia Clementi, Charles Laughton, Shantenu Jha </em>
   IEEE International Conference on eScience,  2016
-  (under review) 
+  (under review)
   [<a title="link" href="https://arxiv.org/abs/1606.00093">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/extasy-2016_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/extasy-2016.bib">bib</a>] : extasy-2016
   <br><br>
   <a name="radicalpilot"></a>
   <strong> <em> Executing Dynamic and Heterogeneous Workloads on Super Computers </em> </strong>
   <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
     2016
-  (under review) 
+  (under review)
   [<a title="link" href="http://arxiv.org/abs/1512.08194">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/radicalpilot.bib">bib</a>] : radicalpilot
   <br><br>
   <a name="pilotreview"></a>
   <strong> <em> A Comprehensive Perspective on Pilot-Jobs </em> </strong>
   <em> Matteo Turilli, Mark Santcroos, Shantenu Jha </em>
   Under Review,  2016
-  (under review) newline 
+  (under review)
   [<a title="link" href="http://arxiv.org/abs/1508.04180">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilotreview.bib">bib</a>] : pilotreview
   <br><br>
   <a name="2015-hpdc"></a>
   <strong> <em> Pilot-Abstraction: A Valid Abstraction for Data-Intensive Application on HPC, Hadoop and Cloud Infrastructures? </em> </strong>
   <em> Andre Luckow, Ioannis Paraskevakos, Shantenu Jha </em>
   The 24th International ACM Symposium on High Performance Distributed Computing,  2015
-  newline 
   [<a title="link" href="http://arxiv.org/pdf/1501.05041v1.pdf">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/2015-hpdc_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/2015-hpdc.bib">bib</a>] : 2015-hpdc
   <br><br>
   <a name="3dpas_intro"></a>
@@ -51,7 +50,6 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Analysis of Distributed Execution of Workloads </em> </strong>
   <em> Matteo Turilli, Yadu Nand Babuji, Andre Merzky, Ming Tai Ha, Michael Wilde, Daniel S. Katz, Shantenu Jha </em>
     2016
-  newline 
   [<a title="link" href="http://arxiv.org/pdf/1605.09513v1.pdf">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/turilli2016analysis.bib">bib</a>] : turilli2016analysis
   <br><br>
 
@@ -90,14 +88,12 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Hadoop on HPC: Integrating Hadoop and Pilot-based Dynamic Resource Management  </em> </strong>
   <em> Andre Luckow, Ioannis Paraskevakos, George Chantzialexiou, Shantenu Jha </em>
   Workshop on High-Performance Big Data Computing,  2016
-  newline <br>
   [<a title="link" href="http://arxiv.org/abs/1602.00345">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/hadoop-on-hpc.bib">bib</a>] : hadoop-on-hpc
   <br><br>
   <a name="cug-2016"></a>
   <strong> <em> Executing dynamic heterogeneous workloads on Blue Waters with RADICAL-Pilot </em> </strong>
   <em> Mark Santcroos, Ralph Castain, Andre Merzky, Iain Bethune, Shantenu Jha </em>
   Cray User Group 2016,  2016
-  newline <br>
   [<a title="link" href="https://cug.org/proceedings/cug2016_proceedings/includes/files/pap130.pdf">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/cug-2016.bib">bib</a>] : cug-2016
   <br><br>
 
@@ -137,7 +133,6 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> P*: A model of pilot-abstractions </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Andre Merzky, Ole Weidner, Pradeep Mantha, Shantenu Jha </em>
   IEEE 8th International Conference on e-Science,  2012
-  newline <br>
   [<a title="link" href="http://dx.doi.org/10.1109/eScience.2012.6404423">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pstar12_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pstar12.bib">bib</a>] : pstar12
   <br><br>
   <a name="pstar-network12"></a>
@@ -341,7 +336,7 @@ These publications are work in progress, are under review, or are not yet publis
 
   <a name="ccpe-2016-error"></a>
   <strong> <em> On the complexities of utilizing large-scale lightpath-connected distributed cyberinfrastructure </em> </strong>
-  <em> Jason Maassen, Ben van Werkhoven, Maarten van Meersbergen, Henri E. Bal, Michael Kliphuis, Sandra E. Brunnabend, Henk A. Dijkstra, Gerben van Malenstein, Migiel de Vos, Sylvia Kuijpers, Sander Boele, Jules Wolfrat, Nick Hill, David Wallom, Christian Grimm, Dieter Kranzlmüller, Dinesh Ganpathi, Shantenu Jha, Yaakoub El Khamra, Frank O. Bryan, Benjamin Kirtman, Frank J. Seinstra </em>
+  <em> Jason Maassen, Ben van Werkhoven, Maarten van Meersbergen, Henri E. Bal, Michael Kliphuis, Sandra E. Brunnabend, Henk A. Dijkstra, Gerben van Malenstein, Migiel de Vos, Sylvia Kuijpers, Sander Boele, Jules Wolfrat, Nick Hill, David Wallom, Christian Grimm, Dieter Kranzlm&uuml;ller, Dinesh Ganpathi, Shantenu Jha, Yaakoub El Khamra, Frank O. Bryan, Benjamin Kirtman, Frank J. Seinstra </em>
   Concurrency and Computation: Practice and Experience,  2016
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccpe-2016-error_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccpe-2016-error.bib">bib</a>] : ccpe-2016-error
   <br><br>
@@ -365,7 +360,6 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Characterization of the Three-Dimensional Free Energy Manifold for the Uracil Ribonucleoside from Asynchronous Replica Exchange Simulations </em> </strong>
   <em> Brian K. Radak, Melissa Romanus, Tai-Sung Lee, Haoyuan Chen, Ming Huang, Antons Treikalis, Vivekanandan Balasubramanian, Shantenu Jha, Darrin M. York </em>
   Journal of Chemical Theory and Computation, vol. 11 # 2,  2015
-  newline<br>
   [<a title="link" href="http://dx.doi.org/10.1021/ct500776j">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ct500776j_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ct500776j.bib">bib</a>] : ct500776j
   <br><br>
   <a name="titan-panda"></a>
@@ -387,7 +381,6 @@ These publications are work in progress, are under review, or are not yet publis
   <strong> <em> Pilot-Data: An Abstraction for Distributed Data </em> </strong>
   <em> Andre Luckow, Mark Santcroos, Ashley Zebrowski, Shantenu Jha </em>
   Journal Parallel and Distributed Computing, October 2014
-  newline <br>
   [<a title="link" href="http://dx.doi.org/10.1016/j.jpdc.2014.09.009">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/pilot-data-jpdc-2014_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/pilot-data-jpdc-2014.bib">bib</a>] : pilot-data-jpdc-2014
   <br><br>
   <a name="ethread-biomed-2014"></a>
