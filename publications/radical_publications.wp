@@ -13,13 +13,6 @@
 These publications are work in progress, are under review, or are not yet published for other reasons.  As such, they are likely to change, sometimes significantly, and should not (yet) be referenced directly.  Please contact the repective authors for further details.
 
 <br><br>
-  <a name="extasy-2016"></a>
-  <strong> <em> ExTASY: Scalable and Flexible Coupling of MD Simulations and Advanced Sampling Techniques </em> </strong>
-  <em> Vivekanandan Balasubramanian, Iain Bethune, Ardita Shkurti, Elena Breitmoser, Eugen Hruska, Cecilia Clementi, Charles Laughton, Shantenu Jha </em>
-  IEEE International Conference on eScience,  2016
-  (under review)
-  [<a title="link" href="https://arxiv.org/abs/1606.00093">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/extasy-2016_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/extasy-2016.bib">bib</a>] : extasy-2016
-  <br><br>
   <a name="radicalpilot"></a>
   <strong> <em> Executing Dynamic and Heterogeneous Workloads on Super Computers </em> </strong>
   <em> Andre Merzky, Mark Santcroos, Matteo Turilli, Shantenu Jha </em>
@@ -52,6 +45,12 @@ These publications are work in progress, are under review, or are not yet publis
     2016
   [<a title="link" href="http://arxiv.org/pdf/1605.09513v1.pdf">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/turilli2016analysis.bib">bib</a>] : turilli2016analysis
   <br><br>
+  <a name="workflows2016"></a>
+  <strong> <em> A Building Blocks Approach towards Domain Specific Workflow Systems? </em> </strong>
+  <em> Shantenu Jha, Matteo Turilli </em>
+    2016
+  [<a title="link" href="http://arxiv.org/abs/1609.03484">link</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/workflows2016.bib">bib</a>] : workflows2016
+  <br><br>
 
 
 <a name="Conference_and_Workshop_Papers"></a><h1><hr/><u>Conference and Workshop Papers</u></h1>
@@ -59,6 +58,12 @@ These publications are work in progress, are under review, or are not yet publis
 
  <h2><u>2016</u></h2>
 
+  <a name="extasy-2016"></a>
+  <strong> <em> ExTASY: Scalable and Flexible Coupling of MD Simulations and Advanced Sampling Techniques </em> </strong>
+  <em> Vivekanandan Balasubramanian, Iain Bethune, Ardita Shkurti, Elena Breitmoser, Eugen Hruska, Cecilia Clementi, Charles Laughton, Shantenu Jha </em>
+  IEEE International Conference on eScience,  2016
+  [<a title="link" href="http://arxiv.org/abs/1606.00093">link</a>]  [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/extasy-2016_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/extasy-2016.bib">bib</a>] : extasy-2016
+  <br><br>
   <a name="repex-icpp-2016"></a>
   <strong> <em> RepEx: A Flexible Framework for Scalable Replica Exchange Molecular Dynamics Simulations </em> </strong>
   <em> Antons Treikalis, Andre Merzky, Haoyuan Chen, Tai-Sung Lee, Darrin M. York, Shantenu Jha </em>
@@ -336,7 +341,7 @@ These publications are work in progress, are under review, or are not yet publis
 
   <a name="ccpe-2016-error"></a>
   <strong> <em> On the complexities of utilizing large-scale lightpath-connected distributed cyberinfrastructure </em> </strong>
-  <em> Jason Maassen, Ben van Werkhoven, Maarten van Meersbergen, Henri E. Bal, Michael Kliphuis, Sandra E. Brunnabend, Henk A. Dijkstra, Gerben van Malenstein, Migiel de Vos, Sylvia Kuijpers, Sander Boele, Jules Wolfrat, Nick Hill, David Wallom, Christian Grimm, Dieter Kranzlm&uuml;ller, Dinesh Ganpathi, Shantenu Jha, Yaakoub El Khamra, Frank O. Bryan, Benjamin Kirtman, Frank J. Seinstra </em>
+  <em> Jason Maassen, Ben van Werkhoven, Maarten van Meersbergen, Henri E. Bal, Michael Kliphuis, Sandra E. Brunnabend, Henk A. Dijkstra, Gerben van Malenstein, Migiel de Vos, Sylvia Kuijpers, Sander Boele, Jules Wolfrat, Nick Hill, David Wallom, Christian Grimm, Dieter Kranzlmüller, Dinesh Ganpathi, Shantenu Jha, Yaakoub El Khamra, Frank O. Bryan, Benjamin Kirtman, Frank J. Seinstra </em>
   Concurrency and Computation: Practice and Experience,  2016
     [<a title="pdf" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/pdf/ccpe-2016-error_draft.pdf">pdf</a>]  [<a title="bib" href="https://www.github.com/saga-project/radical.wp/raw/master/publications/bib/ccpe-2016-error.bib">bib</a>] : ccpe-2016-error
   <br><br>
